@@ -78,11 +78,36 @@
         </div>
         <br />
         <br />
-        <div style="margin-left:10px"><asp:Image ID="kuetimg" runat="server" ImageUrl="~/Images/kuet.jpg" ImageAlign="AbsMiddle" />
-        </div><br />
+        <asp:Table ID="Table3" runat="server" Width="1359px" CellSpacing="10">
+            <asp:TableRow>
+                <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Khulna University of Engineering & Technology (KUET) is one of the leading public universities of Bangladesh giving special emphasis in the Engineering and Technological Education and research. KUET is well known for offering very high quality educational, research and developmental programs in the major disciplines of engineering as well as basic sciences. It has a sober objective to achieve excellence in quality education, research and progression to address the present needs of the country as well as the South-Western region to make it as the "Center of Excellence".</asp:TableCell>
+                <asp:TableCell Width="450px"><asp:Image runat="server" ImageUrl="~/Images/KUETHome.jpg" Width="450"></asp:Image></asp:TableCell>
+                <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Khulna University of Engineering & Technology (KUET), Bangladesh established in 1967 as Khulna Engineering College, starts its long cherished journey in 3 June, 1974 after receiving special direction from the Father of the Nation Bangabandhu Sheikh Mujibur Rahman. Later to ensure the better academic and research capabilities and environment, it is converted to an autonomous institute called Bangladesh Institute of Technology (BIT), Khulna in July 1986. To meet the demands of the days in the academic and research arena, the institute was upgraded and renamed as Khulna University of Engineering & Technology (KUET) in September 2003.</asp:TableCell>
+                
+            </asp:TableRow>
+        </asp:Table>
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" BorderWidth="2px" GridLines="Both" HorizontalAlign="Center" Font-Size="30px" BackColor="#006666" Caption="Preveous Year Information Summary" CaptionAlign="Top" ForeColor="#006699">
+        <div style=" text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Architecture(Arch)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Building Engineering and Construction Management(BECM)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Biomedical Engineering(BME)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Chemical Engineering(ChE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Civil Engineering(CE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Computer Science and Engineering(CSE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Electrical and Electronic Engineering(EEE)</p></div>  
+        <div style=" text-align:center; font-size:20px"><p> Department of Electronics and Communication Engineering(ECE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Energy Science and Engineering(ESE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Industrial Engineering and Management(IEM)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Leather Engineering(LE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Materials Science and Engineering(MSE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Mechatronics Engineering(MtE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Mechanical Engineering(ME)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Textile Engineering(TE)</p></div> 
+        <div style=" text-align:center; font-size:20px"><p> Department of Urban and Regional Planning(URP)</p></div>
+        <br />
+        <br />
+        <asp:Table ID="Table1" runat="server" BorderWidth="2px" GridLines="Both" HorizontalAlign="Center" Font-Size="30px" BackColor="#006666" Caption="Preveous Year Information Summary" CaptionAlign="Top" ForeColor="#006699" Width="1150px">
             <asp:TableHeaderRow BackColor="#33CC33" ForeColor="Black" Font-Size="18px">
                 <asp:TableHeaderCell>Year</asp:TableHeaderCell>
                 <asp:TableHeaderCell>GPA</asp:TableHeaderCell>
@@ -108,43 +133,43 @@
                 <asp:TableCell>2018</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
-                <asp:TableCell>5-452</asp:TableCell>
-                <asp:TableCell>8-301</asp:TableCell>
-                <asp:TableCell>177-1466</asp:TableCell>
-                <asp:TableCell>400-1141</asp:TableCell>
-                <asp:TableCell>1166-2603</asp:TableCell>
-                <asp:TableCell>55-704</asp:TableCell>
-                <asp:TableCell>1035-1866</asp:TableCell>
-                <asp:TableCell>1417-3621</asp:TableCell>
-                <asp:TableCell>1273-3121</asp:TableCell>
-                <asp:TableCell>408-1497</asp:TableCell>
-                <asp:TableCell>714-1478</asp:TableCell>
-                <asp:TableCell>164-967</asp:TableCell>
-                <asp:TableCell>1076-2996</asp:TableCell>
-                <asp:TableCell>1033-2890</asp:TableCell>
-                <asp:TableCell>1969-3712</asp:TableCell>
-                <asp:TableCell>506-1435</asp:TableCell>
+                <asp:TableCell>452</asp:TableCell>
+                <asp:TableCell>301</asp:TableCell>
+                <asp:TableCell>1466</asp:TableCell>
+                <asp:TableCell>1141</asp:TableCell>
+                <asp:TableCell>2603</asp:TableCell>
+                <asp:TableCell>704</asp:TableCell>
+                <asp:TableCell>1866</asp:TableCell>
+                <asp:TableCell>3621</asp:TableCell>
+                <asp:TableCell>3121</asp:TableCell>
+                <asp:TableCell>1497</asp:TableCell>
+                <asp:TableCell>1478</asp:TableCell>
+                <asp:TableCell>967</asp:TableCell>
+                <asp:TableCell>2996</asp:TableCell>
+                <asp:TableCell>2890</asp:TableCell>
+                <asp:TableCell>3712</asp:TableCell>
+                <asp:TableCell>1435</asp:TableCell>
             </asp:TableRow>
             <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
                 <asp:TableCell>2016</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
-                <asp:TableCell>104-1040</asp:TableCell>
-                <asp:TableCell>1036-2129</asp:TableCell>
-                <asp:TableCell>889-1677</asp:TableCell>
-                <asp:TableCell>400-1141</asp:TableCell>
-                <asp:TableCell>1166-2603</asp:TableCell>
-                <asp:TableCell>55-704</asp:TableCell>
-                <asp:TableCell>1035-1866</asp:TableCell>
-                <asp:TableCell>1417-3621</asp:TableCell>
-                <asp:TableCell>1273-3121</asp:TableCell>
-                <asp:TableCell>408-1497</asp:TableCell>
-                <asp:TableCell>714-1478</asp:TableCell>
-                <asp:TableCell>164-967</asp:TableCell>
-                <asp:TableCell>1076-2996</asp:TableCell>
-                <asp:TableCell>1033-2890</asp:TableCell>
-                <asp:TableCell>1969-3712</asp:TableCell>
-                <asp:TableCell>506-1435</asp:TableCell>
+                <asp:TableCell>1040</asp:TableCell>
+                <asp:TableCell>2129</asp:TableCell>
+                <asp:TableCell>1677</asp:TableCell>
+                <asp:TableCell>1141</asp:TableCell>
+                <asp:TableCell>2603</asp:TableCell>
+                <asp:TableCell>704</asp:TableCell>
+                <asp:TableCell>1866</asp:TableCell>
+                <asp:TableCell>3621</asp:TableCell>
+                <asp:TableCell>3121</asp:TableCell>
+                <asp:TableCell>1497</asp:TableCell>
+                <asp:TableCell>1478</asp:TableCell>
+                <asp:TableCell>967</asp:TableCell>
+                <asp:TableCell>2996</asp:TableCell>
+                <asp:TableCell>2890</asp:TableCell>
+                <asp:TableCell>3712</asp:TableCell>
+                <asp:TableCell>1435</asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />
