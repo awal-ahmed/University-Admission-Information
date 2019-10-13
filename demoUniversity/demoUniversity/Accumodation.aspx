@@ -1,4 +1,9 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Accumodation.aspx.cs" Inherits="demoUniversity.Accumodation" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head id="Head1" runat="server">
     <title>Home</title>
     <style>
@@ -72,7 +77,7 @@
         <br />
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:40pt; color: #FFFFCC ; width:inherit">Engineering University</div>
+            <div style="font-size:40pt; color: #FFFFCC ; width:inherit">Accomodation</div>
         </div>
         <br />
         <br />

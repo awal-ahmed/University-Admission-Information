@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="KUET.aspx.cs" Inherits="demoUniversity.KUET" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CUET.aspx.cs" Inherits="demoUniversity.CUET" %>
 
 <!DOCTYPE html>
 
@@ -74,7 +74,7 @@
         </div>
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Khulna University of Engineering & Technology, Khulna</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Chittagong University of Engineering & Technology</div>
         </div>
         <br />
         <br />
@@ -158,15 +158,15 @@
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To KUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To CUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />
         <br />
-        <asp:Table runat="server" CellSpacing="50"  ForeColor="#006699" CellPadding="-1" Width="1346px">
+        <asp:Table ID="Table3" runat="server" CellSpacing="50"  ForeColor="#006699" CellPadding="-1" Width="1346px">
             <asp:TableHeaderRow>
                 <asp:TableHeaderCell HorizontalAlign="Left">
-                    <asp:HyperLink runat="server" NavigateUrl="http://www.kuet.ac.bd/" ForeColor="#006699">KUET Website</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.cuet.ac.bd/" ForeColor="#006699">CUET Website</asp:HyperLink>
                 </asp:TableHeaderCell>
                 <asp:TableHeaderCell HorizontalAlign="Right">
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="#" ForeColor="#006699">Accomodation</asp:HyperLink>

@@ -81,10 +81,10 @@
         <br />
         <br />
        
-        <a href="#">Bangladesh University of Engineering & Technology, Dhaka</a><br />
-        <a href="#">Chittagong University of Engineering & Technology, Chittagong</a><br />
+        <a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a><br />
+        <a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a><br />
         <a href="KUET.aspx">Khulna University of Engineering & Technology, Khulna</a> <br />
-        <a href="#">Rajshahi University of Engineering & Technology, Rajshahi</a> <br />   
+        <a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a> <br />   
         <br />
         <br />
          <p class="foot" style="font:15px">

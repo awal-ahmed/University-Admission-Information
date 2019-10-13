@@ -1,4 +1,9 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Transport.aspx.cs" Inherits="demoUniversity.Transport" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head id="Head1" runat="server">
     <title>Home</title>
     <style>
@@ -72,10 +77,11 @@
         <br />
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:40pt; color: #FFFFCC ; width:inherit">Engineering University</div>
+            <div style="font-size:40pt; color: #FFFFCC ; width:inherit">Transportation</div>
         </div>
+        <br /><asp:Label ID="Label1" runat="server" Text="This Page is under construction...." Font-Bold="True" ForeColor="Red" Font-Size="30"></asp:Label>
         <br />
-        <br />
+        
         <br />
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />

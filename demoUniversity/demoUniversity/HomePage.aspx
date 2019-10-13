@@ -80,8 +80,8 @@
                                             <a href="#">Agriculture</a>
                                              <a href="EnPg.aspx">Engineering</a>
                                              <a href="#">Public University</a></div>
-                <li><a href="#">Transportation</a></li>
-                <li><a href="#">Accomodation</a></li>
+                <li><a href="Transport.aspx">Transportation</a></li>
+                <li><a href="Accumodation.aspx">Accomodation</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Notice</a></li>
                 <li><a href="#">FAQ</a></li>
