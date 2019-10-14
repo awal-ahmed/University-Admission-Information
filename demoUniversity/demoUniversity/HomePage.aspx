@@ -76,14 +76,14 @@
         <br />
         <br />
          <ul>
+                <li><a href="HomePage.aspx">Home</a></li>
                 <li><div class="dropdown"><a href="#">University</a><div class="dropdown-content">
-                                            <a href="#">Agriculture</a>
+                                            <a href="AgPg.aspx">Agriculture</a>
                                              <a href="EnPg.aspx">Engineering</a>
-                                             <a href="#">Public University</a></div>
+                                             <a href="PuPg.aspx">Public University</a></div>
                 <li><a href="Transport.aspx">Transportation</a></li>
                 <li><a href="Accumodation.aspx">Accomodation</a></li>
                 <li><a href="#">News</a></li>
-                <li><a href="#">Notice</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Notice</a></li>

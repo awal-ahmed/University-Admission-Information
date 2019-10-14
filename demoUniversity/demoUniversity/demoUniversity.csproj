@@ -128,6 +128,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Accumodation.aspx" />
+    <Content Include="AgPg.aspx" />
     <Content Include="BUET.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -189,7 +190,9 @@
     <Content Include="EnPg.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\BUET.jpg" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\CUET.jpg" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\images.png" />
     <Content Include="Images\kuet.jpg" />
@@ -204,9 +207,11 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\RUET.jpg" />
     <Content Include="KUET.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="PuPg.aspx" />
     <Content Include="RUET.aspx" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -250,6 +255,13 @@
     </Compile>
     <Compile Include="Accumodation.aspx.designer.cs">
       <DependentUpon>Accumodation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgPg.aspx.cs">
+      <DependentUpon>AgPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgPg.aspx.designer.cs">
+      <DependentUpon>AgPg.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -348,6 +360,13 @@
       <DependentUpon>KUET.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuPg.aspx.cs">
+      <DependentUpon>PuPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PuPg.aspx.designer.cs">
+      <DependentUpon>PuPg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RUET.aspx.cs">
       <DependentUpon>RUET.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
