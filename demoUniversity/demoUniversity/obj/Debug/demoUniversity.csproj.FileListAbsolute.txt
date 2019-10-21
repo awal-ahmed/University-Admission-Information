@@ -58,3 +58,33 @@ D:\web1\New folder\new-get-test\demoUniversity\demoUniversity\bin\DotNetOpenAuth
 D:\web1\New folder\new-get-test\demoUniversity\demoUniversity\obj\Debug\demoUniversity.csprojResolveAssemblyReference.cache
 D:\web1\New folder\new-get-test\demoUniversity\demoUniversity\obj\Debug\demoUniversity.dll
 D:\web1\New folder\new-get-test\demoUniversity\demoUniversity\obj\Debug\demoUniversity.pdb
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\demoUniversity.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\demoUniversity.pdb
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\Antlr3.Runtime.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\AspNet.ScriptManager.jQuery.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.AspNet.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.Core.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OAuth.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OpenId.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\EntityFramework.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\Microsoft.ScriptManager.WebForms.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\Microsoft.Web.Infrastructure.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\System.Web.Optimization.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\System.Web.Providers.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\WebGrease.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\EntityFramework.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.Core.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OAuth.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OpenId.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\bin\DotNetOpenAuth.AspNet.xml
+D:\project\demoUniversity\demoUniversity\demoUniversity\obj\Debug\demoUniversity.csprojResolveAssemblyReference.cache
+D:\project\demoUniversity\demoUniversity\demoUniversity\obj\Debug\demoUniversity.dll
+D:\project\demoUniversity\demoUniversity\demoUniversity\obj\Debug\demoUniversity.pdb

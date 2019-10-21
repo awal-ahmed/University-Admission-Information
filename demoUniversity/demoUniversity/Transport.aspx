@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head id="Head1" runat="server">
-    <title>Home</title>
+    <title>Transportation</title>
     <style>
         .foot{
             position:static;
@@ -19,10 +19,11 @@
 
         display:block;
         height:40px;
-        width:100%;
+        width:200px;
         text-align:center;
+        background-color:#008080;
         padding:0px;
-        color:blue;
+        color:white;
         text-decoration:none;
         font-size:20px;
 
@@ -70,23 +71,72 @@
 </head>
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
-        <div style="text-align:center; width:1350px; background-color:#008080">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+        <div style="text-align: center; width: 1350px; background-color: midnightblue">
+            <div style="font-size: 60pt; color: #FFFFCC; width: inherit">University Admission Information</div>
         </div>
         <br />
         <br />
         <br />
-        <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:40pt; color: #FFFFCC ; width:inherit">Transportation</div>
+         <ul>
+                <li><a href="HomePage.aspx">Home</a></li>
+                <li><div class="dropdown"><a href="#">University</a><div class="dropdown-content">
+                                            <a href="AgPg.aspx">Agriculture</a>
+                                             <a href="EnPg.aspx">Engineering</a>
+                                             <a href="PuPg.aspx">Public University</a></div></div></li>
+                <li><a href="Transport.aspx">Transportation</a></li>
+                <li><a href="Accumodation.aspx">Accomodation</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Notice</a></li>
+                <li><div class="dropdown"><a href="#">Apply</a><div class="dropdown-content">
+                                            <a href="#">Agriculture</a>
+                                             <a href="#">Engineering</a>
+                                             <a href="#">Public University</a></div></div></li>
+                <li><a href="#">About Us</a></li>
+                
+                </ul>
+                <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div style="text-align: center; width: 1350px; background-color: #5784BE">
+            <div style="font-size: 40pt; color: #FFFFCC; width: inherit">Transportation</div>
         </div>
-        <br /><asp:Label ID="Label1" runat="server" Text="This Page is under construction...." Font-Bold="True" ForeColor="Red" Font-Size="30"></asp:Label>
         <br />
-        
         <br />
-        <p class="foot" style="font:15px">
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+            <asp:TableRow>
+                <asp:TableCell>From</asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>To</asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
+
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="This Page is under construction...." Font-Bold="True" ForeColor="Red" Font-Size="30"></asp:Label>
+        <br />
+
+        <br />
+        <p class="foot" style="font: 15px">
             Contact Us: support@universityadmission.com<br />
-           ©System Development Project 2019
-        </p>   
+            ©System Development Project 2019
+        </p>
     </form>
 
 </body>

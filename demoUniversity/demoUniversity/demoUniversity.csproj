@@ -129,6 +129,14 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Accumodation.aspx" />
     <Content Include="AgPg.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Projectdatabase.mdf" />
+    <Content Include="App_Data\Projectdatabase_log.ldf">
+      <DependentUpon>Projectdatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="BUET.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -389,9 +397,7 @@
       <DependentUpon>Transport.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
