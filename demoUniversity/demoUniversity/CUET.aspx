@@ -69,7 +69,7 @@
 </head>
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
-        <div style="text-align:center; width:1350px; background-color:#008080">
+        <div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
         <br />

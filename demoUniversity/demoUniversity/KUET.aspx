@@ -69,7 +69,7 @@
 </head>
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
-        <div style="text-align:center; width:1350px; background-color:#008080">
+        <div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
         <br />
@@ -175,9 +175,10 @@
         <br />
         <br />
         <div style=" text-align:center; font-size:30px; color:#006699"><p>Transportation</p></div> 
-        <asp:Table ID="Table2" runat="server" CellSpacing="10" HorizontalAlign="Center" ForeColor="White">
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             
             <asp:TableRow>
+                <asp:TableCell>From</asp:TableCell>
                 <asp:TableCell><asp:DropDownList ID="DropDownList1" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
                     <Items> <asp:ListItem Enabled="true" Selected="True" Text="Select Your Place"></asp:ListItem>
                               </Items> </asp:DropDownList> 

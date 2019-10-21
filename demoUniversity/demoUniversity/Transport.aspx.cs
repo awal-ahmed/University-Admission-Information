@@ -50,7 +50,26 @@ namespace demoUniversity
                 DropDownList2.DataBind();
 
             }
-            
+            if (Session["place"] != null && Session["seluni"] != null)
+            {
+                String st1 = Session["place"].ToString();
+                String st2 = Session["seluni"].ToString();
+                SqlCommand cmd5 = new SqlCommand("select * from transport where Fromp='" + st1 + "' and To_place='" + st2 + "'", connect);
+                cmd5.ExecuteNonQuery();
+                SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
+                DataSet ds5 = new DataSet();
+                da5.Fill(ds5);
+                int ii = ds5.Tables[0].Rows.Count;
+                if (ii > 0)
+                {
+                    GridView1.DataSource = (ds5);
+                    GridView1.DataBind();
+
+                }
+                DropDownList1.Items.FindByValue(st1).Selected = true;
+                DropDownList2.Items.FindByValue(st2).Selected = true;
+               
+            }
         }
         
 
