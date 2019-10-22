@@ -13,59 +13,50 @@
             text-align:center;
    
         }
-
-    a {
-
-        display:block;
-        height:40px;
-        width:200px;
-        text-align:center;
-        background-color:#5784BE;
-        padding:0px;
-        color:white;
-        text-decoration:none;
-        font-size:20px;
-
+       li {
+        padding-left:17px;
+        padding-right:17px;
     }
-    ul {
-        vertical-align:middle;
-        list-style-type: none;  
-        text-emphasis-color:white;
-        margin-left:150px;
-        width: 1000px;
-    }
-    li {
-        float: left;
-        vertical-align:middle;
-    }
-        li a.active {
-            background-color:blue;
-            color:white;
-        }
-        li a:hover:not(.active) {
-            background-color:gray;
-        }
-        .dropdown {
-      position: relative;
-      display: inline-block;
-            top: 0px;
-            left: 0px;
-            width: 197px;
-        }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #008080;
+}
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background:  #008080;
+}
+li ul { display: none; }
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+ul li a:hover { background: gray; }
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+li:hover li { float: none; }
+li:hover a { background: #008080; }
+li:hover li a:hover {background: gray }
+.main-navigation li ul li { border-top: 0; }
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+ul:after { clear: both; }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: gray;
-      min-width: 200px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-        color: white;
-      display: block;
-    }
     </style>
 </head>
 <body style="background-color: #CCFFFF">
@@ -74,26 +65,47 @@
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
         <br />
-        <br />
-         <ul>
-                <li><a href="HomePage.aspx">Home</a></li>
-                <li><div class="dropdown"><a href="#">University</a><div class="dropdown-content">
-                                            <a href="AgPg.aspx">Agriculture</a>
-                                             <a href="EnPg.aspx">Engineering</a>
-                                             <a href="PuPg.aspx">Public University</a></div>
-                <li><a href="Transport.aspx">Transportation</a></li>
-                <li><a href="Accumodation.aspx">Accomodation</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Notice</a></li>
-                <li><div class="dropdown"><a href="#">Apply</a><div class="dropdown-content">
-                                            <a href="#">Agriculture</a>
-                                             <a href="#">Engineering</a>
-                                             <a href="#">Public University</a></div>
-                <li><a href="#">About Us</a></li>
-                </div></li>
-                </ul>
+    <br />
+    <br />
+   <ul class="main-navigation">
+  <li><a href="HomePage.aspx">Home</a></li>
+  <li><a href="#">University</a>
+    <ul>
+      <li><a href="AgPg.aspx">Agriculture</a>
+            <ul>
+                <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
+                <li><a href="#">Bangladesh Agricultural University</a></li>
+                <li><a href="#">Khulna Agricultural University Bangladesh</a></li>
+                 <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
+             </ul>
+          </li>
+    <li><a href="EnPg.aspx">Engineering</a>
+      <ul>
+            <li><a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a></li>
+            <li><a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a></li>
+            <li><a href="KUET.aspx">Khulna University of Engineering & Technology, Khulna</a></li>
+            <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
+      </ul>
+      </li>
+    <li><a href="EnPg.aspx">Public University</a></li>
+     </ul>
+    </li>
+    <li><a href="Transport.aspx">Transportation</a></li>
+    <li><a href="Accumodation.aspx">Accomodation</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">FAQ</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Notice</a></li>
+    <li><a href="#">Apply</a>
+        <ul>
+            <li><a href="#">Agriculture</a></li>
+            <li><a href="#">Engineering</a></li>
+            <li><a href="#">Public University</a></li>
+        </ul>
+    </li>
+     <li><a href="#">About Us</a></li>
+   </ul>
+
         <br />
         <br />
         <asp:Table ID="Table1" runat="server" CellSpacing="10" HorizontalAlign="Center">
