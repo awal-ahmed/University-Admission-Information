@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Transport.aspx.cs" Inherits="demoUniversity.Transport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="demoUniversity.News" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head id="Head1" runat="server">
-    <title>Transportation</title>
+    <title>Home</title>
     <style>
         .foot{
             position:static;
@@ -14,7 +14,6 @@
             text-align:center;
    
         }
-
        li {
         padding-left:17px;
         padding-right:17px;
@@ -63,8 +62,7 @@ ul:after { clear: both; }
 </head>
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
-
-        <div style="text-align:center; width:1350px; background-color:midnightblue">
+		<div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
     <br />
@@ -105,56 +103,102 @@ ul:after { clear: both; }
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="#">About Us</a></li>
+     <li><a href="AbUs">About Us</a></li>
    </ul>
+   <br />
+   <br />
         <br />
-        <br />
-        <br />
-
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Transportation</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">News</div>
         </div>
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+         <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
-                <asp:TableCell>From</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:Button ID="Button4" runat="server" Text="Show all" OnClick="Button_Click4" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+        
                 </asp:TableCell>
-                <asp:TableCell>To</asp:TableCell>
+            </asp:TableRow>
+         </asp:Table>>
+                    
+        <br />
+        <br />
+        <asp:GridView ID="GridView4" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+       
+        <br />
+        <br />
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="0">
+            <asp:TableRow>
+                <asp:TableCell>Search with month</asp:TableCell>
                 <asp:TableCell>
                     <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
-                </asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    </asp:TableCell>
             </asp:TableRow>
 
         </asp:Table>
+        
+                
+            
+                
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
         <br />
         <br />
         <br />
-        <br />
-        <asp:Table ID="tab1" runat="server" HorizontalAlign="Center" Font-Bold="True" Font-Size="25" ForeColor="#009933">
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
+                <asp:TableCell>Search with Venue</asp:TableCell>
                 <asp:TableCell>
-                    <asp:Label ID="Label2" runat="server" Text="Ways From  "></asp:Label>
-                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                    <asp:Label ID="Label5" runat="server" Text="  To  "></asp:Label>
-                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button_Click1" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    </asp:TableCell>
             </asp:TableRow>
+
         </asp:Table>
+        
+                    
+                
+            
+                
         <br />
-        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
+        <br />
+        <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
         <br />
         <br />
         <br />
-        <p class="foot" style="font: 15px">
+        <asp:Table ID="Table3" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+            <asp:TableRow>
+                <asp:TableCell>Search with Program Type</asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList3" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button3" runat="server" Text="Search" OnClick="Button_Click2" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+        
+                
+            
+                
+        <br />
+        <br />
+        <asp:GridView ID="GridView3" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <br />
+        <br />
+        <br />
+        <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
-            ©System Development Project 2019
-        </p>
+           ©System Development Project 2019
+        </p>   
     </form>
 
 </body>

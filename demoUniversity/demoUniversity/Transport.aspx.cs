@@ -26,7 +26,7 @@ namespace demoUniversity
             {
                 DropDownList1.Items.Clear();
                 DropDownList1.Items.Add("From");
-                SqlCommand cmd = new SqlCommand("select distinct Fromp from transport", connect);
+                SqlCommand cmd = new SqlCommand("select distinct  Fromp from transport", connect);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds1 = new DataSet();
@@ -34,8 +34,9 @@ namespace demoUniversity
                 DropDownList1.DataSource = ds1;
                 DropDownList1.DataBind();
                 DropDownList1.DataTextField = "Fromp";
-                //  DropDownList1.DataValueField = "stf";
+                DropDownList1.DataValueField = "Fromp";
                 DropDownList1.DataBind();
+                //  DropDownList1.DataValueField = "stf";
 
                 SqlCommand cmd1 = new SqlCommand("select distinct To_place from transport", connect);
                 cmd1.ExecuteNonQuery();

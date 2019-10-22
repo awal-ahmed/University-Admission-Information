@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PuPg.aspx.cs" Inherits="demoUniversity.PuPg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notic.aspx.cs" Inherits="demoUniversity.Notic" %>
 
 <!DOCTYPE html>
 
@@ -61,7 +61,7 @@ ul:after { clear: both; }
 </head>
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
-        <div style="text-align:center; width:1350px; background-color:midnightblue">
+		<div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
     <br />
@@ -72,7 +72,7 @@ ul:after { clear: both; }
     <ul>
       <li><a href="AgPg.aspx">Agriculture</a>
             <ul>
-                <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural University</a></li>
+                <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
                 <li><a href="#">Khulna Agricultural University Bangladesh</a></li>
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
@@ -104,26 +104,19 @@ ul:after { clear: both; }
     </li>
      <li><a href="#">About Us</a></li>
    </ul>
-        <br />
-        <br />
+   <br />
+   <br />
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Public University</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Noice</div>
         </div>
         <br />
         <br />
         <br />
-       
-        <a href="#">Jahangirnagar University</a><br />
-        <a href="#">Khulna University</a><br />
-        <a href="#">Rajshahi University</a><br />   
-        <a href="#">University of Dhaka</a><br />
-        <br />
-        <br />
-         <p class="foot" style="font:15px">
+        <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019
-        </p>  
+        </p>   
     </form>
 
 </body>
