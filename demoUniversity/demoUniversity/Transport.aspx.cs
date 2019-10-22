@@ -14,14 +14,13 @@ namespace demoUniversity
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Projectdatabase.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            tab1.Visible = false;
             if (connect.State == ConnectionState.Open)
             {
                 connect.Close();
             }
             connect.Open();
             Response.Write("Successful");
-
 
             if (!IsPostBack)
             {
@@ -51,10 +50,15 @@ namespace demoUniversity
                 DropDownList2.DataBind();
 
             }
+            
             if (Session["place"] != null && Session["seluni"] != null)
             {
+                
                 String st1 = Session["place"].ToString();
                 String st2 = Session["seluni"].ToString();
+                tab1.Visible = true;
+                Label3.Text = st1;
+                Label4.Text = st2;
                 SqlCommand cmd5 = new SqlCommand("select * from transport where Fromp='" + st1 + "' and To_place='" + st2 + "'", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
@@ -67,22 +71,27 @@ namespace demoUniversity
                     GridView1.DataBind();
 
                 }
-                DropDownList1.Items.FindByValue(st1).Selected = true;
-                DropDownList2.Items.FindByValue(st2).Selected = true;
+
                
             }
+           
         }
         
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Clear();
+            //DropDownList1.Items.FindByValue(Session["place"].ToString()).Selected = false;
+           // DropDownList2.Items.FindByValue(Session["seluni"].ToString()).Selected = false;
             //DropDownList1.AutoPostBack = false;
             Response.Write(DropDownList1.SelectedItem.Text);
             Response.Write(DropDownList2.SelectedItem.Text);
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
+                tab1.Visible = true;
+                Label3.Text = DropDownList1.SelectedItem.Text;
+                Label4.Text = DropDownList2.SelectedItem.Text;
                 SqlCommand cmd5 = new SqlCommand("select * from transport where Fromp='" + DropDownList1.SelectedItem.Text + "' and To_place='" + DropDownList2.SelectedItem.Text + "'", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
