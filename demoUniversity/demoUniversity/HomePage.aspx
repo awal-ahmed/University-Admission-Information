@@ -108,26 +108,27 @@ ul:after { clear: both; }
 
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" CellSpacing="10" HorizontalAlign="Center">
+        <asp:Table ID="Table1" runat="server" CellSpacing="10" HorizontalAlign="Center"  Font-Size="20" ForeColor="Blue" Font-Bold="True">
             
             <asp:TableRow>
-                <asp:TableCell><asp:DropDownList runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
-                    <Items> <asp:ListItem Enabled="true" Selected="True" Text="Select Your University"></asp:ListItem>
-                              </Items> </asp:DropDownList> 
-                    
+                <asp:TableCell>Select University </asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" BackColor="#CCFFFF" Font-Italic="True" Font-Size="15"></asp:DropDownList>
                 </asp:TableCell>
-                <asp:TableCell> <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/images.png" Height="25px" Width="30px" /> </asp:TableCell>
+                <asp:TableCell> <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/images.png" Height="25px" Width="30px" OnClick="ImageButton1_Click" /> </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         
         <br />
         <br />
+        
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019
         </p>   
             </>     
     </form>
+    
 
 </body>
 </html>
