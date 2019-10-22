@@ -14,7 +14,7 @@ namespace demoUniversity
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Projectdatabase.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            tab1.Visible = false;
             if (connect.State == ConnectionState.Open)
             {
                 connect.Close();
@@ -52,8 +52,12 @@ namespace demoUniversity
             
             if (Session["place"] != null && Session["seluni"] != null)
             {
+                
                 String st1 = Session["place"].ToString();
                 String st2 = Session["seluni"].ToString();
+                tab1.Visible = true;
+                Label3.Text = st1;
+                Label4.Text = st2;
                 SqlCommand cmd5 = new SqlCommand("select * from transport where Fromp='" + st1 + "' and To_place='" + st2 + "'", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
@@ -84,6 +88,9 @@ namespace demoUniversity
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
+                tab1.Visible = true;
+                Label3.Text = DropDownList1.SelectedItem.Text;
+                Label4.Text = DropDownList2.SelectedItem.Text;
                 SqlCommand cmd5 = new SqlCommand("select * from transport where Fromp='" + DropDownList1.SelectedItem.Text + "' and To_place='" + DropDownList2.SelectedItem.Text + "'", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);

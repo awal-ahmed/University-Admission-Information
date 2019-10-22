@@ -134,12 +134,22 @@ ul:after { clear: both; }
         </asp:Table>
         <br />
         <br />
+        <br />
+        <br />
+        <asp:Table ID="tab1" runat="server" HorizontalAlign="Center" Font-Bold="True" Font-Size="25" ForeColor="#009933">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label2" runat="server" Text="Ways From  "></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text="  To  "></asp:Label>
+                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <br />
         <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
-
         <br />
-        <asp:Label ID="Label1" runat="server" Text="This Page is under construction...." Font-Bold="True" ForeColor="Red" Font-Size="30"></asp:Label>
         <br />
-
         <br />
         <p class="foot" style="font: 15px">
             Contact Us: support@universityadmission.com<br />
