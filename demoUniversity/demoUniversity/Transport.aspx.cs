@@ -22,7 +22,6 @@ namespace demoUniversity
             connect.Open();
             Response.Write("Successful");
 
-
             if (!IsPostBack)
             {
                 DropDownList1.Items.Clear();
@@ -35,7 +34,7 @@ namespace demoUniversity
                 DropDownList1.DataSource = ds1;
                 DropDownList1.DataBind();
                 DropDownList1.DataTextField = "Fromp";
-              //  DropDownList1.DataValueField = "stf";
+                //  DropDownList1.DataValueField = "stf";
                 DropDownList1.DataBind();
 
                 SqlCommand cmd1 = new SqlCommand("select distinct To_place from transport", connect);
@@ -50,6 +49,7 @@ namespace demoUniversity
                 DropDownList2.DataBind();
 
             }
+            
             if (Session["place"] != null && Session["seluni"] != null)
             {
                 String st1 = Session["place"].ToString();
@@ -66,16 +66,18 @@ namespace demoUniversity
                     GridView1.DataBind();
 
                 }
-                DropDownList1.Items.FindByValue(st1).Selected = true;
-                DropDownList2.Items.FindByValue(st2).Selected = true;
+
                
             }
+           
         }
         
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Clear();
+            //DropDownList1.Items.FindByValue(Session["place"].ToString()).Selected = false;
+           // DropDownList2.Items.FindByValue(Session["seluni"].ToString()).Selected = false;
             //DropDownList1.AutoPostBack = false;
             Response.Write(DropDownList1.SelectedItem.Text);
             Response.Write(DropDownList2.SelectedItem.Text);
