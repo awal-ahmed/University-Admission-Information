@@ -1,4 +1,9 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="demoUniversity.News" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head id="Head1" runat="server">
     <title>Home</title>
     <style>
@@ -98,14 +103,80 @@ ul:after { clear: both; }
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="#">About Us</a></li>
+     <li><a href="AbUs">About Us</a></li>
    </ul>
    <br />
    <br />
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Engineering University</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">News</div>
         </div>
+        <br />
+        <br />
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+            <asp:TableRow>
+                <asp:TableCell>Search with month</asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+        
+                
+            
+                
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <br />
+        <br />
+        <br />
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+            <asp:TableRow>
+                <asp:TableCell>Search with Venue</asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button_Click1" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+        
+                    
+                
+            
+                
+        <br />
+        <br />
+        <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <br />
+        <br />
+        <br />
+        <asp:Table ID="Table3" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+            <asp:TableRow>
+                <asp:TableCell>Search with Program Type</asp:TableCell>
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList3" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button3" runat="server" Text="Search" OnClick="Button_Click2" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+        
+                
+            
+                
+        <br />
+        <br />
+        <asp:GridView ID="GridView3" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
         <br />
         <br />
         <br />

@@ -94,10 +94,10 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Notice</a></li>
+    <li><a href="News.aspx">News</a></li>
+    <li><a href="FAQ.aspx">FAQ</a></li>
+    <li><a href="Blog.aspx">Blog</a></li>
+    <li><a href="Notic.aspx">Notice</a></li>
     <li><a href="#">Apply</a>
         <ul>
             <li><a href="#">Agriculture</a></li>
@@ -136,8 +136,6 @@ ul:after { clear: both; }
         <br />
         <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
 
-        <br />
-        <asp:Label ID="Label1" runat="server" Text="This Page is under construction...." Font-Bold="True" ForeColor="Red" Font-Size="30"></asp:Label>
         <br />
 
         <br />

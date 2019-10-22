@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AbUs.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -137,6 +138,7 @@
     <Content Include="App_Data\Projectdatabase_log.ldf">
       <DependentUpon>Projectdatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="Blog.aspx" />
     <Content Include="BUET.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -196,6 +198,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CUET.aspx" />
     <Content Include="EnPg.aspx" />
+    <Content Include="FAQ.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\BUET.jpg" />
@@ -217,6 +220,8 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\RUET.jpg" />
     <Content Include="KUET.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="Notic.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="PuPg.aspx" />
@@ -257,6 +262,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbUs.aspx.cs">
+      <DependentUpon>AbUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AbUs.aspx.designer.cs">
+      <DependentUpon>AbUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accumodation.aspx.cs">
       <DependentUpon>Accumodation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -315,6 +327,13 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BUET.aspx.cs">
       <DependentUpon>BUET.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -350,6 +369,13 @@
     <Compile Include="EnPg.aspx.designer.cs">
       <DependentUpon>EnPg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -366,6 +392,20 @@
     </Compile>
     <Compile Include="KUET.aspx.designer.cs">
       <DependentUpon>KUET.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notic.aspx.cs">
+      <DependentUpon>Notic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notic.aspx.designer.cs">
+      <DependentUpon>Notic.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuPg.aspx.cs">

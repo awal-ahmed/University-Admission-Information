@@ -92,10 +92,10 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Notice</a></li>
+    <li><a href="News.aspx">News</a></li>
+    <li><a href="FAQ.aspx">FAQ</a></li>
+    <li><a href="Blog.aspx">Blog</a></li>
+    <li><a href="Notic.aspx">Notice</a></li>
     <li><a href="#">Apply</a>
         <ul>
             <li><a href="#">Agriculture</a></li>
