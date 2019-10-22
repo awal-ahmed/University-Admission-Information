@@ -13,10 +13,13 @@ namespace demoUniversity
         {
             tab1.Visible = false;
             tab2.Visible = false;
+            tab3.Visible = false;
             Label15.Visible = false;
             Label16.Visible = false;
+            Label17.Visible = false;
             Button4.Visible = false;
             Button5.Visible = false;
+            Button6.Visible = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -36,7 +39,9 @@ namespace demoUniversity
         }
         protected void Button3_Click(object sender, EventArgs e)
         {
-
+            tab3.Visible = true;
+            Label17.Visible = true;
+            Button6.Visible = true;
         }
 
         protected void Button5_Click(object sender, EventArgs e)
@@ -45,6 +50,11 @@ namespace demoUniversity
         }
 
         protected void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
         {
 
         }

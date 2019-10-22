@@ -116,7 +116,7 @@ ul:after { clear: both; }
         <br />
         <asp:Button ID="Button1" runat="server" Text="Add a new news" OnClick="Button1_Click" />
         <asp:Button ID="Button2" runat="server" Text="Add a new way to go to your university" OnClick="Button2_Click" />
-        <asp:Button ID="Button3" runat="server" Text="Add a place to stay in you city" OnClick="Button3_Click" />
+        <asp:Button ID="Button3" runat="server" Text="Add a place to stay in your city" OnClick="Button3_Click" />
         <br />
         <br />
         <div style="margin-left:75px"><asp:Label ID="Label15" runat="server" Text="Add a new news"></asp:Label></div>
@@ -244,7 +244,44 @@ ul:after { clear: both; }
         <div style="margin-left:240px">
             <asp:Button ID="Button5" runat="server" Text="Done" OnClick="Button5_Click" />
         </div>
-        
+        <div style="margin-left:75px"><asp:Label ID="Label17" runat="server" Text="Place you stay in your city"></asp:Label></div>
+        <asp:Table ID="tab3" runat="server" CellSpacing="20">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label18" runat="server" Text="Enter the versity "></asp:Label>
+                 </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                     <asp:Label ID="Label19" runat="server" Text="Name of the hotel"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                     <asp:TextBox ID="TextBox16" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label20" runat="server" Text="Address of the hotel"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label21" runat="server" Text="Phone number"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox18" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <div style="margin-left:270px">
+            <asp:Button ID="Button6" runat="server" Text="Done" OnClick="Button6_Click" />
+        </div>
         <br />
         <br />
         <br />
