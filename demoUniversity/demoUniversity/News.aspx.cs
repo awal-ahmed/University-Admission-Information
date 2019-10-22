@@ -159,5 +159,30 @@ namespace demoUniversity
                 }
             }
         }
+
+        protected void Button_Click4(object sender, EventArgs e)
+        {
+            Response.Clear();
+            if (true)
+            {
+                SqlCommand cmd5 = new SqlCommand("select * from news", connect);
+                cmd5.ExecuteNonQuery();
+                SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
+                DataSet ds5 = new DataSet();
+                da5.Fill(ds5);
+                int ii = ds5.Tables[0].Rows.Count;
+                if (ii > 0)
+                {
+                    GridView4.DataSource = (ds5);
+                    GridView4.DataBind();
+                }
+                else
+                {
+                    Response.Clear();
+                    Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Information Not Found');</script>");
+                    Response.Write("Information Not Found");
+                }
+            }
+        }
     }
 }

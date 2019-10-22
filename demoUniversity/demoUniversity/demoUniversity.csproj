@@ -197,6 +197,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CUET.aspx" />
+    <Content Include="Edit.aspx" />
     <Content Include="EnPg.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="HomePage.aspx" />
@@ -361,6 +362,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="EnPg.aspx.cs">
       <DependentUpon>EnPg.aspx</DependentUpon>

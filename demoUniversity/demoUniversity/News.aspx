@@ -113,7 +113,22 @@ ul:after { clear: both; }
         </div>
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+         <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button4" runat="server" Text="Show all" OnClick="Button_Click4" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+        
+                </asp:TableCell>
+            </asp:TableRow>
+         </asp:Table>>
+                    
+        <br />
+        <br />
+        <asp:GridView ID="GridView4" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+       
+        <br />
+        <br />
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="0">
             <asp:TableRow>
                 <asp:TableCell>Search with month</asp:TableCell>
                 <asp:TableCell>
