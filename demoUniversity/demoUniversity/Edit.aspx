@@ -120,13 +120,13 @@ ul:after { clear: both; }
         <br />
         <br />
         <div style="margin-left:75px"><asp:Label ID="Label15" runat="server" Text="Add a new news"></asp:Label></div>
-        <asp:Table ID="tab1" runat="server" CellSpacing="20">
+        <asp:Table ID="tab1" runat="server" CellSpacing="20" Width="298px">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label1" runat="server" Text="Venue"></asp:Label>
                  </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="140" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -169,6 +169,14 @@ ul:after { clear: both; }
                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                   <asp:Label ID="Label22" runat="server" Text="Add Contact Information"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                   <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
         <div style="margin-left:240px">
             <asp:Button ID="Button4" runat="server" Text="Done" OnClick="Button4_Click" />
@@ -181,7 +189,7 @@ ul:after { clear: both; }
                     <asp:Label ID="Label7" runat="server" Text="From"></asp:Label>
                  </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -189,7 +197,7 @@ ul:after { clear: both; }
                      <asp:Label ID="Label8" runat="server" Text="To"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                     <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList3" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -251,7 +259,8 @@ ul:after { clear: both; }
                     <asp:Label ID="Label18" runat="server" Text="Enter the versity "></asp:Label>
                  </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>
+                    
+                    <asp:DropDownList ID="DropDownList4" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>

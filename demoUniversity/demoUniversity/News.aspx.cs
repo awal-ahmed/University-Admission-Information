@@ -86,7 +86,7 @@ namespace demoUniversity
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
-                SqlCommand cmd5 = new SqlCommand("select * from news where Mont='" + DropDownList2.SelectedItem.Text + "'", connect);
+                SqlCommand cmd5 = new SqlCommand("select * from news where Mont='" + DropDownList2.SelectedItem.Text + "' order by Start_Date", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();
@@ -113,7 +113,7 @@ namespace demoUniversity
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
-                SqlCommand cmd5 = new SqlCommand("select * from news where Venue='" + DropDownList1.SelectedItem.Text + "'", connect);
+                SqlCommand cmd5 = new SqlCommand("select * from news where Venue='" + DropDownList1.SelectedItem.Text + "' order by Start_Date", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();
@@ -140,7 +140,7 @@ namespace demoUniversity
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
-                SqlCommand cmd5 = new SqlCommand("select * from news where Program_type='" + DropDownList3.SelectedItem.Text + "'", connect);
+                SqlCommand cmd5 = new SqlCommand("select * from news where Program_type='" + DropDownList3.SelectedItem.Text + "' order by Start_Date", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();
@@ -165,7 +165,7 @@ namespace demoUniversity
             Response.Clear();
             if (true)
             {
-                SqlCommand cmd5 = new SqlCommand("select * from news", connect);
+                SqlCommand cmd5 = new SqlCommand("select * from news order by Start_Date", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();
