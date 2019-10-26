@@ -15,6 +15,7 @@ namespace demoUniversity
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Projectdatabase.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
+            tab1.Visible = false;
             if (connect.State == ConnectionState.Open)
             {
                 connect.Close();
@@ -46,6 +47,8 @@ namespace demoUniversity
         {
             if (true)
             {
+                tab1.Visible = true;
+                Label3.Text = DropDownList1.SelectedItem.Text;
                 SqlCommand cmd5 = new SqlCommand("select Hotel , Adress , Contact from hotel where varsity='" + DropDownList1.SelectedItem.Text + "'", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);

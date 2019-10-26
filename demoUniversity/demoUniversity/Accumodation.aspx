@@ -127,10 +127,16 @@ ul:after { clear: both; }
             </asp:TableRow>
 
         </asp:Table>
-        
-
-        
         <br />
+        <br />
+        <asp:Table ID="tab1" runat="server" HorizontalAlign="Center" Font-Bold="True" Font-Size="25" ForeColor="#009933">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label2" runat="server" Text="Places you can stay in  "></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
         <br />
         <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
         <p class="foot" style="font:15px">

@@ -92,7 +92,7 @@ namespace demoUniversity
                 tab1.Visible = true;
                 Label3.Text = DropDownList1.SelectedItem.Text;
                 Label4.Text = DropDownList2.SelectedItem.Text;
-                SqlCommand cmd5 = new SqlCommand("select * from transport where Fromp='" + DropDownList1.SelectedItem.Text + "' and To_place='" + DropDownList2.SelectedItem.Text + "'", connect);
+                SqlCommand cmd5 = new SqlCommand("select Fromp as Start, To_place as Destination, Type as Transport_Type, Time, Fare, Contact, Duration, Additional  from transport where Fromp='" + DropDownList1.SelectedItem.Text + "' and To_place='" + DropDownList2.SelectedItem.Text + "'", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();

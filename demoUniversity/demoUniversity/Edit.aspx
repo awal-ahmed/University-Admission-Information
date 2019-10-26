@@ -114,13 +114,13 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Add a new news" OnClick="Button1_Click" />
-        <asp:Button ID="Button2" runat="server" Text="Add a new way to go to your university" OnClick="Button2_Click" />
-        <asp:Button ID="Button3" runat="server" Text="Add a place to stay in your city" OnClick="Button3_Click" />
+        <div style="margin-left:300px"><asp:Button ID="Button1" runat="server" Text="Add a new news" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
+        <asp:Button ID="Button2" runat="server" Text="Add a new way to go to your university" OnClick="Button2_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+        <asp:Button ID="Button3" runat="server" Text="Add a place to stay in your city" OnClick="Button3_Click" BackColor="Teal" ForeColor="White" Font-Size="15" /></div>
         <br />
         <br />
-        <div style="margin-left:75px"><asp:Label ID="Label15" runat="server" Text="Add a new news"></asp:Label></div>
-        <asp:Table ID="tab1" runat="server" CellSpacing="20" Width="298px">
+        <div style="margin-left:550px"><asp:Label ID="Label15" runat="server" Text="Add a new news" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>
+        <asp:Table HorizontalAlign="Center" ID="tab1" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label1" runat="server" Text="Venue"></asp:Label>
@@ -178,12 +178,12 @@ ul:after { clear: both; }
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <div style="margin-left:240px">
-            <asp:Button ID="Button4" runat="server" Text="Done" OnClick="Button4_Click" />
+        <div style="margin-left:825px">
+            <asp:Button ID="Button4" runat="server" Text="Done" OnClick="Button4_Click" BackColor="#006600" ForeColor="White" />
         </div>
-        <div style="margin-left:75px"><asp:Label ID="Label16" runat="server" Text="Add a way to go"></asp:Label></div>
+        <div style="margin-left:550px"><asp:Label ID="Label16" runat="server" Text="Add a way to go" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>
 
-        <asp:Table ID="tab2" runat="server" CellSpacing="20">
+        <asp:Table ID="tab2" HorizontalAlign="Center" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label7" runat="server" Text="From"></asp:Label>
@@ -249,11 +249,11 @@ ul:after { clear: both; }
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <div style="margin-left:240px">
-            <asp:Button ID="Button5" runat="server" Text="Done" OnClick="Button5_Click" />
+        <div style="margin-left:825px">
+            <asp:Button ID="Button5" runat="server" Text="Done" OnClick="Button5_Click" BackColor="#006600" ForeColor="White" />
         </div>
-        <div style="margin-left:75px"><asp:Label ID="Label17" runat="server" Text="Place you stay in your city"></asp:Label></div>
-        <asp:Table ID="tab3" runat="server" CellSpacing="20">
+        <div style="margin-left:485px"><asp:Label ID="Label17" runat="server" Text="Place you stay in the city" Font-Size="25" ForeColor="#FF6600" Font-Bold="True"></asp:Label></div>
+        <asp:Table ID="tab3" HorizontalAlign="Center" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label18" runat="server" Text="Enter the versity "></asp:Label>
@@ -288,8 +288,8 @@ ul:after { clear: both; }
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <div style="margin-left:270px">
-            <asp:Button ID="Button6" runat="server" Text="Done" OnClick="Button6_Click" />
+        <div style="margin-left:825px">
+            <asp:Button ID="Button6" runat="server" Text="Done" OnClick="Button6_Click" BackColor="#006600" ForeColor="White" />
         </div>
         <br />
         <br />
