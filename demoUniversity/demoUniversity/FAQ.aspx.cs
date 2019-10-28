@@ -92,6 +92,7 @@ namespace demoUniversity
             Table3.Visible = false;
             GridView1.Visible = false;
             cons_table();
+            Table5.Visible = true;
         }
 
         protected void Button5_Click(object sender, EventArgs e)
@@ -166,6 +167,7 @@ namespace demoUniversity
             Button3.Visible = false;
             Table1.Visible = false;
             Button4.Visible = true;
+            cons_table();
             Table2.Visible = false;
         }
 
