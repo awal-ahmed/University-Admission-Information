@@ -108,8 +108,86 @@ ul:after { clear: both; }
    <br />
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">FAQ</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">FAQ 
+                
+            </div>
         </div>
+        <asp:Table ID="Table5" runat="server" Caption="Preveously Asked Questions" CaptionAlign="Top" HorizontalAlign="Center"></asp:Table>
+        <div> <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" /> </div>
+
+        <asp:Table ID="Table1" runat="server" Visible="False">
+            <asp:TableFooterRow>
+                
+                
+                <asp:TableCell>Id:</asp:TableCell>
+                <asp:TableCell><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableFooterRow>
+            <asp:TableFooterRow>
+                
+                <asp:TableCell>Password:</asp:TableCell>
+                <asp:TableCell><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableFooterRow>
+            <asp:TableRow>
+                <asp:TableCell><asp:Button ID="Button5" runat="server" Text="Login" OnClick="Button5_Click" /></asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+        
+
+        <div> <asp:Button ID="Button2" runat="server" Text="Ask a Question" OnClick="Button2_Click" /></div>
+        <div><asp:Button ID="Button3" runat="server" Text="Answer a Qusetion" OnClick="Button3_Click" /> </div>
+        
+        <asp:Table ID="Table2" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button6" runat="server" Text="Ask" OnClick="Button6_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        
+        <asp:Table ID="Table4" runat="server"></asp:Table>
+        
+        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:Table ID="Table3" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    Question No:
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    Answer:
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button7" runat="server" Text="Delete" OnClick="Button7_Click" />
+                </asp:TableCell>
+                <asp:TableCell>
+                     <asp:Button ID="Button8" runat="server" Text="Submit" OnClick="Button8_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        
+       
+
+
+        <div><asp:Button ID="Button4" runat="server" Text="Logout" OnClick="Button4_Click" /></div>
+        
+
+        
+        
+
+
         <br />
         <br />
         <br />
