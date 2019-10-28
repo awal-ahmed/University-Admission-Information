@@ -115,20 +115,21 @@ ul:after { clear: both; }
         <br />
          <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
+                <asp:TableCell>Filter By</asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button4" runat="server" Text="Show all" OnClick="Button_Click4" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:DropDownList ID="DropDownList4" runat="server" BackColor="#CCFFFF" Width="200" Height="30">
+                        <asp:ListItem>Venue</asp:ListItem>
+                        <asp:ListItem>Month</asp:ListItem>
+                        <asp:ListItem>Type</asp:ListItem>
+                    </asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button4" runat="server" Text="Apply" OnClick="Button_Click4" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
         
                 </asp:TableCell>
             </asp:TableRow>
          </asp:Table>>
-                    
-        <br />
-        <br />
-        <asp:GridView ID="GridView4" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
-       
-        <br />
-        <br />
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="0">
+         <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="0">
             <asp:TableRow>
                 <asp:TableCell>Search with month</asp:TableCell>
                 <asp:TableCell>
@@ -140,17 +141,7 @@ ul:after { clear: both; }
             </asp:TableRow>
 
         </asp:Table>
-        
-                
-            
-                
-        <br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
-        <br />
-        <br />
-        <br />
-        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+         <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
                 <asp:TableCell>Search with Venue</asp:TableCell>
                 <asp:TableCell>
@@ -162,17 +153,6 @@ ul:after { clear: both; }
             </asp:TableRow>
 
         </asp:Table>
-        
-                    
-                
-            
-                
-        <br />
-        <br />
-        <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
-        <br />
-        <br />
-        <br />
         <asp:Table ID="Table3" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
                 <asp:TableCell>Search with Program Type</asp:TableCell>
@@ -185,12 +165,22 @@ ul:after { clear: both; }
             </asp:TableRow>
 
         </asp:Table>
+                    
+        <br />
+        <br />
+        <asp:GridView ID="GridView4" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+
+       
         
-                
-            
-                
-        <br />
-        <br />
+
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+
+       
+
+        <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+
+        
+
         <asp:GridView ID="GridView3" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
         <br />
         <br />

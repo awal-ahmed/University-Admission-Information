@@ -20,8 +20,33 @@ namespace demoUniversity
                 connect.Close();
             }
             connect.Open();
+            Table1.Visible = false;
+            Table2.Visible = false;
+            Table3.Visible = false;
             Response.Write("Successful");
-
+            {
+                Response.Clear();
+                if (true)
+                {
+                    SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news order by Start_Date", connect);
+                    cmd5.ExecuteNonQuery();
+                    SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
+                    DataSet ds5 = new DataSet();
+                    da5.Fill(ds5);
+                    int ii = ds5.Tables[0].Rows.Count;
+                    if (ii > 0)
+                    {
+                        GridView4.DataSource = (ds5);
+                        GridView4.DataBind();
+                    }
+                    else
+                    {
+                        Response.Clear();
+                        Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Information Not Found');</script>");
+                        Response.Write("Information Not Found");
+                    }
+                }
+            }
 
            if (!IsPostBack)
             {
@@ -96,6 +121,11 @@ namespace demoUniversity
                 {
                     GridView1.DataSource = (ds5);
                     GridView1.DataBind();
+                    GridView4.Visible = false;
+                    GridView3.Visible = false;
+                    GridView2.Visible = false;
+                    GridView1.Visible = true;
+                    Table1.Visible = true;
                 }
                 else
                 {
@@ -123,6 +153,11 @@ namespace demoUniversity
                 {
                     GridView2.DataSource = (ds5);
                     GridView2.DataBind();
+                    GridView4.Visible = false;
+                    GridView3.Visible = false;
+                    GridView2.Visible = true;
+                    GridView1.Visible = false;
+                    Table2.Visible = true;
                 }
                 else
                 {
@@ -150,6 +185,11 @@ namespace demoUniversity
                 {
                     GridView3.DataSource = (ds5);
                     GridView3.DataBind();
+                    GridView4.Visible = false;
+                    GridView3.Visible = true;
+                    GridView2.Visible = false;
+                    GridView1.Visible = false;
+                    Table3.Visible = true;
                 }
                 else
                 {
@@ -165,7 +205,7 @@ namespace demoUniversity
             Response.Clear();
             if (true)
             {
-                SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news order by Start_Date", connect);
+                /*SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news order by Start_Date", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();
@@ -181,6 +221,37 @@ namespace demoUniversity
                     Response.Clear();
                     Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Information Not Found');</script>");
                     Response.Write("Information Not Found");
+                }*/
+                if (DropDownList4.SelectedItem.Text.ToString().ToLower() == "month")
+                {
+                    Table1.Visible = true;
+                    Table2.Visible = false;
+                    Table3.Visible = false;
+                    GridView4.Visible = true;
+                    GridView3.Visible = false;
+                    GridView2.Visible = false;
+                    GridView1.Visible = false;
+                    
+                }
+                else if (DropDownList4.SelectedItem.Text.ToString().ToLower() == "type")
+                {
+                    Table1.Visible = false;
+                    Table2.Visible = false;
+                    Table3.Visible = true;
+                    GridView4.Visible = true;
+                    GridView3.Visible = false;
+                    GridView2.Visible = false;
+                    GridView1.Visible = false;
+                }
+                else
+                {
+                    Table1.Visible = false;
+                    Table2.Visible = true;
+                    Table3.Visible = false;
+                    GridView4.Visible = true;
+                    GridView3.Visible = false;
+                    GridView2.Visible = false;
+                    GridView1.Visible = false;
                 }
             }
         }
