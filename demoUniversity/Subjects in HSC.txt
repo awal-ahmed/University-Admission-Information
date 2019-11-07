@@ -1,0 +1,75 @@
+Compulsory
+1. Bangla(Compulsary) 1st Part – 101
+2. Bangla(Compulsary) 2nd Part – 102
+3. English(Compulsary) 1st Part – 107
+4. English(Compulsary) 2nd Part – 108
+5. Information and Communication Technology(Compulsary) – 275
+
+Science
+01. Physics(Compulsary) 1st Part – 174
+02. Physics(Compulsary) 2nd Part – 175
+03. Chemistry(Compulsary) 1st Part – 176
+04. Chemistry(Compulsary) 2nd Part – 177
+05. Biology(Compulsary) 1st Part – 178
+06. Biology(Compulsary) 2nd Part – 179
+07. Higher Mathematics(Compulsary) 1st Part – 265
+08. Higher Mathematics(Compulsary) 2nd Part – 266
+09. Psychology(Optional) 1st Part – 123
+10. Psychology(Optional) 2nd Part – 124
+11. Geography(Optional) 1st Part – 125
+12. Geography(Optional) 2nd Part – 126
+13. Statics(Optional) 1st Part – 129
+14. Statics(Optional) 2nd Part – 130
+15. Eng Draw & Work Prac(Optional) 1st Part – 222
+16. Eng Draw & Work Prac(Optional) 2nd Part – 182
+17. Eng Draw & Work Prac(Optional) 3rd Part – 183
+
+Business Studies
+01. Accounting(Compulsary) 1st Part – 253
+02. Accounting(Compulsary) 2nd Part – 254
+03. Business Organization and Management(Compulsary) 1st Part – 277
+04. Business Organization and Management(Compulsary) 2nd Part – 278
+05. Economics(Compulsary) 1st Part – 109
+06. Economics(Compulsary) 2nd Part – 110
+07. Finance, Banking, and Insurance(Compulsary) 1st Part – 292
+08. Finance, Banking, and Insurance(Compulsary) 1st Part – 293
+
+Humanities 
+01. Logic(Compulsary) 1st Part – 121
+02. Logic(Compulsary) 2nd Part – 122
+03. Economics(Compulsary) 1st Part – 109
+04. Economics(Compulsary) 2nd Part – 110
+05. Sociology(Compulsary) 1st Part – 117
+06. Sociology(Compulsary) 2nd Part – 118
+07. Geography(Compulsary) 1st Part – 125
+08. Geography(Compulsary) 2nd Part – 126
+09. Islamic History & Culture(Compulsary) 1st Part – 267
+10. Islamic History & Culture(Compulsary) 2nd Part – 268
+11. Civic & Good Governance(Compulsary) 1st Part – 269
+12. Civic & Good Governance(Compulsary) 2nd Part – 270
+13. Social Work(Compulsary) 1st Part – 271
+14. Social Work(Compulsary) 2nd Part – 272
+15. History(Compulsary) 1st Part – 304
+16. History(Compulsary) 2nd Part – 305
+17. Logic(Optional) 1st Part – 121
+18. Logic(Optional) 2nd Part – 122
+19. Economics(Optional) 1st Part – 109
+20. Economics(Optional) 2nd Part – 110
+21. Sociology(Optional) 1st Part – 117
+22. Sociology(Optional) 2nd Part – 118
+23. Geography(Optional) 1st Part – 125
+24. Geography(Optional) 2nd Part – 126
+25. Islamic History & Culture(Optional) 1st Part – 267
+26. Islamic History & Culture(Optional) 2nd Part – 268
+27. Civic & Good Governance(Optional) 1st Part – 269
+28. Civic & Good Governance(Optional) 2nd Part – 270
+29. Social Work(Optional) 1st Part – 271
+30. Social Work(Optional) 2nd Part – 272
+31. History(Optional) 1st Part – 304
+32. History(Optional) 2nd Part – 305
+
+
+Roll No(6digit)Name(full name)Board(name)Father's Name(full name)GroupSCIENCE/Business Studies/ Humanities Mother's Name(full name)TypeREGULARDate of Birth(Month-date-year)ResultPASSED/FAILEDInstituteFull school nameGPA(number)
+Total (62+11)=73 Column
+
+
