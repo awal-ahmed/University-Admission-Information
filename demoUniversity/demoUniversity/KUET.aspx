@@ -4,8 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Home</title>
+     <title>KUET</title>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <style>
+        .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
         .foot{
             position:static;
             bottom:-5em;
@@ -37,7 +47,7 @@ ul li a {
   white-space: nowrap;
   color: #fff;
 }
-ul li a:hover { background: gray; }
+ul li a:hover { background: gray;  text-decoration:none; color: white}
 li:hover > ul {
   display: block;
   position: absolute;
@@ -115,8 +125,70 @@ ul:after { clear: both; }
         <asp:Table ID="Table3" runat="server" Width="1359px" CellSpacing="10">
             <asp:TableRow>
                 <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Khulna University of Engineering & Technology (KUET) is one of the leading public universities of Bangladesh giving special emphasis in the Engineering and Technological Education and research. KUET is well known for offering very high quality educational, research and developmental programs in the major disciplines of engineering as well as basic sciences. It has a sober objective to achieve excellence in quality education, research and progression to address the present needs of the country as well as the South-Western region to make it as the "Center of Excellence".</asp:TableCell>
-                <asp:TableCell Width="450px"><asp:Image runat="server" ImageUrl="~/Images/KUETHome.jpg" Width="450" Height="300"></asp:Image></asp:TableCell>
-                <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Khulna University of Engineering & Technology (KUET), Bangladesh established in 1967 as Khulna Engineering College, starts its long cherished journey in 3 June, 1974 after receiving special direction from the Father of the Nation Bangabandhu Sheikh Mujibur Rahman. Later to ensure the better academic and research capabilities and environment, it is converted to an autonomous institute called Bangladesh Institute of Technology (BIT), Khulna in July 1986. To meet the demands of the days in the academic and research arena, the institute was upgraded and renamed as Khulna University of Engineering & Technology (KUET) in September 2003.</asp:TableCell>
+                <asp:TableCell Width="450px" Height="300px">
+
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                            <li data-target="#demo" data-slide-to="3"></li>
+                            <li data-target="#demo" data-slide-to="4"></li>
+                          </ol>
+
+                          <!-- The slideshow -->
+                          <div class="carousel-inner" style="text-align:center">
+                            <div class="carousel-item active">
+                              <img src="kuetpic/Durbarbangla.jpg" alt="Durbar"/>
+                                <div class="carousel-caption">
+                                    <h3>Durbar Bangle</h3>
+                                    <p>It is in the center of kuet</p>
+                                  </div>
+                            </div>
+                            <div class="carousel-item">
+                              <img src="kuetpic/Swc.jpg" alt="S.W.C" />
+                                <div class="carousel-caption">
+                                    <h3>S.W.C.</h3>
+                                    <p>Student Welfare Center</p>
+                                  </div>
+                            </div>
+                            <div class="carousel-item">
+                              <img src="kuetpic/swimimgpool.jpg" alt="Swimming Pool" />
+                                <div class="carousel-caption">
+                                    <h3>Swimming Pool</h3>
+                                    <p>It is in the SWC</p>
+                                  </div>
+                            </div>
+                              <div class="carousel-item">
+                              <img src="kuetpic/hollywood.jpg" alt="KUET Hollywood" />
+                                  <div class="carousel-caption">
+                                    <h3>KUET Hollywood</h3>
+                                    <p>You can see it from the main road</p>
+                                  </div>
+                            </div>
+                              <div class="carousel-item">
+                              <img src="kuetpic/kuetmaigate.jpg" alt="New York" />
+                                  <div class="carousel-caption">
+                                    <h3>KUET Main Gate</h3>
+                                    <p>Your journey will start from here</p>
+                                  </div>
+                            </div>
+                          </div>
+
+                          <!-- Left and right controls -->
+                          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                          </a>
+                          <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                          </a>
+
+                        </div>
+
+                </asp:TableCell>
+        <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Khulna University of Engineering & Technology (KUET), Bangladesh established in 1967 as Khulna Engineering College, starts its long cherished journey in 3 June, 1974 after receiving special direction from the Father of the Nation Bangabandhu Sheikh Mujibur Rahman. Later to ensure the better academic and research capabilities and environment, it is converted to an autonomous institute called Bangladesh Institute of Technology (BIT), Khulna in July 1986. To meet the demands of the days in the academic and research arena, the institute was upgraded and renamed as Khulna University of Engineering & Technology (KUET) in September 2003.</asp:TableCell>
                 
             </asp:TableRow>
         </asp:Table>
@@ -209,7 +281,7 @@ ul:after { clear: both; }
         <br />
         <br />
         <div style=" text-align:center; font-size:30px; color:#006699"><p>Transportation</p></div> 
-        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="15px" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             
             <asp:TableRow>
                 <asp:TableCell>From</asp:TableCell>
@@ -218,17 +290,17 @@ ul:after { clear: both; }
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To KUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To KUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" Font-Overline="False" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />
         <br />
-        <asp:Table runat="server" CellSpacing="50"  ForeColor="#006699" CellPadding="-1" Width="1346px">
+        <asp:Table runat="server" CellSpacing="50"  ForeColor="#006699" CellPadding="20" Width="1346px">
             <asp:TableHeaderRow>
-                <asp:TableHeaderCell HorizontalAlign="Left">
+                <asp:TableHeaderCell HorizontalAlign="Left" VerticalAlign="Middle">
                     <asp:HyperLink runat="server" NavigateUrl="http://www.kuet.ac.bd/" ForeColor="#006699">KUET Website</asp:HyperLink>
                 </asp:TableHeaderCell>
-                <asp:TableHeaderCell HorizontalAlign="Right">
+                <asp:TableHeaderCell HorizontalAlign="Right" VerticalAlign="Middle">
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="#" ForeColor="#006699">Accomodation</asp:HyperLink>
                 </asp:TableHeaderCell>
             </asp:TableHeaderRow>
