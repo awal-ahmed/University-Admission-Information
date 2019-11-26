@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Notic.aspx.cs" Inherits="demoUniversity.Notic" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UniAdm.aspx.cs" Inherits="demoUniversity.UniAdm" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Home</title>
+    <title>University_Admin</title>
     <style>
         .foot{
             position:static;
@@ -108,27 +108,19 @@ ul:after { clear: both; }
    <br />
         <br />
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Noice</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Engineering University</div>
         </div>
         <br />
         <br />
+        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
         <br />
+        <asp:Label ID="Label1" runat="server" Text="Date"></asp:Label><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label2" runat="server" Text="University"></asp:Label><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label3" runat="server" Text="description"></asp:Label><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label4" runat="server" Text="Upload a file"></asp:Label><asp:FileUpload ID="FileUpload1" runat="server" /><br />
+        <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
 
-
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand1" CellPadding="5" HorizontalAlign="Center">
-            <Columns>
-                <asp:TemplateField HeaderText="File">
-                    <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("File") %>' CommandName="Download" Text='<%# Eval("File") %>'></asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                 <asp:BoundField DataField="Uname" HeaderText="University" />
-                <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:MM/dd/yyyy}" />
-                <asp:BoundField DataField="Det" HeaderText="Details" />
-            </Columns>
-        </asp:GridView>
-
-
+        <br />
         <br />
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />

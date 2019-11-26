@@ -284,6 +284,7 @@
     <Content Include="Global.asax" />
     <Content Include="TextFile1.txt" />
     <Content Include="Transport.aspx" />
+    <Content Include="UniAdm.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -469,8 +470,17 @@
     <Compile Include="Transport.aspx.designer.cs">
       <DependentUpon>Transport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UniAdm.aspx.cs">
+      <DependentUpon>UniAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UniAdm.aspx.designer.cs">
+      <DependentUpon>UniAdm.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="notic\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
