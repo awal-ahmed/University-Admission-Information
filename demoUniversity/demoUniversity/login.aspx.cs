@@ -26,6 +26,18 @@ namespace demoUniversity
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Clear();
+            if (email.Text.ToString() == "admin" && pword.Text.ToString() == "admin")
+            {
+                AddDataToSession();
+                if (Session["page"] == null)
+                    Response.Redirect("adprofile.aspx");
+                else
+                {
+                    String st = Session["page"].ToString();
+                    Session["page"] = null;
+                    Response.Redirect(st);
+                }
+            }
             SqlCommand cmd = new SqlCommand("select * from stud where reg = '" + email.Text + "'", connect);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds1 = new DataSet();
@@ -41,7 +53,14 @@ namespace demoUniversity
                 if (j > 0)
                 {
                     AddDataToSession();
-                    Response.Redirect("profile.aspx");
+                    if (Session["page"] == null)
+                        Response.Redirect("profile.aspx");
+                    else
+                    {
+                        String st = Session["page"].ToString();
+                        Session["page"] = null;
+                        Response.Redirect(st);
+                    }
 
                 }
                 else Response.Write("<div style='background-color:green ;color:red;font-size:20px'> Invalid Password</div>");
@@ -56,7 +75,8 @@ namespace demoUniversity
         {
             Session.Add("reg", email.Text);
             Session.Add("pword", pword.Text);
-            Session.Timeout = 2;
+            //Session.Timeout = 2;
+            Response.Write(email.Text);
             
 
         }

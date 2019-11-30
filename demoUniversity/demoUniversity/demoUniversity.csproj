@@ -130,6 +130,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Accumodation.aspx" />
     <Content Include="addstud.aspx" />
+    <Content Include="adprofile.aspx" />
     <Content Include="AgPg.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -312,6 +313,13 @@
     </Compile>
     <Compile Include="addstud.aspx.designer.cs">
       <DependentUpon>addstud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adprofile.aspx.cs">
+      <DependentUpon>adprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adprofile.aspx.designer.cs">
+      <DependentUpon>adprofile.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgPg.aspx.cs">
       <DependentUpon>AgPg.aspx</DependentUpon>

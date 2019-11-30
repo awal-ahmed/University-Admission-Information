@@ -68,7 +68,12 @@ namespace demoUniversity
             {
                 Button1.Text = "Login";
             }
-            Button2.Visible = false;
+            if (Session["reg"] == "admin")
+            {
+                Button1.Text = "admin";
+            }
+            if(Session["reg"]==null) Button2.Visible = false;
+            Session["page"] = null;
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -107,7 +112,9 @@ namespace demoUniversity
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            if (Session["reg"] == null) Response.Redirect("login.aspx");
+            else if (Session["reg"].ToString() == "admin") Response.Redirect("adprofile.aspx");
+            else Response.Redirect("profile.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)

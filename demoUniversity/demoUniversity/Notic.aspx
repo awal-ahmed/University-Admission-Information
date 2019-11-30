@@ -115,7 +115,7 @@ ul:after { clear: both; }
         <br />
 
 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand1" CellPadding="5" HorizontalAlign="Center">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand1" CellPadding="5" HorizontalAlign="Center" BackColor="#D8B97A">
             <Columns>
                 <asp:TemplateField HeaderText="File">
                     <ItemTemplate>

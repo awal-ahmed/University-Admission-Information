@@ -23,34 +23,90 @@ namespace demoUniversity
             connect.Open();
             cons_table();
             Response.Write("Successful");
-            Button1.Visible = true;
+            //Button1.Visible = true;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = false;
+            //Table1.Visible = false;
+            //Button4.Visible = false;
             Table2.Visible = false;
             Table3.Visible = false;
+
+            if (Session["reg"] != null)
+            {
+                SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
+                SqlDataAdapter da = new SqlDataAdapter(cmds);
+                DataSet ds1 = new DataSet();
+                da.Fill(ds1);
+                int ij = ds1.Tables[0].Rows.Count;
+                if (ij > 0)
+                {
+                    SqlCommand cmd1 = new SqlCommand("select id from stud where reg = '" + Session["reg"].ToString() + "' and pass='" + Session["pword"].ToString() + "'", connect);
+                    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+                    DataSet ds2 = new DataSet();
+                    da1.Fill(ds2);
+                    int j = ds2.Tables[0].Rows.Count;
+                    if (j > 0)
+                    {
+                        bt1.Text = ds1.Tables[0].Rows[0][0].ToString();
+                        bt2.Visible = true;
+
+                    }
+                    else bt1.Text = "Login";
+
+                }
+                else bt1.Text = "Login";
+            }
+            else
+            {
+                bt1.Text = "Login";
+            }
+
+            if (Session["reg"] == null) bt2.Visible = false;
+            else if(Session["reg"].ToString() == "admin")
+            {
+                                bt1.Text = "admin";
+                Response.Write("Admin");
+            }
+            if (Session["reg"] == null)
+            {
+
+            }
+            else if (Session["reg"].ToString() == "admin")
+            {
+                //Button1.Visible = false;
+                Button3.Visible = true;
+                //Table1.Visible = false;
+                //Button4.Visible = true;
+            }
+            else
+            {
+                //Button1.Visible = false;
+                Button2.Visible = true;
+                //Table1.Visible = false;
+                //Button4.Visible = true;
+                //Table1.Visible = false;
+            }
             
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Button1.Visible = false;
+            //Button1.Visible = false;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = true;
-            Button4.Visible = false;
+            //Table1.Visible = true;
+            //Button4.Visible = false;
             cons_table();
             
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Button1.Visible = false;
+            //Button1.Visible = false;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = true;
+            //Table1.Visible = false;
+            //Button4.Visible = true;
             Table2.Visible = true;
             cons_table();
         }
@@ -70,11 +126,11 @@ namespace demoUniversity
                 GridView1.DataBind();
 
             }
-            Button1.Visible = false;
+            //Button1.Visible = false;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = true;
+            //Table1.Visible = false;
+            //Button4.Visible = true;
             Table2.Visible = false;
             Table3.Visible = true;
             GridView1.Visible = true;
@@ -84,11 +140,11 @@ namespace demoUniversity
         {
 
 
-            Button1.Visible = true;
+            //Button1.Visible = true;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = false;
+            //Table1.Visible = false;
+            //Button4.Visible = false;
             Table2.Visible = false;
             Table3.Visible = false;
             GridView1.Visible = false;
@@ -96,78 +152,21 @@ namespace demoUniversity
             Table5.Visible = true;
         }
 
-        protected void Button5_Click(object sender, EventArgs e)
-        {
-            {
-                Response.Clear();
-                SqlCommand cmd = new SqlCommand("select * from d2 where Id = '" + TextBox1.Text + "'", connect);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds1 = new DataSet();
-                da.Fill(ds1);
-                int i = ds1.Tables[0].Rows.Count;
-                if (i > 0)
-                {
-                    SqlCommand cmd1 = new SqlCommand("select Id from d2 where Id = '" + TextBox1.Text + "' and pass='" + TextBox2.Text + "'", connect);
-                    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
-                    DataSet ds2 = new DataSet();
-                    da1.Fill(ds2);
-                    int j = ds2.Tables[0].Rows.Count;
-                    if (j > 0)
-                    {
 
-                        Button1.Visible = false;
-                        Button3.Visible = true;
-                        Table1.Visible = false;
-                        Button4.Visible = true;
-
-                    }
-                    else Response.Write("<div style='background-color:green ;color:red;font-size:20px'> Invalid Password</div>");
-                }
-            }
-
-
-            {
-                Response.Clear();
-                SqlCommand cmd = new SqlCommand("select * from d1 where reg = '" + TextBox1.Text + "'", connect);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds1 = new DataSet();
-                da.Fill(ds1);
-                int i = ds1.Tables[0].Rows.Count;
-                if (i > 0)
-                {
-                    SqlCommand cmd1 = new SqlCommand("select reg from d1 where reg = '" + TextBox1.Text + "' and roll='" + TextBox2.Text + "'", connect);
-                    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
-                    DataSet ds2 = new DataSet();
-                    da1.Fill(ds2);
-                    int j = ds2.Tables[0].Rows.Count;
-                    if (j > 0)
-                    {
-
-                        Button1.Visible = false;
-                        Button2.Visible = true;
-                        Table1.Visible = false;
-                        Button4.Visible = true;
-                        Table1.Visible = false;
-
-                    }
-                    else Response.Write("<div style='background-color:green ;color:red;font-size:20px'> Invalid Password</div>");
-                }
-            }
-
-        }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
             SqlCommand cmd4 = connect.CreateCommand();
             cmd4.CommandType = CommandType.Text;
             cmd4.CommandText = "insert into faq(q) values ('" + TextBox3.Text + "')";
-            cmd4.ExecuteNonQuery();
+            if (TextBox3.Text.ToString() != "") cmd4.ExecuteNonQuery();
+            else Response.Write("Empty Question\n");
 
-            Button1.Visible = false;
+            //Button1.Visible = false;
             Button2.Visible = true;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = true;
+            //Table1.Visible = false;
+            //Button4.Visible = true;
             cons_table();
             Table2.Visible = false;
         }
@@ -202,11 +201,11 @@ namespace demoUniversity
                 GridView1.DataBind();
 
             }
-            Button1.Visible = false;
+           // Button1.Visible = false;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = true;
+            //Table1.Visible = false;
+            //Button4.Visible = true;
             Table2.Visible = false;
             Table3.Visible = true;
             GridView1.Visible = true;
@@ -242,11 +241,11 @@ namespace demoUniversity
                 GridView1.DataBind();
 
             }
-            Button1.Visible = false;
+            //Button1.Visible = false;
             Button2.Visible = false;
             Button3.Visible = false;
-            Table1.Visible = false;
-            Button4.Visible = true;
+            //Table1.Visible = false;
+            //Button4.Visible = true;
             Table2.Visible = false;
             Table3.Visible = true;
             GridView1.Visible = true;
@@ -296,6 +295,32 @@ namespace demoUniversity
             }
             // Loop through rows
 
+        }
+
+        protected void Bt2_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            bt2.Visible = false;
+            bt1.Text = "Login";
+                       // Button1.Visible = true;
+            Button2.Visible = false;
+            Button3.Visible = false;
+           // Table1.Visible = false;
+           // Button4.Visible = false;
+            Table2.Visible = false;
+            Table3.Visible = false;
+            GridView1.Visible = false;
+            cons_table();
+            Table5.Visible = true;
+        }
+
+        protected void bt1_Click(object sender, EventArgs e)
+        {
+            Session.Add("page", "FAQ.aspx");
+
+            if (Session["reg"] == null) Response.Redirect("login.aspx");
+            else if (Session["reg"].ToString() == "admin") Response.Redirect("adprofile.aspx");
+            else Response.Redirect("profile.aspx");
         }
     }
 }

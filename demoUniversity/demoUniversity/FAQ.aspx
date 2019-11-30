@@ -64,8 +64,26 @@ ul:after { clear: both; }
 		<div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-    <br />
-    <br />
+       
+            <br />
+           
+        <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
+            <asp:TableRow  >
+                <asp:TableCell><asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                   
+                
+         
+                                      </asp:TableCell>
+                <asp:TableCell>
+                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+               </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <br />
+        <br />
+        <br />
+            
+ 
    <ul class="main-navigation">
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
@@ -112,46 +130,38 @@ ul:after { clear: both; }
                 
             </div>
         </div>
-        <asp:Table ID="Table5" runat="server" Caption="Preveously Asked Questions" CaptionAlign="Top" HorizontalAlign="Center"></asp:Table>
-        <div> <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" /> </div>
+        <br />
+        <br />
+        <div style="text-align:center; font-size:25pt; font-weight: bold;">Preveously Asked Questions</div>
+        <br />
+        <asp:Table ID="Table5" runat="server"  CaptionAlign="Top" HorizontalAlign="Center" Font-Size="25px"></asp:Table>
+        <div> </div>
 
-        <asp:Table ID="Table1" runat="server" Visible="False">
-            <asp:TableFooterRow>
-                
-                
-                <asp:TableCell>Id:</asp:TableCell>
-                <asp:TableCell><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableFooterRow>
-            <asp:TableFooterRow>
-                
-                <asp:TableCell>Password:</asp:TableCell>
-                <asp:TableCell><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableFooterRow>
-            <asp:TableRow>
-                <asp:TableCell><asp:Button ID="Button5" runat="server" Text="Login" OnClick="Button5_Click" /></asp:TableCell>
-            </asp:TableRow>
-
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="25px">
+            <asp:TableHeaderRow>
+                <asp:TableCell>
+                    <div> <asp:Button ID="Button2" runat="server" Text="Ask a Question" OnClick="Button2_Click" BackColor="Lime" Font-Size="25px" /></div>
+        <div><asp:Button ID="Button3" runat="server" Text="Answer a Qusetion" OnClick="Button3_Click" BackColor="Lime" Font-Size="25px" /> </div>
+                </asp:TableCell>
+            </asp:TableHeaderRow>
         </asp:Table>
+        <br />
         
-
-        <div> <asp:Button ID="Button2" runat="server" Text="Ask a Question" OnClick="Button2_Click" /></div>
-        <div><asp:Button ID="Button3" runat="server" Text="Answer a Qusetion" OnClick="Button3_Click" /> </div>
-        
-        <asp:Table ID="Table2" runat="server">
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="25px">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server"  Height="25px" Width="400px"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button6" runat="server" Text="Ask" OnClick="Button6_Click" />
+                    <asp:Button ID="Button6" runat="server" Text="Ask" OnClick="Button6_Click" BackColor="#333300" ForeColor="White" Font-Size="25px"/>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         
-        <asp:Table ID="Table4" runat="server"></asp:Table>
+        <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="25px"></asp:Table>
         
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-        <asp:Table ID="Table3" runat="server">
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" Font-Size="25px"></asp:GridView>
+        <asp:Table ID="Table3" runat="server" HorizontalAlign="Center" Font-Size="25px">
             <asp:TableRow>
                 <asp:TableCell>
                     Question No:
@@ -170,23 +180,13 @@ ul:after { clear: both; }
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Button ID="Button7" runat="server" Text="Delete" OnClick="Button7_Click" />
+                    <asp:Button ID="Button7" runat="server" Text="Delete" OnClick="Button7_Click" BackColor="Red" ForeColor="White" Font-Size="25px" />
                 </asp:TableCell>
                 <asp:TableCell>
-                     <asp:Button ID="Button8" runat="server" Text="Submit" OnClick="Button8_Click" />
+                     <asp:Button ID="Button8" runat="server" Text="Submit" OnClick="Button8_Click" BackColor="Green" ForeColor="White" Font-Size="25px"/>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        
-       
-
-
-        <div><asp:Button ID="Button4" runat="server" Text="Logout" OnClick="Button4_Click" /></div>
-        
-
-        
-        
-
 
         <br />
         <br />
