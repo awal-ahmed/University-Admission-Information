@@ -65,8 +65,20 @@ ul:after { clear: both; }
 		<div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-    <br />
-    <br />
+         <br />
+          <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
+            <asp:TableRow  >
+                <asp:TableCell>
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                </asp:TableCell>
+                <asp:TableCell>
+                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+               </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <br />
+        <br />
+        <br />
    <ul class="main-navigation">
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
@@ -114,9 +126,24 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <div style="margin-left:300px"><asp:Button ID="Button1" runat="server" Text="Add a new news" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
-        <asp:Button ID="Button2" runat="server" Text="Add a new way to go to your university" OnClick="Button2_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
-        <asp:Button ID="Button3" runat="server" Text="Add a place to stay in your city" OnClick="Button3_Click" BackColor="Teal" ForeColor="White" Font-Size="15" /></div>
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" Text="Add a new news" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Add a new way to go to your university" OnClick="Button2_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button3" runat="server" Text="Add a place to stay in your city" OnClick="Button3_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button7" runat="server" Text="Add a new student" OnClick="Button7_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        
+        
         <br />
         <br />
         <div style="margin-left:550px"><asp:Label ID="Label15" runat="server" Text="Add a new news" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>

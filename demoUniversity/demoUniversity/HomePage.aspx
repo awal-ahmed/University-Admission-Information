@@ -62,13 +62,12 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:1350px; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:100%">University Admission Information</div>
         </div>
         
-            <br />
-           
-        <asp:Table ID="Table2" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow  >
+         <br />
+         <asp:Table  ID="Table2" runat="server" HorizontalAlign="Right"   CellPadding="5">
+            <asp:TableRow >
                 <asp:TableCell>
                         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" />
                 </asp:TableCell>

@@ -20,6 +20,43 @@ namespace demoUniversity
                 connect.Close();
             }
             connect.Open();
+            Response.Write("Successful");
+            if (Session["reg"] != null)
+            {
+                SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
+                SqlDataAdapter da = new SqlDataAdapter(cmds);
+                DataSet ds1 = new DataSet();
+                da.Fill(ds1);
+                int ij = ds1.Tables[0].Rows.Count;
+                if (ij > 0)
+                {
+                    SqlCommand cmd1 = new SqlCommand("select id from stud where reg = '" + Session["reg"].ToString() + "' and pass='" + Session["pword"].ToString() + "'", connect);
+                    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+                    DataSet ds2 = new DataSet();
+                    da1.Fill(ds2);
+                    int j = ds2.Tables[0].Rows.Count;
+                    if (j > 0)
+                    {
+                        bt1.Text = ds1.Tables[0].Rows[0][0].ToString();
+                        bt2.Visible = true;
+
+                    }
+                    else bt1.Text = "Login";
+
+                }
+                else bt1.Text = "Login";
+            }
+            else
+            {
+                bt1.Text = "Login";
+            }
+
+            if (Session["reg"] == null) bt2.Visible = false;
+            else if (Session["reg"].ToString() == "admin")
+            {
+                bt1.Text = "admin";
+                Response.Write("Admin");
+            }
            // cons_table();
             Response.Write("Successful");
             Table2.Visible = false;
@@ -73,6 +110,21 @@ namespace demoUniversity
                 cmd4.CommandText = "insert into stud(reg,roll,pass,name,sub1,mark1,sub2,mark2,sub3,mark3,sub4,mark4,sub5,mark5,sub6,mark6,sub7,mark7,opt,ssc,dept) values ('" + TextBox18.Text + "','" + TextBox19.Text + "','" + TextBox19.Text + "','" + TextBox20.Text + "','" + DropDownList3.SelectedItem.ToString() + "','" + TextBox8.Text + "','" + DropDownList11.SelectedItem.ToString() + "','" + TextBox9.Text + "','" + DropDownList12.SelectedItem.ToString() + "','" + TextBox10.Text + "','" + DropDownList13.SelectedItem.ToString() + "','" + TextBox11.Text + "','" + DropDownList14.SelectedItem.ToString() + "','" + TextBox12.Text + "','" + DropDownList15.SelectedItem.ToString() + "','" + TextBox13.Text + "','" + DropDownList16.SelectedItem.ToString() + "','" + TextBox14.Text + "','" + DropDownList17.SelectedItem.ToString() + "','" + TextBox21.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
                 cmd4.ExecuteNonQuery();
             }
+        }
+
+        protected void bt1_Click(object sender, EventArgs e)
+        {
+            Session.Add("page", null);
+            if (Session["reg"] == null) Response.Redirect("login.aspx");
+            else if (Session["reg"].ToString() == "admin") Response.Redirect("Edit.aspx");
+            else Response.Redirect("profile.aspx");
+        }
+
+        protected void Bt2_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            bt2.Visible = false;
+            bt1.Text = "Login";
         }
     }
 }

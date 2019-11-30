@@ -30,7 +30,7 @@ namespace demoUniversity
             {
                 AddDataToSession();
                 if (Session["page"] == null)
-                    Response.Redirect("adprofile.aspx");
+                    Response.Redirect("Edit.aspx");
                 else
                 {
                     String st = Session["page"].ToString();
