@@ -39,6 +39,36 @@ namespace demoUniversity
                 
 
             }
+            if (Session["reg"] != null)
+            {
+                SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
+                SqlDataAdapter da = new SqlDataAdapter(cmds);
+                DataSet ds1 = new DataSet();
+                da.Fill(ds1);
+                int ij = ds1.Tables[0].Rows.Count;
+                if (ij > 0)
+                {
+                    SqlCommand cmd1 = new SqlCommand("select id from stud where reg = '" + Session["reg"].ToString() + "' and pass='" + Session["pword"].ToString() + "'", connect);
+                    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+                    DataSet ds2 = new DataSet();
+                    da1.Fill(ds2);
+                    int j = ds2.Tables[0].Rows.Count;
+                    if (j > 0)
+                    {
+                        Button1.Text = ds1.Tables[0].Rows[0][0].ToString();
+                        Button2.Visible = true;
+
+                    }
+                    else Button1.Text = "Login";
+
+                }
+                else Button1.Text = "Login";
+            }
+            else
+            {
+                Button1.Text = "Login";
+            }
+            Button2.Visible = false;
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -73,6 +103,18 @@ namespace demoUniversity
                 //Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Page is not available right now');</script>");
                 Response.Write("Page is not available right now");
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Button2.Visible = false;
+            Button1.Text = "Login";
         }
     }
 }

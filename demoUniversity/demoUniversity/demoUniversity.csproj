@@ -129,6 +129,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Accumodation.aspx" />
+    <Content Include="addstud.aspx" />
     <Content Include="AgPg.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
@@ -236,6 +237,7 @@
     <Content Include="kuetpic\kuetmaigate.jpg" />
     <Content Include="kuetpic\Swc.jpg" />
     <Content Include="kuetpic\swimimgpool.jpg" />
+    <Content Include="login.aspx" />
     <Content Include="News.aspx" />
     <Content Include="Notic.aspx" />
     <Content Include="packages.config" />
@@ -250,6 +252,7 @@
     <Content Include="js\bootstrap.js.map" />
     <Content Include="js\bootstrap.min.js.map" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="profile.aspx" />
     <Content Include="PuPg.aspx" />
     <Content Include="RUET.aspx" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -302,6 +305,13 @@
     </Compile>
     <Compile Include="Accumodation.aspx.designer.cs">
       <DependentUpon>Accumodation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addstud.aspx.cs">
+      <DependentUpon>addstud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addstud.aspx.designer.cs">
+      <DependentUpon>addstud.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgPg.aspx.cs">
       <DependentUpon>AgPg.aspx</DependentUpon>
@@ -427,6 +437,13 @@
     <Compile Include="KUET.aspx.designer.cs">
       <DependentUpon>KUET.aspx</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,6 +457,13 @@
     </Compile>
     <Compile Include="Notic.aspx.designer.cs">
       <DependentUpon>Notic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuPg.aspx.cs">

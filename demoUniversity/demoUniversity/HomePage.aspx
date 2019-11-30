@@ -104,6 +104,9 @@ ul:after { clear: both; }
         </ul>
     </li>
      <li><a href="#">About Us</a></li>
+       <li> <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" /></li>
+       <li>
+           <asp:Button ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" /></li>
    </ul>
 
         <br />
