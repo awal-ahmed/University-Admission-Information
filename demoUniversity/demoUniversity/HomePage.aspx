@@ -15,6 +15,7 @@
         }
        li {
         padding-left:17px;
+
         padding-right:17px;
     }
 ul {
@@ -126,12 +127,12 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Select University </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" BackColor="#CCFFFF" Font-Italic="True" Font-Size="15"></asp:DropDownList>
+                   <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" BackColor="#CCFFFF" Font-Italic="True" Font-Size="15" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell> <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/images.png" Height="25px" Width="30px" OnClick="ImageButton1_Click" /> </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        
+         
         <br />
         <br />
         

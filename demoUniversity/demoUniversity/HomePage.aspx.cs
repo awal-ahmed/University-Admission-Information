@@ -123,5 +123,37 @@ namespace demoUniversity
             Button2.Visible = false;
             Button1.Text = "Login";
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String st1 = DropDownList1.SelectedItem.Text.Trim().ToString();
+            Response.Write(st1.Length);
+            if (st1 == "BUET" || st1 == "Bangladesh University of Engineering & Technology".ToString())
+            {
+                Response.Redirect("BUET.aspx");
+            }
+            else if (DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "RUET".ToString() || DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "Rajshahi University of Engineering & Technology".ToString().ToLower())
+            {
+                Response.Redirect("RUET.aspx");
+            }
+            else if (DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "KUET".ToString().ToLower() || DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "Khulna University of Engineering & Technology".ToString().ToLower())
+            {
+                Response.Redirect("KUET.aspx");
+            }
+            else if (DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "CUET".ToString().ToLower() || DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "Chittagong University of Engineering & Technology".ToString().ToLower())
+            {
+                Response.Redirect("CUET.aspx");
+            }
+            else if (DropDownList1.SelectedItem.Text.ToString().ToLower() == "DU".ToString().ToLower().Trim() || DropDownList1.SelectedItem.Text.ToString().ToLower().Trim() == "Dhaka University".ToString().ToLower())
+            {
+                Response.Redirect("#");
+            }
+            else
+            {
+                Response.Clear();
+                //Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Page is not available right now');</script>");
+                Response.Write("Page is not available right now");
+            }
+        }
     }
 }
