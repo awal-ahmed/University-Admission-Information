@@ -208,6 +208,7 @@ namespace demoUniversity
             Session.Clear();
             bt2.Visible = false;
             bt1.Text = "Login";
+            Response.Redirect("HomePage.aspx");
         }
 
         protected void Button7_Click(object sender, EventArgs e)

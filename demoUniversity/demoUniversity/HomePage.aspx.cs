@@ -113,7 +113,7 @@ namespace demoUniversity
         protected void Button1_Click(object sender, EventArgs e)
         {
             if (Session["reg"] == null) Response.Redirect("login.aspx");
-            else if (Session["reg"].ToString() == "admin") Response.Redirect("adprofile.aspx");
+            else if (Session["reg"].ToString() == "admin") Response.Redirect("edit.aspx");
             else Response.Redirect("profile.aspx");
         }
 

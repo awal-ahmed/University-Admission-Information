@@ -72,7 +72,7 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
 
-       <div style="text-align:center; width:1350px; background-color:midnightblue">
+       <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
 
@@ -130,7 +130,7 @@ ul:after { clear: both; }
    </ul>
         <br />
         <br />
-        <div style="text-align:center; width:1350px;  background-color:#5784BE">
+        <div style="text-align:center; width:100%;  background-color:#5784BE">
             <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Khulna University of Engineering & Technology, Khulna</div>
         </div>
         <br />
