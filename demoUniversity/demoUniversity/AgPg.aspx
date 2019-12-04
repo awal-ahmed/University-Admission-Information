@@ -61,7 +61,7 @@ ul:after { clear: both; }
 </head>
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
-        <div style="text-align:center; width:1350px; background-color:midnightblue">
+        <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
          <br />
@@ -119,8 +119,8 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:35pt; color: #FFFFCC ; width:inherit">Agriculturial University</div>
+        <div style="text-align:center; width:100%;  background-color:#5784BE">
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Agriculturial University</div>
         </div>
         <br />
         <br />
