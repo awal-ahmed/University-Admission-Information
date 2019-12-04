@@ -165,5 +165,47 @@ namespace demoUniversity
             bt2.Visible = false;
             bt1.Text = "Login";
         }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (false)
+            {
+
+                Response.Clear();
+                //DropDownList1.Items.FindByValue(Session["place"].ToString()).Selected = false;
+                // DropDownList2.Items.FindByValue(Session["seluni"].ToString()).Selected = false;
+                //DropDownList1.AutoPostBack = false;
+                //Response.Write(DropDownList1.SelectedItem.Text);
+                //Response.Write(DropDownList2.SelectedItem.Text);
+                //DropDownList1.AutoPostBack = true;
+                if (false)
+                {
+                    tab1.Visible = true;
+                    Label3.Text = DropDownList1.SelectedItem.Text;
+                    Label4.Text = DropDownList2.SelectedItem.Text;
+                    SqlCommand cmd5 = new SqlCommand("select Fromp as Start, To_place as Destination, Type as Transport_Type, Time, Fare, Contact, Duration, Additional  from transport where Fromp='" + DropDownList1.SelectedItem.Text + "' and To_place='" + DropDownList2.SelectedItem.Text + "'", connect);
+                    cmd5.ExecuteNonQuery();
+                    SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
+                    DataSet ds5 = new DataSet();
+                    da5.Fill(ds5);
+                    int ii = ds5.Tables[0].Rows.Count;
+                    if (ii > 0)
+                    {
+                        GridView1.DataSource = (ds5);
+                        GridView1.DataBind();
+                    }
+                    else
+                    {
+                        Response.Clear();
+                        Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Information Not Found');</script>");
+                        Response.Write("Information Not Found");
+                    }
+
+
+
+                }
+            }
+        }
     }
 }

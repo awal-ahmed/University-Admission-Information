@@ -137,7 +137,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
                 <asp:TableCell>To</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200"  Height="30" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
@@ -145,6 +145,8 @@ ul:after { clear: both; }
             </asp:TableRow>
 
         </asp:Table>
+
+        
         <br />
         <br />
         <br />

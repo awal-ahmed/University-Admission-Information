@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="demoUniversity.profile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="apply.aspx.cs" Inherits="demoUniversity.apply" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <style>
+    <style>
         .foot{
             position:static;
             bottom:-5em;
@@ -13,7 +13,6 @@
             text-align:center;
    
         }
-
        li {
         padding-left:17px;
         padding-right:17px;
@@ -60,18 +59,22 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body>
     <form id="form1" runat="server">
-        <div style="text-align:center; width:1350px; background-color:midnightblue">
+    
+		<div style="text-align:center; width:1350px; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-
-        <br />
-          <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
+       
+            <br />
+           
+        <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  >
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" />
-                </asp:TableCell>
+                   
+                <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" />
+         
+                                      </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
                </asp:TableCell>
@@ -81,6 +84,8 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
+            
+ 
    <ul class="main-navigation">
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
@@ -119,75 +124,47 @@ ul:after { clear: both; }
     </li>
      <li><a href="#">About Us</a></li>
    </ul>
-
-                <br />
+   <br />
+   <br />
         <br />
-        <br />
-
         <div style="text-align:center; width:1350px;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Student Profile</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Apply
+                
+            </div>
         </div>
         <br />
         <br />
 
-        
-    <asp:Table ID="Table1" runat="server" HorizontalAlign="Center"></asp:Table>
+        <p style="color: red"> *Complete your payment first. To know details about payment procedure visit <a href ="Notic.aspx"> Notice</a> page. Use your transaction id here to continue your apply procedure. It may take time to update your transaction id on website.</p>
 
-        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
-                <asp:TableCell>Old Password</asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
-
-             <asp:TableRow>
-                <asp:TableCell>New Password</asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
-
-             <asp:TableRow>
-                <asp:TableCell>New Password</asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
-
-            <asp:TableRow>
-                <asp:TableCell> <asp:Button ID="Button1" runat="server" Text="Change Password" OnClick="Button1_Click"  BackColor="Green" /> </asp:TableCell>
-                
-            </asp:TableRow>
-            <asp:TableRow>
-               
-                    <asp:TableCell> <asp:Button ID="Button2" runat="server" Text="Apply To University" OnClick="Button2_Click" BackColor="Cyan" /> </asp:TableCell>
-                <asp:TableCell> </asp:TableCell>
-                
+                <asp:TableCell>
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem>Choose Payment Method</asp:ListItem>
+                        <asp:ListItem>bKash</asp:ListItem>
+                        <asp:ListItem>Rocket</asp:ListItem>
+                        <asp:ListItem>Surecash</asp:ListItem>
+                    </asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell>
+                    Transaction Id:
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Table ID="Table3" runat="server" HorizontalAlign="Center">
-            <asp:TableRow>
-                <asp:TableCell> <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/apply.aspx">Apply To Agriculture University</asp:HyperLink></asp:TableCell>
-                
-            </asp:TableRow>
 
-             <asp:TableRow>
-                <asp:TableCell> <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/apply.aspx">Apply To Engineering University</asp:HyperLink></asp:TableCell>
-                
-            </asp:TableRow>
-
-             <asp:TableRow>
-                <asp:TableCell> <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/apply.aspx">Apply To Public University</asp:HyperLink></asp:TableCell>
-                
-            </asp:TableRow>
-
-            
-        </asp:Table>
-
+        <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
         
-        <br />
-        <br />
          <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019
         </p> 
-        
-        
     </form>
 </body>
 </html>

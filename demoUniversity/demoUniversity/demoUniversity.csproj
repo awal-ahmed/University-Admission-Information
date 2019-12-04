@@ -132,6 +132,7 @@
     <Content Include="addstud.aspx" />
     <Content Include="adprofile.aspx" />
     <Content Include="AgPg.aspx" />
+    <Content Include="apply.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
@@ -327,6 +328,13 @@
     </Compile>
     <Compile Include="AgPg.aspx.designer.cs">
       <DependentUpon>AgPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="apply.aspx.cs">
+      <DependentUpon>apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="apply.aspx.designer.cs">
+      <DependentUpon>apply.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />

@@ -68,7 +68,7 @@ namespace demoUniversity
             {
                 Button1.Text = "Login";
             }
-            if (Session["reg"] == "admin")
+            if (Session["reg"] !=null && Session["reg"].ToString() == "admin")
             {
                 Button1.Text = "admin";
             }
