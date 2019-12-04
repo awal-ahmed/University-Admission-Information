@@ -130,6 +130,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Accumodation.aspx" />
     <Content Include="addstud.aspx" />
+    <Content Include="addsub.aspx" />
     <Content Include="adprofile.aspx" />
     <Content Include="AgPg.aspx" />
     <Content Include="apply.aspx" />
@@ -314,6 +315,13 @@
     </Compile>
     <Compile Include="addstud.aspx.designer.cs">
       <DependentUpon>addstud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addsub.aspx.cs">
+      <DependentUpon>addsub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addsub.aspx.designer.cs">
+      <DependentUpon>addsub.aspx</DependentUpon>
     </Compile>
     <Compile Include="adprofile.aspx.cs">
       <DependentUpon>adprofile.aspx</DependentUpon>

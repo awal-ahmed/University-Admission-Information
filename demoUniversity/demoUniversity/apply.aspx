@@ -160,6 +160,116 @@ ul:after { clear: both; }
         </asp:Table>
 
         <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
+
+        <asp:Table ID="Table2" runat="server" BorderWidth="2px" BorderColor="Green" CellPadding="2" CellSpacing="2">
+            <asp:TableRow>
+                <asp:TableCell>Action</asp:TableCell>
+                <asp:TableCell>University</asp:TableCell>
+                <asp:TableCell>Subject</asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Select" BackColor="Green" OnClick="Button2_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button3" runat="server" Text="Select" BackColor="Green" OnClick="Button3_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button4" runat="server" Text="Select" BackColor="Green" OnClick="Button4_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button5" runat="server" Text="Select" BackColor="Green" OnClick="Button5_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                     <asp:Button ID="Button6" runat="server" Text="Select" BackColor="Green" OnClick="Button6_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button7" runat="server" Text="Select" BackColor="Green" OnClick="Button7_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                     <asp:Button ID="Button8" runat="server" Text="Select" BackColor="Green" OnClick="Button8_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button9" runat="server" Text="Button" OnClick="Button9_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <asp:Table ID="Table3" runat="server">
+                        <asp:TableRow>
+                <asp:TableCell>
+                    
+        <asp:Button ID="Button10" runat="server" Text="Button" OnClick="Button10_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button11" runat="server" Text="Button" OnClick="Button11_Click" />
+       
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button38" runat="server" Text="Button" OnClick="Button11_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    
+        <asp:Button ID="Button39" runat="server" Text="Button" OnClick="Button12_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button13" runat="server" Text="Button" OnClick="Button13_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button14" runat="server" Text="Button" OnClick="Button14_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    
+        <asp:Button ID="Button15" runat="server" Text="Button" OnClick="Button15_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    
+        <asp:Button ID="Button16" runat="server" Text="Button" OnClick="Button16_Click" /> <asp:Button ID="Button17" runat="server" Text="Button" OnClick="Button16_Click" />
+
+        <asp:Button ID="Button18" runat="server" Text="Button" OnClick="Button17_Click" /><asp:Button ID="Button19" runat="server" Text="Button" OnClick="Button18_Click" /><asp:Button ID="Button20" runat="server" Text="Button" OnClick="Button19_Click" /><asp:Button ID="Button21" runat="server" Text="Button" OnClick="Button20_Click" /><asp:Button ID="Button22" runat="server" Text="Button" OnClick="Button21_Click" /><asp:Button ID="Button23" runat="server" Text="Button" OnClick="Button22_Click" /><asp:Button ID="Button24" runat="server" Text="Button" OnClick="Button23_Click" /><asp:Button ID="Button25" runat="server" Text="Button" OnClick="Button24_Click" /><asp:Button ID="Button26" runat="server" Text="Button" OnClick="Button25_Click" /><asp:Button ID="Button27" runat="server" Text="Button" OnClick="Button26_Click" /><asp:Button ID="Button28" runat="server" Text="Button" OnClick="Button27_Click" />
+        <asp:Button ID="Button29" runat="server" Text="Button" OnClick="Button28_Click" /><asp:Button ID="Button30" runat="server" Text="Button" OnClick="Button29_Click" />
+        <asp:Button ID="Button31" runat="server" Text="Button" OnClick="Button30_Click" /><asp:Button ID="Button32" runat="server" Text="Button" OnClick="Button31_Click" />
+        <asp:Button ID="Button40" runat="server" Text="Button" OnClick="Button32_Click" />
+        <asp:Button ID="Button33" runat="server" Text="Button" OnClick="Button33_Click" /><asp:Button ID="Button34" runat="server" Text="Button" OnClick="Button34_Click" /><asp:Button ID="Button35" runat="server" Text="Button" OnClick="Button35_Click" />
+        <asp:Button ID="Button36" runat="server" Text="Button" OnClick="Button36_Click" /><asp:Button ID="Button37" runat="server" Text="Button" OnClick="Button37_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+
+        
+
+        
+
+        
+        
+       
         
          <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
