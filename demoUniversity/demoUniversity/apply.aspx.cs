@@ -12,61 +12,180 @@ namespace demoUniversity
     public partial class apply : System.Web.UI.Page
     {
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Projectdatabase.mdf;Integrated Security=True");
-
-    
-        protected void Page_Load(object sender, EventArgs e)
+        void bt_Click(object sender, EventArgs e)
         {
-            if (connect.State == ConnectionState.Open)
             {
-                connect.Close();
+                string uni, sub;
+                Button button = (Button)sender;
+                string row = button.CommandArgument;
+                int i = Convert.ToInt32(row);
+                String reg = Session["reg"].ToString();
+                {
+
+
+
+
+                    String sql = "select uni,sub from subli  except select uni,sub from subch  where reg = '" + reg + "'";
+                    using (SqlCommand command = new SqlCommand(sql, connect))
+                    {
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                        DataSet dataSet = new DataSet();
+                        dataAdapter.Fill(dataSet);
+                        uni = dataSet.Tables[0].Rows[i][0].ToString();
+                        sub = dataSet.Tables[0].Rows[i][1].ToString();
+                    }
+                }
+
+                SqlCommand cmd = connect.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into subch (uni,sub,reg) values('" + uni + "', '" + sub + "','" + reg + "')";
+                cmd.Connection.Open();
+
+                if (sub == "") Response.Write(i);
+                cmd.ExecuteNonQuery();
+                Response.Write(sub + uni);
             }
-            connect.Open();
-            Table3.Visible = false;
-            //Table2.Visible = false;
-            for (int i = 0; i < Table2.Rows.Count; i++)
+
             {
-                Table2.Rows[i].Visible = false;
+                create2();
             }
-            Response.Write("Successful");
-            //cons_table();
-            //Table3.Visible = false;
+
+
+        }
+        void btr_Click(object sender, EventArgs e)
+        {
+
+            Button button = (Button)sender;
+            string row = button.CommandArgument;
+            int i = Convert.ToInt32(row);
+            SqlCommand cmd = connect.CreateCommand();
+            String reg = Session["reg"].ToString();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete from subch where id = '" + i + "'and reg = '" + reg + "'";
+            cmd.Connection.Open();
+
+
+            cmd.ExecuteNonQuery();
+            create2();
+        }
+        void create2()
+        {
+            //
+            //Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
+            //Response.Clear();
+            Table3.Rows.Clear();
             if (Session["reg"] != null)
             {
-                SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
-                SqlDataAdapter da = new SqlDataAdapter(cmds);
-                DataSet ds1 = new DataSet();
-                da.Fill(ds1);
-                int ij = ds1.Tables[0].Rows.Count;
-                if (ij > 0)
+                String reg = Session["reg"].ToString();
+                String sql = "select uni,sub,id from subch  where reg = '" + reg + "'";
+                SqlCommand command = new SqlCommand(sql, connect);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet);
+                int j = dataSet.Tables[0].Rows.Count;
+                //Table5.Dispose = true;
+
+
+                for (int i = 0; i < j; i++)
                 {
-                    SqlCommand cmd1 = new SqlCommand("select id from stud where reg = '" + Session["reg"].ToString() + "' and pass='" + Session["pword"].ToString() + "'", connect);
-                    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
-                    DataSet ds2 = new DataSet();
-                    da1.Fill(ds2);
-                    int j = ds2.Tables[0].Rows.Count;
-                    if (j > 0)
+                    DataTable tables = dataSet.Tables[0];
+
+
                     {
-                        bt1.Text = ds1.Tables[0].Rows[0][0].ToString();
-                        bt2.Visible = true;
+                        TableRow row = new TableRow();
+
+                        TableCell cell = new TableCell();
+                        cell.Text = tables.Rows[i][0].ToString();
+                        int id = Convert.ToInt32(tables.Rows[i][2].ToString());
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = tables.Rows[i][1].ToString();
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.LightGreen;
+
+                        Button bt = new Button();
+                        bt.ID = "bt_" + i.ToString() + "_rmv";
+                        bt.CommandArgument = id.ToString();
+                        bt.Text = "Remove";
+                        bt.Click += new EventHandler(btr_Click);
+                        TableCell cellp = new TableCell();
+                        row.Cells.Add(cellp);
+                        row.Cells[2].Controls.Add(bt);
+                        Table3.Rows.Add(row);
+
+                        Response.Write(i);
+                    }
+
+
+                }
+            }
+            if (Session["create"] != null) create(); 
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
+                connect.Open();
+
+                //Table3.Visible = false;
+                //Table2.Visible = false;
+                for (int i = 0; i < Table2.Rows.Count; i++)
+                {
+                    Table2.Rows[i].Visible = false;
+                }
+                Response.Write("Successful Database");
+                //cons_table();
+                //Table3.Visible = false;
+                if (Session["reg"] != null)
+                {
+                    SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
+                    SqlDataAdapter da = new SqlDataAdapter(cmds);
+                    DataSet ds1 = new DataSet();
+                    da.Fill(ds1);
+                    int ij = ds1.Tables[0].Rows.Count;
+                    if (ij > 0)
+                    {
+                        SqlCommand cmd1 = new SqlCommand("select id from stud where reg = '" + Session["reg"].ToString() + "' and pass='" + Session["pword"].ToString() + "'", connect);
+                        SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+                        DataSet ds2 = new DataSet();
+                        da1.Fill(ds2);
+                        int j = ds2.Tables[0].Rows.Count;
+                        if (j > 0)
+                        {
+                            bt1.Text = ds1.Tables[0].Rows[0][0].ToString();
+                            bt2.Visible = true;
+
+                        }
+                        else bt1.Text = "Login";
 
                     }
                     else bt1.Text = "Login";
-
                 }
-                else bt1.Text = "Login";
-            }
-            else
-            {
-                bt1.Text = "Login";
-                Response.Redirect("Homepage.aspx");
-            }
+                else
+                {
+                    bt1.Text = "Login";
+                    Response.Redirect("Homepage.aspx");
+                }
 
-            if (Session["reg"] == null) bt2.Visible = false;
-            else if (Session["reg"].ToString() == "admin")
-            {
-                bt1.Text = "admin";
-                Response.Write("Admin");
+                if (Session["reg"] == null) bt2.Visible = false;
+                else if (Session["reg"].ToString() == "admin")
+                {
+                    bt1.Text = "admin";
+                    Response.Write("Admin");
+                }
+
+
+
+
+
             }
+            if (Session["create"] != null) create();
+            create2();
         }
 
         protected void bt1_Click(object sender, EventArgs e)
@@ -87,9 +206,26 @@ namespace demoUniversity
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Response.Write(DropDownList2.SelectedItem.Text);
+            if (DropDownList2.SelectedItem.Text != "Engineering")
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('This_Feature _Is_Currently_Available_For_Enginnering!');", true);
+                return;
+            }
             Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
-            Response.Clear();
+            
+            create();
+            Session.Add("create", "notnull");
+        }
+        void p_create()
+        {
 
+        }
+        void create()
+        {
+            //Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
+            //Response.Clear();
+            Table4.Rows.Clear();
             if (Session["reg"] != null)
             {
                 String reg = Session["reg"].ToString();
@@ -100,7 +236,7 @@ namespace demoUniversity
                 dataAdapter.Fill(dataSet);
                 int j = dataSet.Tables[0].Rows.Count;
                 //Table5.Dispose = true;
-                //Table1.Visible = false;
+
 
                 for (int i = 0; i < j; i++)
                 {
@@ -113,200 +249,30 @@ namespace demoUniversity
                         TableCell cell = new TableCell();
                         cell.Text = tables.Rows[i][0].ToString();
 
-                        Table2.Rows[i+1].Cells.Add(cell);
+                        row.Cells.Add(cell);
                         TableCell cell1 = new TableCell();
                         cell1.Text = tables.Rows[i][1].ToString();
-                        Table2.Rows[i+1].Cells.Add(cell1);
+                        row.Cells.Add(cell1);
                         row.BackColor = System.Drawing.Color.LightGreen;
 
-                        Table2.Rows[i+1].Visible = true;
+                        Button bt = new Button();
+                        bt.ID = "bt_" + i.ToString() + "_Del";
+                        bt.CommandArgument = i.ToString();
+                        bt.Text = "Choose";
+                        bt.Click += new EventHandler(bt_Click);
+                        TableCell cellp = new TableCell();
+                        row.Cells.Add(cellp);
+                        row.Cells[2].Controls.Add(bt);
+                        Table4.Rows.Add(row);
 
-                        
+
                     }
 
-                    
+
                 }
             }
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
 
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button37_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

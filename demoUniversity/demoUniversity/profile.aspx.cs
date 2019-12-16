@@ -262,7 +262,7 @@ namespace demoUniversity
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Table3.Visible = true;
+            Response.Redirect("apply.aspx");
         }
     }
 }
