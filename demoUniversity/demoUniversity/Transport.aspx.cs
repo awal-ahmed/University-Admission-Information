@@ -107,10 +107,24 @@ namespace demoUniversity
                     GridView1.DataBind();
 
                 }
+                SqlCommand cmd51 = new SqlCommand("select api from gmap where fromp='" + st1 + "' and to_p='" + st2 + "'", connect);
+                cmd51.ExecuteNonQuery();
+                SqlDataAdapter da51 = new SqlDataAdapter(cmd51);
+                DataSet ds51 = new DataSet();
+                da51.Fill(ds51);
+                int ii1 = ds51.Tables[0].Rows.Count;
+                if (ii1 > 0)
+                {
+                    string st = ds51.Tables[0].Rows[0][0].ToString();
+                    mymap.Attributes.Add("src", st);
+                }
+               
+
+                
 
                
             }
-           
+            
         }
         
 
@@ -144,6 +158,18 @@ namespace demoUniversity
                     Response.Clear();
                     Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Information Not Found');</script>");
                     Response.Write("Information Not Found");
+                }
+
+                SqlCommand cmd51 = new SqlCommand("select api from gmap where fromp='" + DropDownList1.SelectedItem.Text + "' and to_p='" + DropDownList2.SelectedItem.Text + "'", connect);
+                cmd51.ExecuteNonQuery();
+                SqlDataAdapter da51 = new SqlDataAdapter(cmd51);
+                DataSet ds51 = new DataSet();
+                da51.Fill(ds51);
+                int ii1 = ds51.Tables[0].Rows.Count;
+                if (ii1 > 0)
+                {
+                    string st = ds51.Tables[0].Rows[0][0].ToString();
+                    mymap.Attributes.Add("src", st);
                 }
 
 

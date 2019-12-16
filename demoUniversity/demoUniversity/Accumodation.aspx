@@ -151,6 +151,25 @@ ul:after { clear: both; }
         </asp:Table>
         <br />
         <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell >
+                    <iframe runat="server" id="mymap" ></iframe>
+                </asp:TableCell>
+                
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button3" runat="server" Text="Preveous" OnClick="Button3_Click" />
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Next" OnClick="Button2_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            
+        </asp:Table>
+        
+        <asp:GridView ID="GridView2" runat="server"></asp:GridView>
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019

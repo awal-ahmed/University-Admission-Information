@@ -162,12 +162,23 @@ ul:after { clear: both; }
             </asp:TableRow>
         </asp:Table>
         <br />
+        <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
         <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <iframe runat="server" id="mymap" ></iframe>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+         
+        
         <br />
         <br />
         <br />
         <p class="foot" style="font: 15px">
             Contact Us: support@universityadmission.com<br />
+            
             ©System Development Project 2019
         </p>
     </form>

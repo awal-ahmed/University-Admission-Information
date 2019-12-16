@@ -164,6 +164,18 @@ namespace demoUniversity
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "insert into transport (Fromp, To_place, Type, Time, Fare, Contact, Duration, Additional) values ('" + DropDownList2.Text + "','" + DropDownList3.Text + "','" + TextBox9.Text + "','" + TextBox10.Text + "'," + TextBox11.Text + ",'" + TextBox12.Text + "','" + TextBox13.Text + "','" + TextBox14.Text + "')";
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = "insert  into gmap (fromp, to_p, api) values ('" + DropDownList2.Text + "','" + DropDownList3.Text + "','" + TextBox7.Text + "')";
+                SqlCommand cmd51 = new SqlCommand("select api from gmap where fromp='" + DropDownList2.SelectedItem.Text + "' and to_p='" + DropDownList3.SelectedItem.Text + "'", connect);
+                cmd51.ExecuteNonQuery();
+                SqlDataAdapter da51 = new SqlDataAdapter(cmd51);
+                DataSet ds51 = new DataSet();
+                da51.Fill(ds51);
+                int ii1 = ds51.Tables[0].Rows.Count;
+                if (ii1 <= 0)
+                {
+                    cmd.ExecuteNonQuery();
+                    
+                }
 
             }
             else
@@ -183,7 +195,7 @@ namespace demoUniversity
                 Response.Write("Done");
                 SqlCommand cmd = connect.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into hotel (varsity, hotel, Adress, Contact) values ('" + DropDownList4.Text  + "','" + TextBox16.Text + "','" + TextBox17.Text + "','" + TextBox18.Text + "')";
+                cmd.CommandText = "insert into hotel (varsity, hotel, Adress, Contact,api) values ('" + DropDownList4.Text + "','" + TextBox16.Text + "','" + TextBox17.Text + "','" + TextBox18.Text + "','" + TextBox8.Text + "')";
                 cmd.ExecuteNonQuery();
 
             }

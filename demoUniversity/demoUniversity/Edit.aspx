@@ -275,6 +275,14 @@ ul:after { clear: both; }
                      <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                     <asp:Label ID="Label23" runat="server" Text="Map API: "></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                     <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
         <div style="margin-left:825px">
             <asp:Button ID="Button5" runat="server" Text="Done" OnClick="Button5_Click" BackColor="#006600" ForeColor="White" />
@@ -312,6 +320,14 @@ ul:after { clear: both; }
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="TextBox18" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label24" runat="server" Text="Map API"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>

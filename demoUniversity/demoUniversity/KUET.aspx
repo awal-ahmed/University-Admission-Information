@@ -293,7 +293,11 @@ ul:after { clear: both; }
         </asp:Table>
         <br />
         <br />
-        <div style=" text-align:center; font-size:30px; color:#006699"><p>Transportation</p></div> 
+        
+        <div style=" text-align:center; font-size:30px; color:#006699">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.4181345144325!2d89.5042995501795!3d22.8979433266477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9bd143bc2a97%3A0xc7be01c0002e6c00!2sKUET%20Main%20Gate!5e0!3m2!1sen!2sbd!4v1576496323358!5m2!1sen!2sbd" width="800" height="650" frameborder="0" style="border:0;" "></iframe>
+        <br />
+            <p>Transportation</p></div> 
         <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="15px" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             
             <asp:TableRow>
