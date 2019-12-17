@@ -95,20 +95,54 @@ namespace demoUniversity
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            
             if (DropDownList1.SelectedItem.ToString() == "Science")
             {
-                SqlCommand cmd4 = connect.CreateCommand();
-                cmd4.CommandType = CommandType.Text;
-                cmd4.CommandText = "insert into stud(reg,roll,pass,name,sub1,mark1,sub2,mark2,sub3,mark3,sub4,mark4,sub5,mark5,sub6,mark6,sub7,mark7,opt,ssc,dept) values ('" + TextBox15.Text + "','" + TextBox16.Text + "','" + TextBox16.Text + "','" + TextBox17.Text + "','" + DropDownList2.SelectedItem.ToString() + "','" + TextBox1.Text + "','" + DropDownList4.SelectedItem.ToString() + "','" + TextBox2.Text + "','" + DropDownList5.SelectedItem.ToString() + "','" + TextBox3.Text + "','" + DropDownList6.SelectedItem.ToString() + "','" + TextBox4.Text + "','" + DropDownList7.SelectedItem.ToString() + "','" + TextBox5.Text + "','" + DropDownList8.SelectedItem.ToString() + "','" + TextBox6.Text + "','" + DropDownList9.SelectedItem.ToString() + "','" + TextBox7.Text + "','" + DropDownList10.SelectedItem.ToString() + "','" + TextBox22.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
-                cmd4.ExecuteNonQuery();
+
+
+                    SqlCommand cmd5 = new SqlCommand("select * from stud where reg = '" + TextBox15.Text + "'", connect);
+                    cmd5.ExecuteNonQuery();
+                     SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
+                     DataSet ds5 = new DataSet();
+                     da5.Fill(ds5);
+                     int ii = ds5.Tables[0].Rows.Count;
+                if (ii > 0)
+            
+                {
+                    Response.Write("Student Already Added");
+            
+                }
+                else
+                {
+                    SqlCommand cmd4 = connect.CreateCommand();
+                    cmd4.CommandType = CommandType.Text;
+                    cmd4.CommandText = "insert into stud(reg,roll,pass,name,sub1,mark1,sub2,mark2,sub3,mark3,sub4,mark4,sub5,mark5,sub6,mark6,sub7,mark7,opt,ssc,dept) values ('" + TextBox15.Text + "','" + TextBox16.Text + "','" + TextBox16.Text + "','" + TextBox17.Text + "','" + DropDownList2.SelectedItem.ToString() + "','" + TextBox1.Text + "','" + DropDownList4.SelectedItem.ToString() + "','" + TextBox2.Text + "','" + DropDownList5.SelectedItem.ToString() + "','" + TextBox3.Text + "','" + DropDownList6.SelectedItem.ToString() + "','" + TextBox4.Text + "','" + DropDownList7.SelectedItem.ToString() + "','" + TextBox5.Text + "','" + DropDownList8.SelectedItem.ToString() + "','" + TextBox6.Text + "','" + DropDownList9.SelectedItem.ToString() + "','" + TextBox7.Text + "','" + DropDownList10.SelectedItem.ToString() + "','" + TextBox22.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
+                    cmd4.ExecuteNonQuery();
+                    Response.Redirect("addstud.aspx");
+                }
 
             }
             else
             {
-                SqlCommand cmd4 = connect.CreateCommand();
-                cmd4.CommandType = CommandType.Text;
-                cmd4.CommandText = "insert into stud(reg,roll,pass,name,sub1,mark1,sub2,mark2,sub3,mark3,sub4,mark4,sub5,mark5,sub6,mark6,sub7,mark7,opt,ssc,dept) values ('" + TextBox18.Text + "','" + TextBox19.Text + "','" + TextBox19.Text + "','" + TextBox20.Text + "','" + DropDownList3.SelectedItem.ToString() + "','" + TextBox8.Text + "','" + DropDownList11.SelectedItem.ToString() + "','" + TextBox9.Text + "','" + DropDownList12.SelectedItem.ToString() + "','" + TextBox10.Text + "','" + DropDownList13.SelectedItem.ToString() + "','" + TextBox11.Text + "','" + DropDownList14.SelectedItem.ToString() + "','" + TextBox12.Text + "','" + DropDownList15.SelectedItem.ToString() + "','" + TextBox13.Text + "','" + DropDownList16.SelectedItem.ToString() + "','" + TextBox14.Text + "','" + DropDownList17.SelectedItem.ToString() + "','" + TextBox21.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
-                cmd4.ExecuteNonQuery();
+                SqlCommand cmd5 = new SqlCommand("select * from stud where reg = '" + TextBox15.Text + "'", connect);
+                cmd5.ExecuteNonQuery();
+                SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
+                DataSet ds5 = new DataSet();
+                da5.Fill(ds5);
+                int ii = ds5.Tables[0].Rows.Count;
+                if (ii > 0)
+                {
+                    Response.Write("Student Already Added");
+
+                }
+                else
+                {
+                    SqlCommand cmd4 = connect.CreateCommand();
+                    cmd4.CommandType = CommandType.Text;
+                    cmd4.CommandText = "insert into stud(reg,roll,pass,name,sub1,mark1,sub2,mark2,sub3,mark3,sub4,mark4,sub5,mark5,sub6,mark6,sub7,mark7,opt,ssc,dept) values ('" + TextBox18.Text + "','" + TextBox19.Text + "','" + TextBox19.Text + "','" + TextBox20.Text + "','" + DropDownList3.SelectedItem.ToString() + "','" + TextBox8.Text + "','" + DropDownList11.SelectedItem.ToString() + "','" + TextBox9.Text + "','" + DropDownList12.SelectedItem.ToString() + "','" + TextBox10.Text + "','" + DropDownList13.SelectedItem.ToString() + "','" + TextBox11.Text + "','" + DropDownList14.SelectedItem.ToString() + "','" + TextBox12.Text + "','" + DropDownList15.SelectedItem.ToString() + "','" + TextBox13.Text + "','" + DropDownList16.SelectedItem.ToString() + "','" + TextBox14.Text + "','" + DropDownList17.SelectedItem.ToString() + "','" + TextBox21.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
+                    cmd4.ExecuteNonQuery();
+                    Response.Redirect("addstud.aspx");
+                }
             }
         }
 

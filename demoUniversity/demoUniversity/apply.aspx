@@ -144,6 +144,7 @@ ul:after { clear: both; }
                         <asp:ListItem>University Type</asp:ListItem>
                         <asp:ListItem>Agriculture</asp:ListItem>
                         <asp:ListItem>Engineering</asp:ListItem>
+                        <asp:ListItem>Science And Technology</asp:ListItem>
                         <asp:ListItem>Public</asp:ListItem>
                     </asp:DropDownList>
                 </asp:TableCell>
@@ -176,9 +177,31 @@ ul:after { clear: both; }
 
 
 
-        <asp:Table ID="Table4" runat="server"></asp:Table>
+        <asp:Table ID="Table4" runat="server" Caption="Available Subject" HorizontalAlign="Center" >
+            <asp:TableHeaderRow>
+                <asp:TableCell>
+                    University
+                </asp:TableCell>
+                <asp:TableCell>
+                    Subject
+                </asp:TableCell>
+                <asp:TableCell>
+                    Action
+                </asp:TableCell>
+            </asp:TableHeaderRow>
+        </asp:Table>
          <asp:Table ID="Table3" runat="server" Caption="Selected Subject" HorizontalAlign="Center">
-      
+                <asp:TableHeaderRow>
+                <asp:TableCell>
+                    University
+                </asp:TableCell>
+                <asp:TableCell>
+                    Subject
+                </asp:TableCell>
+                <asp:TableCell>
+                    Action
+                </asp:TableCell>
+            </asp:TableHeaderRow>
         </asp:Table>
 
         

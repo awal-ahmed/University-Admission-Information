@@ -14,40 +14,162 @@ namespace demoUniversity
         SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Projectdatabase.mdf;Integrated Security=True");
         void bt_Click(object sender, EventArgs e)
         {
+            if (Session["type"].ToString() == "Engineering")
             {
-                string uni, sub;
-                Button button = (Button)sender;
-                string row = button.CommandArgument;
-                int i = Convert.ToInt32(row);
-                String reg = Session["reg"].ToString();
                 {
-
-
-
-
-                    String sql = "select uni,sub from subli  except select uni,sub from subch  where reg = '" + reg + "'";
-                    using (SqlCommand command = new SqlCommand(sql, connect))
+                    string uni, sub;
+                    Button button = (Button)sender;
+                    string row = button.CommandArgument;
+                    int i = Convert.ToInt32(row);
+                    String reg = Session["reg"].ToString();
                     {
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                        DataSet dataSet = new DataSet();
-                        dataAdapter.Fill(dataSet);
-                        uni = dataSet.Tables[0].Rows[i][0].ToString();
-                        sub = dataSet.Tables[0].Rows[i][1].ToString();
+
+
+
+
+                        String sql = "select uni,sub from subli  except select uni,sub from subch  where reg = '" + reg + "'";
+                        using (SqlCommand command = new SqlCommand(sql, connect))
+                        {
+                            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                            DataSet dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet);
+                            uni = dataSet.Tables[0].Rows[i][0].ToString();
+                            sub = dataSet.Tables[0].Rows[i][1].ToString();
+                        }
                     }
+
+                    SqlCommand cmd = connect.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into subch (uni,sub,reg) values('" + uni + "', '" + sub + "','" + reg + "')";
+                    cmd.Connection.Open();
+
+                    if (sub == "") Response.Write(i);
+                    cmd.ExecuteNonQuery();
+                    Response.Write(sub + uni);
+                }
+                if (Session["type"] != null)
+                {
+                    create2();
+                }
+                else
+                {
+                    Table4.Visible = false;
+                    Table3.Visible = false;
+                }
+            }
+            else if (Session["type"] == "Agriculture")
+            {
+                {
+                    string uni, sub;
+                    Button button = (Button)sender;
+                    string row = button.CommandArgument;
+                    int i = Convert.ToInt32(row);
+                    String reg = Session["reg"].ToString();
+                    {
+
+
+
+
+                        String sql = "select uni,sub from agsubli  except select uni,sub from agsubch  where reg = '" + reg + "'";
+                        using (SqlCommand command = new SqlCommand(sql, connect))
+                        {
+                            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                            DataSet dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet);
+                            uni = dataSet.Tables[0].Rows[i][0].ToString();
+                            sub = dataSet.Tables[0].Rows[i][1].ToString();
+                        }
+                    }
+
+                    SqlCommand cmd = connect.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into agsubch (uni,sub,reg) values('" + uni + "', '" + sub + "','" + reg + "')";
+                    cmd.Connection.Open();
+
+                    if (sub == "") Response.Write(i);
+                    cmd.ExecuteNonQuery();
+                    Response.Write(sub + uni);
                 }
 
-                SqlCommand cmd = connect.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into subch (uni,sub,reg) values('" + uni + "', '" + sub + "','" + reg + "')";
-                cmd.Connection.Open();
-
-                if (sub == "") Response.Write(i);
-                cmd.ExecuteNonQuery();
-                Response.Write(sub + uni);
+                {
+                    create2();
+                }
             }
-
+            else if (Session["type"] == "Public")
             {
-                create2();
+                {
+                    string uni, sub;
+                    Button button = (Button)sender;
+                    string row = button.CommandArgument;
+                    int i = Convert.ToInt32(row);
+                    String reg = Session["reg"].ToString();
+                    {
+
+
+
+
+                        String sql = "select uni,sub from pbsubli  except select uni,sub from pbsubch  where reg = '" + reg + "'";
+                        using (SqlCommand command = new SqlCommand(sql, connect))
+                        {
+                            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                            DataSet dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet);
+                            uni = dataSet.Tables[0].Rows[i][0].ToString();
+                            sub = dataSet.Tables[0].Rows[i][1].ToString();
+                        }
+                    }
+
+                    SqlCommand cmd = connect.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into pbsubch (uni,sub,reg) values('" + uni + "', '" + sub + "','" + reg + "')";
+                    cmd.Connection.Open();
+
+                    if (sub == "") Response.Write(i);
+                    cmd.ExecuteNonQuery();
+                    Response.Write(sub + uni);
+                }
+
+                {
+                    create2();
+                }
+            }
+            else if (Session["type"] == "Science And Technology")
+            {
+                {
+                    string uni, sub;
+                    Button button = (Button)sender;
+                    string row = button.CommandArgument;
+                    int i = Convert.ToInt32(row);
+                    String reg = Session["reg"].ToString();
+                    {
+
+
+
+
+                        String sql = "select uni,sub from scsubli  except select uni,sub from scsubch  where reg = '" + reg + "'";
+                        using (SqlCommand command = new SqlCommand(sql, connect))
+                        {
+                            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                            DataSet dataSet = new DataSet();
+                            dataAdapter.Fill(dataSet);
+                            uni = dataSet.Tables[0].Rows[i][0].ToString();
+                            sub = dataSet.Tables[0].Rows[i][1].ToString();
+                        }
+                    }
+
+                    SqlCommand cmd = connect.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "insert into scsubch (uni,sub,reg) values('" + uni + "', '" + sub + "','" + reg + "')";
+                    cmd.Connection.Open();
+
+                    if (sub == "") Response.Write(i);
+                    cmd.ExecuteNonQuery();
+                    Response.Write(sub + uni);
+                }
+
+                {
+                    create2();
+                }
             }
 
 
@@ -55,71 +177,370 @@ namespace demoUniversity
         void btr_Click(object sender, EventArgs e)
         {
 
-            Button button = (Button)sender;
-            string row = button.CommandArgument;
-            int i = Convert.ToInt32(row);
-            SqlCommand cmd = connect.CreateCommand();
-            String reg = Session["reg"].ToString();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from subch where id = '" + i + "'and reg = '" + reg + "'";
-            cmd.Connection.Open();
+            if (Session["type"] == "Engineering")
+            {
+                Button button = (Button)sender;
+                string row = button.CommandArgument;
+                int i = Convert.ToInt32(row);
+                SqlCommand cmd = connect.CreateCommand();
+                String reg = Session["reg"].ToString();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from subch where id = '" + i + "'and reg = '" + reg + "'";
+                cmd.Connection.Open();
 
 
-            cmd.ExecuteNonQuery();
-            create2();
+                cmd.ExecuteNonQuery();
+                create2();
+            }
+            else if (Session["type"] == "Agriculture")
+            {
+                Button button = (Button)sender;
+                string row = button.CommandArgument;
+                int i = Convert.ToInt32(row);
+                SqlCommand cmd = connect.CreateCommand();
+                String reg = Session["reg"].ToString();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from agsubch where id = '" + i + "'and reg = '" + reg + "'";
+                cmd.Connection.Open();
+
+
+                cmd.ExecuteNonQuery();
+                create2();
+            }
+            else if (Session["type"] == "Public")
+            {
+                Button button = (Button)sender;
+                string row = button.CommandArgument;
+                int i = Convert.ToInt32(row);
+                SqlCommand cmd = connect.CreateCommand();
+                String reg = Session["reg"].ToString();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from pbsubch where id = '" + i + "'and reg = '" + reg + "'";
+                cmd.Connection.Open();
+
+
+                cmd.ExecuteNonQuery();
+                create2();
+            }
+            else if (Session["type"] == "Science And Technology")
+            {
+                Button button = (Button)sender;
+                string row = button.CommandArgument;
+                int i = Convert.ToInt32(row);
+                SqlCommand cmd = connect.CreateCommand();
+                String reg = Session["reg"].ToString();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from scsubch where id = '" + i + "'and reg = '" + reg + "'";
+                cmd.Connection.Open();
+
+
+                cmd.ExecuteNonQuery();
+                create2();
+            }
+            
         }
         void create2()
         {
             //
             //Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
             //Response.Clear();
-            Table3.Rows.Clear();
-            if (Session["reg"] != null)
+            if (Session["type"] == "Engineering")
             {
-                String reg = Session["reg"].ToString();
-                String sql = "select uni,sub,id from subch  where reg = '" + reg + "'";
-                SqlCommand command = new SqlCommand(sql, connect);
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet);
-                int j = dataSet.Tables[0].Rows.Count;
-                //Table5.Dispose = true;
-
-
-                for (int i = 0; i < j; i++)
+                Table3.Rows.Clear();
+                if (Session["reg"] != null)
                 {
-                    DataTable tables = dataSet.Tables[0];
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub,id from subch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
+                    {
+                        TableRow row = new TableRow();
 
+                        TableCell cell = new TableCell();
+                        cell.Text = "University";
+
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = "Subject";
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
+
+
+                        TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
+                        row.Cells.Add(cellp);
+                        Table3.Rows.Add(row);
+                        Table3.Caption = "Available Subjects";
+                    }
+
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+                            int id = Convert.ToInt32(tables.Rows[i][2].ToString());
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_rmv";
+                            bt.CommandArgument = id.ToString();
+                            bt.Text = "Remove";
+                            bt.BackColor = System.Drawing.Color.Red;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(btr_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table3.Rows.Add(row);
+
+                            Response.Write(i);
+                        }
+
+
+                    }
+                }
+                if (Session["type"] != null) create(); 
+                Table4.Visible = true;
+                Table3.Visible = true;
+            }
+            else if (Session["type"] == "Agriculture")
+            {
+                Table3.Rows.Clear();
+                if (Session["reg"] != null)
+                {
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub,id from agsubch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
 
                     {
                         TableRow row = new TableRow();
 
                         TableCell cell = new TableCell();
-                        cell.Text = tables.Rows[i][0].ToString();
-                        int id = Convert.ToInt32(tables.Rows[i][2].ToString());
+                        cell.Text = "University";
+
                         row.Cells.Add(cell);
                         TableCell cell1 = new TableCell();
-                        cell1.Text = tables.Rows[i][1].ToString();
+                        cell1.Text = "Subject";
                         row.Cells.Add(cell1);
-                        row.BackColor = System.Drawing.Color.LightGreen;
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
 
-                        Button bt = new Button();
-                        bt.ID = "bt_" + i.ToString() + "_rmv";
-                        bt.CommandArgument = id.ToString();
-                        bt.Text = "Remove";
-                        bt.Click += new EventHandler(btr_Click);
+
                         TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
                         row.Cells.Add(cellp);
-                        row.Cells[2].Controls.Add(bt);
                         Table3.Rows.Add(row);
-
-                        Response.Write(i);
+                        Table3.Caption = "Available Subjects";
                     }
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
 
 
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+                            int id = Convert.ToInt32(tables.Rows[i][2].ToString());
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_rmv";
+                            bt.CommandArgument = id.ToString();
+                            bt.Text = "Remove";
+                            bt.BackColor = System.Drawing.Color.Red;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(btr_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table3.Rows.Add(row);
+
+                            Response.Write(i);
+                        }
+
+
+                    }
                 }
+                if (Session["type"] != null) create(); 
+                Table4.Visible = true;
+                Table3.Visible = true;
             }
-            if (Session["create"] != null) create(); 
+            else if (Session["type"] == "Public")
+            {
+                Table3.Rows.Clear();
+                if (Session["reg"] != null)
+                {
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub,id from pbsubch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
+
+                    {
+                        TableRow row = new TableRow();
+
+                        TableCell cell = new TableCell();
+                        cell.Text = "University";
+
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = "Subject";
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
+
+
+                        TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
+                        row.Cells.Add(cellp);
+                        Table3.Rows.Add(row);
+                        Table3.Caption = "Available Subjects";
+                    }
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+                            int id = Convert.ToInt32(tables.Rows[i][2].ToString());
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_rmv";
+                            bt.CommandArgument = id.ToString();
+                            bt.Text = "Remove";
+                            bt.BackColor = System.Drawing.Color.Red;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(btr_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table3.Rows.Add(row);
+
+                            Response.Write(i);
+                        }
+
+
+                    }
+                }
+                if (Session["type"] != null) create();
+                Table4.Visible = true;
+                Table3.Visible = true;
+            }
+            else if (Session["type"] == "Science And Technology")
+            {
+                Table3.Rows.Clear();
+                if (Session["reg"] != null)
+                {
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub,id from scsubch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
+
+                    {
+                        TableRow row = new TableRow();
+
+                        TableCell cell = new TableCell();
+                        cell.Text = "University";
+
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = "Subject";
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
+
+
+                        TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
+                        row.Cells.Add(cellp);
+                        Table3.Rows.Add(row);
+                        Table3.Caption = "Available Subjects";
+                    }
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+                            int id = Convert.ToInt32(tables.Rows[i][2].ToString());
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_rmv";
+                            bt.CommandArgument = id.ToString();
+                            bt.Text = "Remove";
+                            bt.BackColor = System.Drawing.Color.Red;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(btr_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table3.Rows.Add(row);
+
+                            Response.Write(i);
+                        }
+
+
+                    }
+                }
+                if (Session["type"] != null) create();
+                Table4.Visible = true;
+                Table3.Visible = true;
+            }
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -184,7 +605,7 @@ namespace demoUniversity
 
 
             }
-            if (Session["create"] != null) create();
+            if (Session["type"] != null) create();
             create2();
         }
 
@@ -207,14 +628,17 @@ namespace demoUniversity
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Write(DropDownList2.SelectedItem.Text);
-            if (DropDownList2.SelectedItem.Text != "Engineering")
+            
+            if (DropDownList2.SelectedItem.Text == "University Type")
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('This_Feature _Is_Currently_Available_For_Enginnering!');", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Select A Type!');", true);
                 return;
             }
+            Session.Add("type", DropDownList2.SelectedItem.Text);
             Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
-            
+
             create();
+            create2();
             Session.Add("create", "notnull");
         }
         void p_create()
@@ -225,52 +649,292 @@ namespace demoUniversity
         {
             //Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
             //Response.Clear();
-            Table4.Rows.Clear();
-            if (Session["reg"] != null)
+            if (Session["type"] == "Engineering")
             {
-                String reg = Session["reg"].ToString();
-                String sql = "select uni,sub from subli  except select uni,sub from subch  where reg = '" + reg + "'";
-                SqlCommand command = new SqlCommand(sql, connect);
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet);
-                int j = dataSet.Tables[0].Rows.Count;
-                //Table5.Dispose = true;
-
-
-                for (int i = 0; i < j; i++)
+                Table4.Rows.Clear();
+                if (Session["reg"] != null)
                 {
-                    DataTable tables = dataSet.Tables[0];
-
-
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub from subli  except select uni,sub from subch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
                     {
                         TableRow row = new TableRow();
 
                         TableCell cell = new TableCell();
-                        cell.Text = tables.Rows[i][0].ToString();
+                        cell.Text = "University";
 
                         row.Cells.Add(cell);
                         TableCell cell1 = new TableCell();
-                        cell1.Text = tables.Rows[i][1].ToString();
+                        cell1.Text = "Subject";
                         row.Cells.Add(cell1);
-                        row.BackColor = System.Drawing.Color.LightGreen;
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
 
-                        Button bt = new Button();
-                        bt.ID = "bt_" + i.ToString() + "_Del";
-                        bt.CommandArgument = i.ToString();
-                        bt.Text = "Choose";
-                        bt.Click += new EventHandler(bt_Click);
+
                         TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
                         row.Cells.Add(cellp);
-                        row.Cells[2].Controls.Add(bt);
                         Table4.Rows.Add(row);
+                        Table4.Caption = "Available Subjects";
+                    }
+
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_Del";
+                            bt.CommandArgument = i.ToString();
+                            bt.Text = "Choose";
+                            bt.BackColor = System.Drawing.Color.Green;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(bt_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table4.Rows.Add(row);
+
+
+                        }
 
 
                     }
+                }
+                Table4.Visible = true;
+                Table3.Visible = true;
+            }
+            else if (Session["type"] == "Agriculture")
+            {
+                Table4.Rows.Clear();
+                if (Session["reg"] != null)
+                {
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub from agsubli  except select uni,sub from agsubch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
+                    {
+                        TableRow row = new TableRow();
+
+                        TableCell cell = new TableCell();
+                        cell.Text = "University";
+
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = "Subject";
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
 
 
+                        TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
+                        row.Cells.Add(cellp);
+                        Table4.Rows.Add(row);
+                        Table4.Caption = "Available Subjects";
+                    }
+
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                           if(i%2==0) row.BackColor = System.Drawing.Color.LightGreen;
+                           else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_Del";
+                            bt.CommandArgument = i.ToString();
+                            bt.Text = "Choose";
+                            bt.BackColor = System.Drawing.Color.Green;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(bt_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table4.Rows.Add(row);
+
+
+                        }
+
+
+                    }
                 }
             }
+            else if (Session["type"] == "Public")
+            {
+                Table4.Rows.Clear();
+                if (Session["reg"] != null)
+                {
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub from pbsubli  except select uni,sub from pbsubch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
+                    {
+                        TableRow row = new TableRow();
+
+                        TableCell cell = new TableCell();
+                        cell.Text = "University";
+
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = "Subject";
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
+
+
+                        TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
+                        row.Cells.Add(cellp);
+                        Table4.Rows.Add(row);
+                        Table4.Caption = "Available Subjects";
+                    }
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_Del";
+                            bt.CommandArgument = i.ToString();
+                            bt.Text = "Choose";
+                            bt.BackColor = System.Drawing.Color.Green;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(bt_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table4.Rows.Add(row);
+
+
+                        }
+
+
+                    }
+                }
+            }
+            else if (Session["type"] == "Science And Technology")
+            {
+                Table4.Rows.Clear();
+                if (Session["reg"] != null)
+                {
+                    String reg = Session["reg"].ToString();
+                    String sql = "select uni,sub from scsubli  except select uni,sub from scsubch  where reg = '" + reg + "'";
+                    SqlCommand command = new SqlCommand(sql, connect);
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    int j = dataSet.Tables[0].Rows.Count;
+                    //Table5.Dispose = true;
+                    {
+                        TableRow row = new TableRow();
+
+                        TableCell cell = new TableCell();
+                        cell.Text = "University";
+
+                        row.Cells.Add(cell);
+                        TableCell cell1 = new TableCell();
+                        cell1.Text = "Subject";
+                        row.Cells.Add(cell1);
+                        row.BackColor = System.Drawing.Color.Blue;
+                        row.ForeColor = System.Drawing.Color.White;
+
+
+                        TableCell cellp = new TableCell();
+                        cellp.Text = "Action";
+                        row.Cells.Add(cellp);
+                        Table4.Rows.Add(row);
+                        Table4.Caption = "Available Subjects";
+                    }
+                    for (int i = 0; i < j; i++)
+                    {
+                        DataTable tables = dataSet.Tables[0];
+
+
+                        {
+                            TableRow row = new TableRow();
+
+                            TableCell cell = new TableCell();
+                            cell.Text = tables.Rows[i][0].ToString();
+
+                            row.Cells.Add(cell);
+                            TableCell cell1 = new TableCell();
+                            cell1.Text = tables.Rows[i][1].ToString();
+                            row.Cells.Add(cell1);
+                            if (i % 2 == 0) row.BackColor = System.Drawing.Color.LightGreen;
+                            else row.BackColor = System.Drawing.Color.LightYellow;
+
+                            Button bt = new Button();
+                            bt.ID = "bt_" + i.ToString() + "_Del";
+                            bt.CommandArgument = i.ToString();
+                            bt.Text = "Choose";
+                            bt.BackColor = System.Drawing.Color.Green;
+                            bt.ForeColor = System.Drawing.Color.White;
+                            bt.Click += new EventHandler(bt_Click);
+                            TableCell cellp = new TableCell();
+                            row.Cells.Add(cellp);
+                            row.Cells[2].Controls.Add(bt);
+                            Table4.Rows.Add(row);
+
+
+                        }
+
+
+                    }
+                }
+            }
+
+
 
         }
 
