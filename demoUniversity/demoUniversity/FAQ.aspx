@@ -6,6 +6,30 @@
 <head id="Head1" runat="server">
     <title>Home</title>
     <style>
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -62,28 +86,21 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
 		<div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
         </div>
-       
-            <br />
-           
         <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow  >
-                <asp:TableCell><asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
-                   
-                
-         
-                                      </asp:TableCell>
+            <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                </asp:TableCell>
+                <asp:TableCell>
+                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />
         <br />
         <br />
-            
- 
    <ul class="main-navigation">
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
@@ -113,22 +130,14 @@ ul:after { clear: both; }
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
-    <li><a href="#">Apply</a>
-        <ul>
-            <li><a href="#">Agriculture</a></li>
-            <li><a href="#">Engineering</a></li>
-            <li><a href="#">Public University</a></li>
-        </ul>
-    </li>
-     <li><a href="#">About Us</a></li>
+    <li><a href="apply.aspx">Apply</a></li>
+    <li><a href="AbUs.aspx">About Us</a></li>
    </ul>
    <br />
    <br />
         <br />
         <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">FAQ 
-                
-            </div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">FAQ </div>
         </div>
         <br />
         <br />
@@ -150,7 +159,7 @@ ul:after { clear: both; }
         <asp:Table ID="Table2" runat="server" HorizontalAlign="Center" Font-Size="25px">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox3" runat="server"  Height="25px" Width="400px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server"  Height="25px" Width="400px" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="Button6" runat="server" Text="Ask" OnClick="Button6_Click" BackColor="#333300" ForeColor="White" Font-Size="25px"/>
@@ -167,7 +176,7 @@ ul:after { clear: both; }
                     Question No:
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -175,7 +184,7 @@ ul:after { clear: both; }
                     Answer:
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>

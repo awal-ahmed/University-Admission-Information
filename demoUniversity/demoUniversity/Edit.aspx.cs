@@ -228,5 +228,17 @@ namespace demoUniversity
             Response.Redirect("addstud.aspx");
         }
 
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("UniAdm.aspx");
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("UniAdm.aspx");
+        }
+
     }
 }

@@ -62,7 +62,7 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
         </div>
         <br />
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
@@ -120,7 +120,7 @@ ul:after { clear: both; }
         <br />
         <br />
         <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Engineering University</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">Engineering University</div>
         </div>
         <br />
         <br />

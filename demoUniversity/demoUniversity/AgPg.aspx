@@ -64,7 +64,6 @@ ul:after { clear: both; }
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-         <br />
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  >
                 <asp:TableCell>
@@ -107,14 +106,8 @@ ul:after { clear: both; }
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
-    <li><a href="#">Apply</a>
-        <ul>
-            <li><a href="#">Agriculture</a></li>
-            <li><a href="#">Engineering</a></li>
-            <li><a href="#">Public University</a></li>
-        </ul>
-    </li>
-     <li><a href="#">About Us</a></li>
+    <li><a href="apply.aspx">Apply</a></li>
+    <li><a href="AbUs.aspx">About Us</a></li>
    </ul>
         <br />
         <br />
