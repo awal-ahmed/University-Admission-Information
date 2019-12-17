@@ -12,6 +12,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <style>
+        
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .carousel-inner img {
       width: 100%;
       height: 100%;
@@ -75,19 +100,16 @@ ul:after { clear: both; }
        <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-
-        <br />
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow  >
+            <asp:TableRow CssClass="ex" >
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
-                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <br />
         <br />
         <br />
    <ul class="main-navigation">
@@ -126,7 +148,7 @@ ul:after { clear: both; }
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="#">About Us</a></li>
+     <li><a href="AbUs.aspx">About Us</a></li>
    </ul>
         <br />
         <br />

@@ -6,6 +6,31 @@
 <head runat="server">
      <title>Student Add</title>
     <style>
+        
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -64,20 +89,17 @@ ul:after { clear: both; }
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-        <br />
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow  >
+            <asp:TableRow CssClass="ex" >
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                    <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br /> 
-                
-               
         <br />
         <br />
    <ul class="main-navigation">
@@ -116,7 +138,7 @@ ul:after { clear: both; }
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="#">About Us</a></li>
+     <li><a href="AbUs.aspx">About Us</a></li>
    </ul>
         <br />
         <br />
@@ -129,7 +151,8 @@ ul:after { clear: both; }
         <br />
         <h1>Add a new Students</h1>
 
-        <asp:GridView ID="GridView1" runat="server" BackColor="YellowGreen"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
         <br />
         <br/ />
         
@@ -151,19 +174,19 @@ ul:after { clear: both; }
         <asp:Table ID="Table2" runat="server">
             <asp:TableRow>
                 <asp:TableCell>Registration: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox15" runat="server" type ="number"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox15" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Roll: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox16" runat="server" type ="number"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox16" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Name: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox17" runat="server" type ="text"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox17" runat="server" type ="text" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>SSC: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox22" runat="server" type ="number"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox22" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
@@ -181,7 +204,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox1" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -200,7 +223,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox2" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -219,7 +242,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox3" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -238,7 +261,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox4" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -257,7 +280,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox5" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -276,7 +299,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox6" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox6" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -295,7 +318,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox7" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox7" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -321,19 +344,19 @@ ul:after { clear: both; }
         <asp:Table ID="Table3" runat="server">
             <asp:TableRow>
                 <asp:TableCell>Registration: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox18" runat="server" type ="number" ></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox18" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Roll: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox19" runat="server" type ="number"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox19" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Name: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox20" runat="server" type ="text"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox20" runat="server" type ="text" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>SSC: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox21" runat="server" type ="number"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox21" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
@@ -352,7 +375,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox8" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox8" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -372,7 +395,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox9" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox9" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -392,7 +415,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox10" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox10" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -412,7 +435,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox11" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox11" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -432,7 +455,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox12" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox12" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -452,7 +475,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox13" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox13" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -469,7 +492,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox14" runat="server" type="number"></asp:TextBox>
+                    <asp:TextBox ID="TextBox14" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>

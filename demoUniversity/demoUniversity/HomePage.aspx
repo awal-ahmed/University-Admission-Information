@@ -6,6 +6,31 @@
 <head runat="server">
     <title>Home</title>
     <style>
+        
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -63,17 +88,15 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:100%">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:100%; text-shadow:1px 1px 2px">University Admission Information</div>
         </div>
-        
-         <br />
-         <asp:Table  ID="Table2" runat="server" HorizontalAlign="Right"   CellPadding="5">
-            <asp:TableRow >
+         <asp:Table  ID="Table2" runat="server" HorizontalAlign="Right" CellPadding="5">
+            <asp:TableRow CssClass="ex">
                 <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" />
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                    <asp:Button ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
@@ -116,7 +139,7 @@ ul:after { clear: both; }
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="#">About Us</a></li>
+     <li><a href="AbUs.aspx">About Us</a></li>
        
    </ul>
 
@@ -127,7 +150,7 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Select University </asp:TableCell>
                 <asp:TableCell>
-                   <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" BackColor="#CCFFFF" Font-Italic="True" Font-Size="15" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                   <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" Font-Italic="True" Font-Size="15" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true" BackColor="#CCFFFF"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell> <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/images.png" Height="25px" Width="30px" OnClick="ImageButton1_Click" /> </asp:TableCell>
             </asp:TableRow>

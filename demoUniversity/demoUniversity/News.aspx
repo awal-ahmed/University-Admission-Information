@@ -7,6 +7,31 @@
 <head id="Head1" runat="server">
     <title>Home</title>
     <style>
+        
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -65,15 +90,13 @@ ul:after { clear: both; }
 		<div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
         </div>
-
-        <br />
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow  >
+            <asp:TableRow CssClass="ex" >
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
-                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
@@ -116,7 +139,7 @@ ul:after { clear: both; }
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="AbUs">About Us</a></li>
+     <li><a href="AbUs.aspx">About Us</a></li>
    </ul>
    <br />
    <br />
@@ -181,20 +204,64 @@ ul:after { clear: both; }
                     
         <br />
         <br />
-        <asp:GridView ID="GridView4" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <asp:GridView ID="GridView4" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" Font-Size="15pt" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
 
        
         
 
-        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="White" Font-Size="15pt" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
 
        
 
-        <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" Font-Size="15pt" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
 
         
 
-        <asp:GridView ID="GridView3" runat="server" HorizontalAlign="Center" CellPadding="5" BackColor="#CCFF66"></asp:GridView>
+        <asp:GridView ID="GridView3" runat="server" HorizontalAlign="Center" CellPadding="3" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" Font-Size="15pt" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
         <br />
         <br />
         <br />

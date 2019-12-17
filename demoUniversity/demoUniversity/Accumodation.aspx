@@ -7,6 +7,31 @@
 <head id="Head1" runat="server">
     <title>Home</title>
     <style>
+        
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -63,16 +88,15 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
         </div>
-        <br />
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow  >
+            <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                    <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                </asp:TableCell>
             </asp:TableRow>
         </asp:Table> 
@@ -108,7 +132,7 @@ ul:after { clear: both; }
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
-    <li><a href="#">Apply</a>
+    <li><a href="AbUs.aspx">Apply</a>
         <ul>
             <li><a href="#">Agriculture</a></li>
             <li><a href="#">Engineering</a></li>
@@ -121,10 +145,12 @@ ul:after { clear: both; }
         <br />
         <br />
         <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Accomodation</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">Accomodation</div>
         </div>
         <br />
         <br />
+        <br />
+        <p style="text-align:center; font-size: 20px; text-shadow: 1px 1px 2px;" >Select any university where you wanna stay.. This will give you name of some hotels, address and their contact number..</p>
         <br />
         <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
@@ -150,7 +176,18 @@ ul:after { clear: both; }
             </asp:TableRow>
         </asp:Table>
         <br />
-        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="#CCFF66" Font-Bold="False" Font-Size="15" CellPadding="5"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="White" Font-Bold="False" Font-Size="15pt" CellPadding="5" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="#DCDCDC" />
+            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#000065" />
+        </asp:GridView>
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019

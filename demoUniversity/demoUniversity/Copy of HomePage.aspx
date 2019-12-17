@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PuPg.aspx.cs" Inherits="demoUniversity.PuPg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="demoUniversity.HomePage" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
+<head runat="server">
     <title>Home</title>
     <style>
         
@@ -21,16 +21,6 @@
             font-size: 15px;
             transition: all 0.5s ease 0s;
      }
-        
-        
-        .te {
-        padding: 5px 20px;
-        border: solid;
-        border-width: 1px;
-        border-color:#99b3ff;
-        border-radius: 4px;
-        background-color: #f1f1f1;
-    }
         .foot{
             position:static;
             bottom:-5em;
@@ -40,6 +30,7 @@
         }
        li {
         padding-left:17px;
+
         padding-right:17px;
     }
 ul {
@@ -87,16 +78,16 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:100%">University Admission Information</div>
         </div>
-          <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
-            <asp:TableRow CssClass="ex" >
+         <asp:Table  ID="Table2" runat="server" HorizontalAlign="Right" CellPadding="5">
+            <asp:TableRow CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                 </asp:TableCell>
                 <asp:TableCell>
-                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
-               </asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
+                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />
@@ -108,7 +99,7 @@ ul:after { clear: both; }
     <ul>
       <li><a href="AgPg.aspx">Agriculture</a>
             <ul>
-                <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural University</a></li>
+                <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
                 <li><a href="#">Khulna Agricultural University Bangladesh</a></li>
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
@@ -122,7 +113,7 @@ ul:after { clear: both; }
             <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
       </ul>
       </li>
-    <li><a href="EnPg.aspx">Public University</a></li>
+    <li><a href="PuPg.aspx">Public University</a></li>
      </ul>
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
@@ -139,28 +130,32 @@ ul:after { clear: both; }
         </ul>
     </li>
      <li><a href="AbUs.aspx">About Us</a></li>
-   </ul>
-        <br />
-        <br />
-        <br />
-        <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Public University</div>
-        </div>
-        <br />
-        <br />
-        <br />
        
-        <a href="#">Jahangirnagar University</a><br />
-        <a href="#">Khulna University</a><br />
-        <a href="#">Rajshahi University</a><br />   
-        <a href="#">University of Dhaka</a><br />
+   </ul>
+
         <br />
         <br />
-         <p class="foot" style="font:15px">
+        <asp:Table ID="Table1" runat="server" CellSpacing="10" HorizontalAlign="Center"  Font-Size="20" ForeColor="Blue" Font-Bold="True">
+            
+            <asp:TableRow>
+                <asp:TableCell>Select University </asp:TableCell>
+                <asp:TableCell>
+                   <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" Font-Italic="True" Font-Size="15" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true" BackColor="#CCFFFF"></asp:DropDownList>
+                </asp:TableCell>
+                <asp:TableCell> <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/images.png" Height="25px" Width="30px" OnClick="ImageButton1_Click" /> </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+         
+        <br />
+        <br />
+        
+        <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019
-        </p>  
+        </p>   
+            </>     
     </form>
+    
 
 </body>
 </html>
