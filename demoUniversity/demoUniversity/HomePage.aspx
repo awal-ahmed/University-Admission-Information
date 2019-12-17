@@ -63,7 +63,7 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:100%">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; width:100%; text-shadow:1px 1px 2px">University Admission Information</div>
         </div>
         
          <br />
