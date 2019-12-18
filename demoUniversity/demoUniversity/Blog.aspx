@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 10px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -142,6 +142,20 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
+
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox1" runat="server" Height="100px" Width="300px" TextMode="MultiLine" CssClass="te"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" Text="Post" OnClick="Button1_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <asp:Table ID="Table2" runat="server"></asp:Table>
+
+        
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019

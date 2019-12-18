@@ -271,26 +271,59 @@ namespace demoUniversity
             {
                 DataTable tables = dataSet.Tables[0];
 
-
+                
                 TableRow row = new TableRow();
-                TableCell cell = new TableCell();
-                cell.Text = "Question: ";
-                row.Cells.Add(cell);
+                /*TableCell cell = new TableCell();
+                cell.Width=5;
+                cell.BackColor = System.Drawing.Color.LightGreen;
+                row.Cells.Add(cell);*/
                 TableCell cell1 = new TableCell();
+                cell1.BackColor = System.Drawing.Color.FromArgb(13434879);
                 cell1.Text = tables.Rows[i][1].ToString();
+                cell1.ForeColor = System.Drawing.Color.Blue;
+                cell1.Font.Size = 25;
+                cell1.Font.Bold = true;
                 row.Cells.Add(cell1);
-                row.BackColor = System.Drawing.Color.LightGreen;
+                
                 Table5.Rows.Add(row);
                 
                 TableRow row1 = new TableRow();
-                TableCell cell2 = new TableCell();
-                cell2.Text = "Answer: ";
-                row1.Cells.Add(cell2);
+                /*TableCell cell2 = new TableCell();
+                cell2.Width = 5;
+                cell2.BackColor = System.Drawing.Color.LightGreen;
+                row1.Cells.Add(cell2);*/
                 TableCell cell11 = new TableCell();
-                cell11.Text = tables.Rows[i][2].ToString();
+                Label lb1 = new Label();
+                lb1.Text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                lb1.BackColor = System.Drawing.Color.FromArgb(13434879);
+                lb1.Width = 20;
+                cell11.Controls.Add(lb1);
+                
+                string st= tables.Rows[i][2].ToString();
+                Label lb2 = new Label();
+                st = "&nbsp; &nbsp; &nbsp;  " + st;
+                lb2.Text = st;
+                lb2.Font.Size = 15;
+ 
+                lb2.BackColor = System.Drawing.Color.FromArgb(13434879);
+                
+                cell11.Controls.Add(lb2);
+                
+               // cell11.Text = st;
+                cell11.BackColor = System.Drawing.Color.FromArgb(13434879);  
                 row1.Cells.Add(cell11);
                 Table5.Rows.Add(row1);
-                row1.BackColor = System.Drawing.Color.LightGray;
+                TableRow row2 = new TableRow();
+                /*TableCell cell = new TableCell();
+                cell.Width=5;
+                cell.BackColor = System.Drawing.Color.LightGreen;
+                row.Cells.Add(cell);*/
+                TableCell cell12 = new TableCell();
+                cell12.BackColor = System.Drawing.Color.FromArgb(13434879);
+                cell12.Text = "&nbsp;";
+                row2.Cells.Add(cell12);
+
+                Table5.Rows.Add(row2);
 
             }
             // Loop through rows

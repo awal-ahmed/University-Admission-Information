@@ -196,7 +196,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-
+        <div style="text-align:center; color:red">*Login to ask a question</div>
         <br />
         <br />
         <br />
