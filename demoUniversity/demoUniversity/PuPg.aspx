@@ -86,7 +86,7 @@ ul:after { clear: both; }
 <body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; text-shadow:1px 1px 2px; width:inherit">University Admission Information</div>
         </div>
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
@@ -105,7 +105,7 @@ ul:after { clear: both; }
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
     <ul>
-      <li><a href="AgPg.aspx">Agriculture</a>
+      <li><a href="#">Agriculture</a>
             <ul>
                 <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural University</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
@@ -113,7 +113,7 @@ ul:after { clear: both; }
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
              </ul>
           </li>
-    <li><a href="EnPg.aspx">Engineering</a>
+    <li><a href="#">Engineering</a>
       <ul>
             <li><a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a></li>
             <li><a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a></li>
@@ -121,7 +121,7 @@ ul:after { clear: both; }
             <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
       </ul>
       </li>
-    <li><a href="EnPg.aspx">Public University</a></li>
+    <li><a href="PuPg.aspx">Public University</a></li>
      </ul>
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
@@ -137,16 +137,22 @@ ul:after { clear: both; }
         <br />
         <br />
         <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Public University</div>
+            <div style="font-size:30pt; color: #FFFFCC ;text-shadow:1px 1px 2px; width:inherit">Public University</div>
         </div>
         <br />
         <br />
         <br />
-       
-        <a href="#">Jahangirnagar University</a><br />
-        <a href="#">Khulna University</a><br />
-        <a href="#">Rajshahi University</a><br />   
-        <a href="#">University of Dhaka</a><br />
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell HorizontalAlign="Center" ForeColor="White" Font-Size="30px">
+                    <a style="text-shadow:1px 1px 2px; text-decoration:none" href="#">Jahangirnagar University</a><br />
+                    <a style="text-shadow:1px 1px 2px; text-decoration:none" href="#">Khulna University</a><br />
+                    <a style="text-shadow:1px 1px 2px; text-decoration:none" href="#">Rajshahi University</a><br />   
+                    <a style="text-shadow:1px 1px 2px; text-decoration:none" href="#">University of Dhaka</a><br />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        
         <br />
         <br />
          <p class="foot" style="font:15px">

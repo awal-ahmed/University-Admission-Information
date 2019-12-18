@@ -106,7 +106,7 @@ ul:after { clear: both; }
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
     <ul>
-      <li><a href="AgPg.aspx">Agriculture</a>
+      <li><a href="#">Agriculture</a>
             <ul>
                 <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
@@ -114,7 +114,7 @@ ul:after { clear: both; }
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
              </ul>
           </li>
-    <li><a href="EnPg.aspx">Engineering</a>
+    <li><a href="#">Engineering</a>
       <ul>
             <li><a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a></li>
             <li><a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a></li>
@@ -122,7 +122,7 @@ ul:after { clear: both; }
             <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
       </ul>
       </li>
-    <li><a href="EnPg.aspx">Public University</a></li>
+    <li><a href="PuPg.aspx">Public University</a></li>
      </ul>
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
@@ -141,6 +141,9 @@ ul:after { clear: both; }
             <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">News</div>
         </div>
         <br />
+        <br />
+        <br />
+        <p style="font-size:20px; margin-right:20px; margin-left:50px; text-shadow: 1px 1px 2px"> This page will provide news about various programme in different university.. You can filter those by month, venue or type of program.. Select that from the box.. Then press 'apply'..</p>
         <br />
          <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>

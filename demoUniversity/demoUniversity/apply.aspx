@@ -115,14 +115,14 @@ ul:after { clear: both; }
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
-    <li><a href="#">Apply</a>
+    <li><a href="apply.aspx">Apply</a>
         <ul>
             <li><a href="#">Agriculture</a></li>
             <li><a href="#">Engineering</a></li>
             <li><a href="#">Public University</a></li>
         </ul>
     </li>
-     <li><a href="#">About Us</a></li>
+     <li><a href="AbUs.aspx">About Us</a></li>
    </ul>
    <br />
    <br />

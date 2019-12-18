@@ -106,7 +106,7 @@ ul:after { clear: both; }
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
     <ul>
-      <li><a href="AgPg.aspx">Agriculture</a>
+      <li><a href="#">Agriculture</a>
             <ul>
                 <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
@@ -114,7 +114,7 @@ ul:after { clear: both; }
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
              </ul>
           </li>
-    <li><a href="EnPg.aspx">Engineering</a>
+    <li><a href="#">Engineering</a>
       <ul>
             <li><a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a></li>
             <li><a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a></li>
@@ -122,7 +122,7 @@ ul:after { clear: both; }
             <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
       </ul>
       </li>
-    <li><a href="EnPg.aspx">Public University</a></li>
+    <li><a href="PuPg.aspx">Public University</a></li>
      </ul>
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
@@ -144,37 +144,42 @@ ul:after { clear: both; }
         </div>
         <br />
         <br />
-
+        <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" CellPadding="100">
+            <asp:TableRow>
+                <asp:TableCell HorizontalAlign="Center">
         
-    <asp:Table ID="Table1" runat="server" HorizontalAlign="Center"></asp:Table>
+                    <asp:Table ID="Table1" runat="server" HorizontalAlign="Center"></asp:Table>
+                    <asp:TableCell> <asp:Button ID="Button2" runat="server" Height="25px" Width="80%" Font-Bold="true" Text="Apply To University" OnClick="Button2_Click" BackColor="Cyan" /> </asp:TableCell>
 
-        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
-            <asp:TableRow>
-                <asp:TableCell>Old Password</asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox1" runat="server" CssClass="ex"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
+                </asp:TableCell>
+                <asp:TableCell HorizontalAlign="Center">
+                    <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
+                                <asp:TableRow>
+                                    <asp:TableCell>Old Password</asp:TableCell>
+                                    <asp:TableCell> <asp:TextBox ID="TextBox1"  runat="server" CssClass="te"></asp:TextBox></asp:TableCell>
+                                </asp:TableRow>
 
-             <asp:TableRow>
-                <asp:TableCell>New Password</asp:TableCell>
-                <asp:TableCell CssClass="ex"> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
+                                 <asp:TableRow>
+                                    <asp:TableCell>New Password</asp:TableCell>
+                                    <asp:TableCell> <asp:TextBox ID="TextBox2" runat="server"  CssClass="te"></asp:TextBox></asp:TableCell>
+                                </asp:TableRow>
 
-             <asp:TableRow>
-                <asp:TableCell>New Password</asp:TableCell>
-                <asp:TableCell CssClass="ex"> <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></asp:TableCell>
-            </asp:TableRow>
+                                 <asp:TableRow>
+                                    <asp:TableCell>New Password</asp:TableCell>
+                                    <asp:TableCell > <asp:TextBox ID="TextBox3" runat="server" CssClass="te"></asp:TextBox></asp:TableCell>
+                                </asp:TableRow>
 
-            <asp:TableRow>
-                <asp:TableCell> <asp:Button ID="Button1" runat="server" Text="Change Password" OnClick="Button1_Click"  BackColor="Green" /> </asp:TableCell>
+                                <asp:TableRow>
+                                    <asp:TableCell></asp:TableCell>
+                                    <asp:TableCell HorizontalAlign="Right"> <asp:Button ID="Button1" ForeColor="white" Height="25px" Width="60%" runat="server"  Text="Change Password" OnClick="Button1_Click"  BackColor="Green" /> </asp:TableCell>
                 
-            </asp:TableRow>
-            <asp:TableRow>
-               
-                    <asp:TableCell> <asp:Button ID="Button2" runat="server" Text="Apply To University" OnClick="Button2_Click" BackColor="Cyan" /> </asp:TableCell>
-                <asp:TableCell> </asp:TableCell>
-                
+                                </asp:TableRow>
+                            </asp:Table>
+                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
+        
+        
         <asp:Table ID="Table3" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell> <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/apply.aspx">Apply To Agriculture University</asp:HyperLink></asp:TableCell>

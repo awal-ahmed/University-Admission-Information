@@ -105,7 +105,7 @@ ul:after { clear: both; }
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
     <ul>
-      <li><a href="AgPg.aspx">Agriculture</a>
+      <li><a href="#">Agriculture</a>
             <ul>
                 <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
@@ -113,7 +113,7 @@ ul:after { clear: both; }
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
              </ul>
           </li>
-    <li><a href="EnPg.aspx">Engineering</a>
+    <li><a href="#">Engineering</a>
       <ul>
             <li><a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a></li>
             <li><a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a></li>
@@ -121,7 +121,7 @@ ul:after { clear: both; }
             <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
       </ul>
       </li>
-    <li><a href="EnPg.aspx">Public University</a></li>
+    <li><a href="PuPg.aspx">Public University</a></li>
      </ul>
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
@@ -142,9 +142,9 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <h1>Add a new Students</h1>
+        <h1 style="text-align:center; text-shadow:1px 1px 2px">Add a new Students</h1>
 
-        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="5" Font-Size="15pt" GridLines="Vertical">
+        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" Font-Size="12pt" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#DCDCDC" />
             <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
             <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -159,7 +159,7 @@ ul:after { clear: both; }
         <br />
         <br/ />
         
-        <asp:Table ID="Table1" runat="server" CaptionAlign="Top" Caption="Add a new student">
+        <asp:Table ID="Table1" runat="server" CaptionAlign="Top" Font-Size="20px"  Caption="Add a new student">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:DropDownList ID="DropDownList1" runat="server" Width="100">
@@ -458,7 +458,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox12" runat="server" type="number" Font-Names="te"></asp:TextBox>
+                    <asp:TextBox ID="TextBox12" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>
@@ -478,7 +478,7 @@ ul:after { clear: both; }
                 </asp:TableCell>
 
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox13" runat="server" type="number" Font-Size="te"></asp:TextBox>
+                    <asp:TextBox ID="TextBox13" runat="server" type="number" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
              <asp:TableRow>

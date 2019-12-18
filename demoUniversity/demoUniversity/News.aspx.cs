@@ -303,7 +303,9 @@ namespace demoUniversity
 
         protected void Bt2_Click(object sender, EventArgs e)
         {
-
+            Session.Clear();
+            bt2.Visible = false;
+            bt1.Text = "Login";
         }
     }
 }

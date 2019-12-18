@@ -81,7 +81,7 @@ ul:after { clear: both; }
   <li><a href="HomePage.aspx">Home</a></li>
   <li><a href="#">University</a>
     <ul>
-      <li><a href="AgPg.aspx">Agriculture</a>
+      <li><a href="#">Agriculture</a>
             <ul>
                 <li><a href="#">Bangabandhu Sheikh Mujibur Rahman Agricultural uUniversity</a></li>
                 <li><a href="#">Bangladesh Agricultural University</a></li>
@@ -89,7 +89,7 @@ ul:after { clear: both; }
                  <li><a href="#">Sher-e-Bangla Agricultural University</a></li>
              </ul>
           </li>
-    <li><a href="EnPg.aspx">Engineering</a>
+    <li><a href="#">Engineering</a>
       <ul>
             <li><a href="BUET.aspx">Bangladesh University of Engineering & Technology, Dhaka</a></li>
             <li><a href="CUET.aspx">Chittagong University of Engineering & Technology, Chittagong</a></li>
@@ -97,7 +97,7 @@ ul:after { clear: both; }
             <li><a href="RUET.aspx">Rajshahi University of Engineering & Technology, Rajshahi</a></li>
       </ul>
       </li>
-    <li><a href="EnPg.aspx">Public University</a></li>
+    <li><a href="PuPg.aspx">Public University</a></li>
      </ul>
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
