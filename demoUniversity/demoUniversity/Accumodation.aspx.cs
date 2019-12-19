@@ -20,7 +20,6 @@ namespace demoUniversity
                 connect.Close();
             }
             connect.Open();
-            Response.Write("Successful");
             GridView2.Visible = false;
             Table2.Visible = false;
             
@@ -58,7 +57,6 @@ namespace demoUniversity
             else if (Session["reg"].ToString() == "admin")
             {
                 bt1.Text = "admin";
-                Response.Write("Admin");
             }
 
             if (!IsPostBack)
@@ -113,7 +111,6 @@ namespace demoUniversity
             else if (Session["reg"].ToString() == "admin")
             {
                 bt1.Text = "admin";
-                Response.Write("Admin");
             }
             
         }
@@ -165,10 +162,7 @@ namespace demoUniversity
                             
                             return;
                         }
-                        Response.Write(i);
-                        Response.Write(n);
                         string st = GridView2.Rows[i].Cells[0].Text.ToString();
-                        Response.Write(st);
                         mymap.Attributes.Add("src", st);
                         i = (i + 1) % n;
                         Session.Add("map_ptr", i);

@@ -21,7 +21,6 @@ namespace demoUniversity
                 connect.Close();
             }
             connect.Open();
-            Response.Write("Successful");
             if (Session["reg"] != null)
             {
                 SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);

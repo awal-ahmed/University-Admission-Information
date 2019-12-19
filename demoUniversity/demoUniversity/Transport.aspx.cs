@@ -20,7 +20,7 @@ namespace demoUniversity
                 connect.Close();
             }
             connect.Open();
-            Response.Write("Successful");
+            Table2.Visible = false;
             if (Session["reg"] != null)
             {
                 SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
@@ -55,7 +55,6 @@ namespace demoUniversity
             else if (Session["reg"].ToString() == "admin")
             {
                 bt1.Text = "admin";
-                Response.Write("Admin");
             }
 
             if (!IsPostBack)
@@ -134,8 +133,6 @@ namespace demoUniversity
             //DropDownList1.Items.FindByValue(Session["place"].ToString()).Selected = false;
            // DropDownList2.Items.FindByValue(Session["seluni"].ToString()).Selected = false;
             //DropDownList1.AutoPostBack = false;
-            Response.Write(DropDownList1.SelectedItem.Text);
-            Response.Write(DropDownList2.SelectedItem.Text);
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
@@ -168,9 +165,11 @@ namespace demoUniversity
                 int ii1 = ds51.Tables[0].Rows.Count;
                 if (ii1 > 0)
                 {
+                    Table2.Visible = true;
                     string st = ds51.Tables[0].Rows[0][0].ToString();
                     mymap.Attributes.Add("src", st);
                 }
+                
 
 
 

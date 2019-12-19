@@ -6,6 +6,30 @@
 <head runat="server">
     <title></title>
     <style>
+        .ex {
+            color: #fff !important;
+            vertical-align:central;
+            text-decoration: none;
+            padding: 5px;
+            padding-left:10px;
+            padding-right:10px;
+            text-decoration-color: black;
+            border-radius: 20px;
+            display: inline-block;
+            border: none;
+            font-size: 15px;
+            transition: all 0.5s ease 0s;
+     }
+        
+        
+        .te {
+        padding: 5px 20px;
+        border: solid;
+        border-width: 1px;
+        border-color:#99b3ff;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -59,11 +83,11 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body>
+<body style="background-color: #CCFFFF">
     <form id="form1" runat="server">
     
 		<div style="text-align:center; width:100%; background-color:midnightblue">
-            <div style="font-size:60pt; color: #FFFFCC ; width:inherit">University Admission Information</div>
+            <div style="font-size:60pt; color: #FFFFCC ; text-shadow:1px 1px 2px; width:inherit">University Admission Information</div>
         </div>
        
             <br />
@@ -72,11 +96,11 @@ ul:after { clear: both; }
             <asp:TableRow  >
                 <asp:TableCell>
                    
-                <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" />
+                <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green" CssClass="ex"  ForeColor="White" Height="30px" Font-Bold="true" />
          
                                       </asp:TableCell>
                 <asp:TableCell>
-                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
+                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" CssClass="ex" ForeColor="White" Height="30px" Font-Bold="true" />
                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
@@ -128,19 +152,19 @@ ul:after { clear: both; }
    <br />
         <br />
         <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit">Apply
+            <div style="font-size:30pt; color: #FFFFCC ;  text-shadow:.5px .5px 1px; width:inherit">Apply
                 
             </div>
         </div>
         <br />
         <br />
 
-        <p style="color: red"> *Complete your payment first. To know details about payment procedure visit <a href ="Notic.aspx"> Notice</a> page. Use your transaction id here to continue your apply procedure. It may take time to update your transaction id on website.</p>
-
+        <p style=" text-shadow:1px 1px 2px; font-size:18px; color: red"> *Complete your payment first. To know details about payment procedure visit <a href ="Notic.aspx"> Notice</a> page. Use your transaction id here to continue your apply procedure. It may take time to update your transaction id on website.</p>
+        <br />
         <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="DropDownList2" CssClass="te" runat="server">
                         <asp:ListItem>University Type</asp:ListItem>
                         <asp:ListItem>Agriculture</asp:ListItem>
                         <asp:ListItem>Engineering</asp:ListItem>
@@ -149,7 +173,7 @@ ul:after { clear: both; }
                     </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="DropDownList1" CssClass="te" runat="server">
                         <asp:ListItem>Choose Payment Method</asp:ListItem>
                         <asp:ListItem>bKash</asp:ListItem>
                         <asp:ListItem>Rocket</asp:ListItem>
@@ -160,24 +184,35 @@ ul:after { clear: both; }
                     Transaction Id:
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" CssClass="te" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" CssClass="ex" BackColor="Green" Text="Submit" OnClick="Button1_Click" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-
-        <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
-
-        <asp:Table ID="Table2" runat="server" BorderWidth="2px" BorderColor="Green" CellPadding="2" CellSpacing="2">
-
+        <br />
+        <asp:Table ID="Table5" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell>
+                           <asp:Label ID="Label1" runat="server" Text=""  ForeColor="Red"></asp:Label>
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
-       
+        <asp:Table HorizontalAlign="Center" ID="Table2" runat="server" BorderWidth="2px" BorderColor="Green" CellPadding="2" CellSpacing="2">
+            <asp:TableRow>
+                <asp:TableCell>
+                 </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+       <br />
 
 
-
-        <asp:Table ID="Table4" runat="server" Caption="Available Subject" HorizontalAlign="Center" >
+        <asp:Table ID="Table7" HorizontalAlign="Center" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    
+        <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" >
             <asp:TableHeaderRow>
                 <asp:TableCell>
                     University
@@ -190,7 +225,10 @@ ul:after { clear: both; }
                 </asp:TableCell>
             </asp:TableHeaderRow>
         </asp:Table>
-         <asp:Table ID="Table3" runat="server" Caption="Selected Subject" HorizontalAlign="Center">
+                </asp:TableCell>
+                <asp:TableCell>
+                    
+         <asp:Table ID="Table3" runat="server"  HorizontalAlign="Center">
                 <asp:TableHeaderRow>
                 <asp:TableCell>
                     University
@@ -202,6 +240,9 @@ ul:after { clear: both; }
                     Action
                 </asp:TableCell>
             </asp:TableHeaderRow>
+        </asp:Table>
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
 
         

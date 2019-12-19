@@ -139,7 +139,7 @@ ul:after { clear: both; }
         <div style="text-align:center; width:100%;  background-color:#5784BE">
             <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">Add a Subject</div>
         </div>
-        <asp:Table ID="Table2" runat="server">
+        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell>
                     Add a new university
@@ -148,25 +148,26 @@ ul:after { clear: both; }
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" CssClass="te" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button2" runat="server" Text="Add" OnClick="Button2_Click" />
+                    <asp:Button ID="Button2" runat="server" CssClass="ex" BackColor="Green" Text="Add" OnClick="Button2_Click" />
                 </asp:TableCell>
                 
             </asp:TableRow>
         </asp:Table>
         
-        <asp:Table ID="Table1" runat="server">
+        <asp:Table ID="Table1" HorizontalAlign="Center"  runat="server">
             <asp:TableRow>
-
-                <asp:TableCell>
+                <asp:TableCell></asp:TableCell>
+                <asp:TableCell></asp:TableCell>
+                <asp:TableCell HorizontalAlign="Center">
                     Add a new subject
                 </asp:TableCell>
                 </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="DropDownList2" CssClass="te" runat="server">
                         <asp:ListItem>Select Type</asp:ListItem>
                         <asp:ListItem>Engineering</asp:ListItem>
                         <asp:ListItem>Agriculture</asp:ListItem>
@@ -178,16 +179,16 @@ ul:after { clear: both; }
                     University: 
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="350"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="te" Width="350"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
                     Subject: 
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" CssClass="te" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" CssClass="ex" BackColor="green" runat="server" Text="Button" OnClick="Button1_Click" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>

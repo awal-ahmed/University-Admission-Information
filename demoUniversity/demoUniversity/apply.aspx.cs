@@ -275,7 +275,7 @@ namespace demoUniversity
                         cellp.Text = "Action";
                         row.Cells.Add(cellp);
                         Table3.Rows.Add(row);
-                        Table3.Caption = "Available Subjects";
+                        Table3.Caption = "Selected Subjects";
                     }
 
                     for (int i = 0; i < j; i++)
@@ -350,7 +350,7 @@ namespace demoUniversity
                         cellp.Text = "Action";
                         row.Cells.Add(cellp);
                         Table3.Rows.Add(row);
-                        Table3.Caption = "Available Subjects";
+                        Table3.Caption = "Selected Subjects";
                     }
                     for (int i = 0; i < j; i++)
                     {
@@ -424,7 +424,7 @@ namespace demoUniversity
                         cellp.Text = "Action";
                         row.Cells.Add(cellp);
                         Table3.Rows.Add(row);
-                        Table3.Caption = "Available Subjects";
+                        Table3.Caption = "Selected Subjects";
                     }
                     for (int i = 0; i < j; i++)
                     {
@@ -498,7 +498,7 @@ namespace demoUniversity
                         cellp.Text = "Action";
                         row.Cells.Add(cellp);
                         Table3.Rows.Add(row);
-                        Table3.Caption = "Available Subjects";
+                        Table3.Caption = "selected Subjects";
                     }
                     for (int i = 0; i < j; i++)
                     {
@@ -552,14 +552,15 @@ namespace demoUniversity
                     connect.Close();
                 }
                 connect.Open();
+                Table4.Rows.Clear();
 
+                Table3.Rows.Clear();
                 //Table3.Visible = false;
                 //Table2.Visible = false;
                 for (int i = 0; i < Table2.Rows.Count; i++)
                 {
                     Table2.Rows[i].Visible = false;
                 }
-                Response.Write("Successful Database");
                 //cons_table();
                 //Table3.Visible = false;
                 if (Session["reg"] != null)
@@ -607,6 +608,7 @@ namespace demoUniversity
             }
             if (Session["type"] != null) create();
             create2();
+            Table2.Visible = true;
         }
 
         protected void bt1_Click(object sender, EventArgs e)
@@ -636,7 +638,7 @@ namespace demoUniversity
             }
             Session.Add("type", DropDownList2.SelectedItem.Text);
             Label1.Text = "Payment is successful. Now complete your subject choice. You can edit your choice. It is not necessary to choice all subjects.";
-
+            Table2.Visible = true;
             create();
             create2();
             Session.Add("create", "notnull");

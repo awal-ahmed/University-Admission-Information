@@ -22,7 +22,6 @@ namespace demoUniversity
             }
             connect.Open();
             cons_table();
-            Response.Write("Successful");
             //Button1.Visible = true;
             Button2.Visible = false;
             Button3.Visible = false;

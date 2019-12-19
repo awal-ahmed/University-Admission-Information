@@ -19,7 +19,6 @@ namespace demoUniversity
                 connect.Close();
             }
             connect.Open();
-            Response.Write("Successful");
 
             if (!IsPostBack)
             {
