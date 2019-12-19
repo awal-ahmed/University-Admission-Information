@@ -308,6 +308,10 @@ namespace demoUniversity
                 TableRow rows1 = new TableRow();
                 TextBox tb = new TextBox();
                 tb.ID = "tb_" + pstno.ToString() + "_cm";
+                tb.CssClass = "te";
+                tb.Width = 400;
+                tb.Height = 30;
+                tb.TextMode = TextBoxMode.MultiLine;
 
                 Button bt1 = new Button();
                 bt1.CommandArgument = pstno.ToString();
