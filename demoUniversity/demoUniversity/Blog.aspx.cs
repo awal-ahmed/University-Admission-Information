@@ -89,10 +89,11 @@ namespace demoUniversity
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = connect.CreateCommand();
-            cmd.CommandType = CommandType.Text;
+            
+            
             string st = Session["name"].ToString();
-            cmd.CommandText = "insert into bpost (name , pst) values ('" + st + "','" + TextBox1.Text + "')";
+            string sql = "insert into bpost (name , pst) values ('" + st + "','" + TextBox1.Text + "')";
+            SqlCommand cmd = new SqlCommand(sql,connect);
             cmd.ExecuteNonQuery();
             TextBox1.Controls.Clear();
             Response.Redirect("Blog.aspx");
@@ -101,7 +102,7 @@ namespace demoUniversity
         void cons_table()
         {
             Response.Clear();
-            String sql = "SELECT * FROM bpost";
+            String sql = "SELECT * FROM bpost order by id DESC";
             SqlCommand command = new SqlCommand(sql, connect);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataSet dataSet = new DataSet();
@@ -124,7 +125,7 @@ namespace demoUniversity
 
                 cell1.Text = tables.Rows[i][1].ToString();
                 cell1.ForeColor = System.Drawing.Color.Blue;
-                cell1.Font.Size = 17;
+                cell1.Font.Size = 15;
                 cell1.Font.Bold = false;
                 row.Cells.Add(cell1);
 
@@ -163,7 +164,8 @@ namespace demoUniversity
                 cell.Width=5;
                 cell.BackColor = System.Drawing.Color.LightGreen;
                 row.Cells.Add(cell);*/
-
+                Label lb = new Label();
+                
                 TableRow row1 = new TableRow();
                 /*TableCell cell2 = new TableCell();
                 cell2.Width = 5;
@@ -174,7 +176,7 @@ namespace demoUniversity
 
                 string st = tables.Rows[i][2].ToString();
                 Label lb2 = new Label();
-                st = "&nbsp; &nbsp;   " + st;
+                //st = "&nbsp; &nbsp;   " + st;
                 lb2.Text = st;
                 lb2.Font.Size = 15;
 
@@ -191,12 +193,7 @@ namespace demoUniversity
 
 
                 // Loop through rows
-                TableCell cell12 = new TableCell();
-                cell12.BackColor = System.Drawing.Color.FromArgb(13434879);
-                cell12.Text = "&nbsp;";
-                row2.Cells.Add(cell12);
-
-                Table2.Rows.Add(row2);
+                
 
 
                 //Write comment
@@ -207,25 +204,35 @@ namespace demoUniversity
                 DataSet dataSet1 = new DataSet();
                 dataAdapter1.Fill(dataSet1);
                 int j1 = dataSet1.Tables[0].Rows.Count;
+                TableRow hdrow = new TableRow();
+
+                TableCell hdcell = new TableCell();
+                Label l = new Label();
+                l.Text = "Comment Section";
+                l.Font.Bold = true;
+                l.Font.Size = 12;
+                l.CssClass = "re";
+                hdcell.Controls.Add(l);
+                hdrow.Cells.Add(hdcell);
+                Table2.Rows.Add(hdrow);
                 for (int i1 = 0; i1 < j1; i1++)
                 {
                     DataTable tables1 = dataSet1.Tables[0];
 
                     int cmtno = Convert.ToInt32(tables1.Rows[i1][0].ToString());
                     TableRow rows = new TableRow();
-                    /*TableCell cell = new TableCell();
-                    cell.Width=5;
-                    cell.BackColor = System.Drawing.Color.LightGreen;
-                    row.Cells.Add(cell);*/
+                    
                     TableCell cell1s = new TableCell();
-
-                    cell1s.Text = tables1.Rows[i1][2].ToString();
+                    Label lb1 = new Label();
+                    lb1.Text = tables1.Rows[i1][2].ToString();
+                    lb1.CssClass = "re";
+                    cell1s.Controls.Add(lb1);
                     cell1s.ForeColor = System.Drawing.Color.Blue;
                     cell1s.Font.Size = 15;
                     cell1s.Font.Bold = false;
                     rows.Cells.Add(cell1s);
 
-
+                    
                     Button bts = new Button();
                     bts.ID = "btc_" + cmtno.ToString() + "_Del";
                     bts.CommandArgument = cmtno.ToString();
@@ -253,6 +260,7 @@ namespace demoUniversity
                         bts.Visible = true;
                     }
                     else bts.Visible = false;
+                   // rows.CssClass = "re";
                     Table2.Rows.Add(rows);
 
                     TableRow row2s = new TableRow();
@@ -271,9 +279,10 @@ namespace demoUniversity
 
                     string sts = tables1.Rows[i1][3].ToString();
                     Label lb2s = new Label();
-                    sts = "&nbsp; &nbsp;   " + sts;
+                   // sts = "&nbsp; &nbsp;   " + sts;
                     lb2s.Text = sts;
-                    lb2s.Font.Size = 13;
+                    lb2s.CssClass = "re";
+                    lb2s.Font.Size = 12;
 
 
 
@@ -288,13 +297,14 @@ namespace demoUniversity
 
 
                     // Loop through rows
-                    TableCell cell12s = new TableCell();
-                    cell12s.BackColor = System.Drawing.Color.FromArgb(13434879);
-                    cell12s.Text = "&nbsp;";
-                    row2s.Cells.Add(cell12s);
-
-                    Table2.Rows.Add(row2s);
+                   
                 }
+                TableCell cell12 = new TableCell();
+                cell12.BackColor = System.Drawing.Color.FromArgb(13434879);
+                cell12.Text = "&nbsp;";
+                row2.Cells.Add(cell12);
+
+                Table2.Rows.Add(row2);
                 TableRow rows1 = new TableRow();
                 TextBox tb = new TextBox();
                 tb.ID = "tb_" + pstno.ToString() + "_cm";
@@ -340,6 +350,9 @@ namespace demoUniversity
 
             }
             Table2.HorizontalAlign = HorizontalAlign.Center;
+            
+            
+            
 
         }
         void btdel_Click(object sender, EventArgs e)

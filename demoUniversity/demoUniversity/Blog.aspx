@@ -30,6 +30,26 @@
         border-radius: 4px;
         background-color: #f1f1f1;
     }
+         .imgfit {
+             display:block;
+        height:auto;
+        width: 100%;
+    }
+         .bgcell
+
+{
+
+  BACKGROUND-IMAGE: url(Images/blog.jpg);
+    BACKGROUND-REPEAT: no-repeat;
+
+}
+        .re {
+        padding: 5px 50px;
+       
+        border-radius: 4px;
+        
+        margin-left: 20px
+    }
         .foot{
             position:static;
             bottom:-5em;
@@ -153,7 +173,17 @@ ul:after { clear: both; }
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Table ID="Table2" runat="server"></asp:Table>
+        <asp:Table ID="Table3" runat="server">
+            <asp:TableRow>
+                <asp:TableCell Width="600px" CssClass="bgcell" >
+                    
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Table ID="Table2" runat="server"></asp:Table>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        
 
         
         <p class="foot" style="font:15px">

@@ -212,6 +212,7 @@
     <Content Include="FAQ.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\blog.jpg" />
     <Content Include="Images\BUET.jpg" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\CUET.jpg" />
