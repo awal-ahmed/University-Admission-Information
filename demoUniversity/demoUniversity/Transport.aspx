@@ -24,7 +24,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -32,6 +32,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -85,7 +86,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 
         <div style="text-align:center; width:100%; background-color:midnightblue">
@@ -94,7 +95,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -145,20 +146,20 @@ ul:after { clear: both; }
         </div>
         <br />
         <br />
-        <p style="font-size:20px; margin-right:20px; margin-left:50px; text-shadow: 1px 1px 2px"> Select a your place (name of your current city) and destination from the box.. This will show you all possible ways from your city to the desination university.. It will also show you the real time shortest way in map..</p>
+        <p style="font-size:20px; margin-right:20px; margin-left:50px; color:white; text-shadow: 1px 1px 2px"> Select your place (name of your current city) and destination from the box.. This will show you all possible ways from your city to the desination university.. It will also show you the real time shortest way in map..</p>
         <br />
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="#03A9F4" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
                 <asp:TableCell>From</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" CssClass="te" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>Destination</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200"  Height="30" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" CssClass="te"  Height="30" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" CssClass="te" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -178,7 +179,7 @@ ul:after { clear: both; }
             </asp:TableRow>
         </asp:Table>
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
+        <asp:Label ID="Label1" runat="server" ForeColor="white" Text="Label" Visible="false"></asp:Label>
         <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" BackColor="White" Font-Bold="False" Font-Size="15pt" CellPadding="5" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#DCDCDC" />
             <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />

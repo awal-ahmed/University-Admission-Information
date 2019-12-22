@@ -29,7 +29,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -93,7 +93,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 
        <div style="text-align:center; width:100%; background-color:midnightblue">
@@ -102,7 +102,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -151,7 +151,7 @@ ul:after { clear: both; }
         </div>
         <br />
         <br />
-        <asp:Table ID="Table3" runat="server" Width="1359px" CellSpacing="10">
+        <asp:Table ID="Table3" ForeColor="White" runat="server" Width="1359px" CellSpacing="10">
             <asp:TableRow>
                 <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Khulna University of Engineering & Technology (KUET) is one of the leading public universities of Bangladesh giving special emphasis in the Engineering and Technological Education and research. KUET is well known for offering very high quality educational, research and developmental programs in the major disciplines of engineering as well as basic sciences. It has a sober objective to achieve excellence in quality education, research and progression to address the present needs of the country as well as the South-Western region to make it as the "Center of Excellence".</asp:TableCell>
                 <asp:TableCell Width="450px" Height="300px">
@@ -224,26 +224,26 @@ ul:after { clear: both; }
         <br />
         <br />
         <div style=" text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Architecture(Arch)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Building Engineering and Construction Management(BECM)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Biomedical Engineering(BME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Chemical Engineering(ChE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Civil Engineering(CE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Computer Science and Engineering(CSE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Electrical and Electronic Engineering(EEE)</p></div>  
-        <div style=" text-align:center; font-size:20px"><p> Department of Electronics and Communication Engineering(ECE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Energy Science and Engineering(ESE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Industrial Engineering and Management(IEM)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Leather Engineering(LE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Materials Science and Engineering(MSE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Mechatronics Engineering(MtE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Mechanical Engineering(ME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Textile Engineering(TE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Urban and Regional Planning(URP)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Architecture(Arch)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Building Engineering and Construction Management(BECM)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Biomedical Engineering(BME)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Chemical Engineering(ChE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Civil Engineering(CE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Computer Science and Engineering(CSE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Electrical and Electronic Engineering(EEE)</p></div>  
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Electronics and Communication Engineering(ECE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Energy Science and Engineering(ESE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Industrial Engineering and Management(IEM)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Leather Engineering(LE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Materials Science and Engineering(MSE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Mechatronics Engineering(MtE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Mechanical Engineering(ME)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Textile Engineering(TE)</p></div> 
+        <div style=" color:white;  text-align:center; font-size:20px"><p> Department of Urban and Regional Planning(URP)</p></div>
         <br />
         <br />
         <asp:Table ID="Table1" runat="server" BorderWidth="2px" GridLines="Both" HorizontalAlign="Center" Font-Size="30px" BackColor="#006666" Caption="Preveous Year Information Summary" CaptionAlign="Top" ForeColor="#006699" Width="1150px">
-            <asp:TableHeaderRow BackColor="#33CC33" ForeColor="Black" Font-Size="18px">
+            <asp:TableHeaderRow BackColor="#33CC33" ForeColor="white" Font-Size="18px">
                 <asp:TableHeaderCell>Year</asp:TableHeaderCell>
                 <asp:TableHeaderCell>GPA</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Examinee</asp:TableHeaderCell>
@@ -264,7 +264,7 @@ ul:after { clear: both; }
                 <asp:TableHeaderCell>URP</asp:TableHeaderCell>                
                 <asp:TableHeaderCell>IEM</asp:TableHeaderCell>
             </asp:TableHeaderRow>
-            <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
+            <asp:TableRow BackColor="#66FF66" ForeColor="white" Font-Size="18px">
                 <asp:TableCell>2018</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
@@ -285,7 +285,7 @@ ul:after { clear: both; }
                 <asp:TableCell>3712</asp:TableCell>
                 <asp:TableCell>1435</asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
+            <asp:TableRow BackColor="#66FF66" ForeColor="white" Font-Size="18px">
                 <asp:TableCell>2016</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
@@ -318,12 +318,12 @@ ul:after { clear: both; }
             
             <asp:TableRow>
                 <asp:TableCell>From</asp:TableCell>
-                <asp:TableCell><asp:DropDownList ID="DropDownList1" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
+                <asp:TableCell><asp:DropDownList ID="DropDownList1" runat="server" CssClass="te"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
                     <Items> <asp:ListItem Enabled="true" Selected="True" Text="Select Your Place"></asp:ListItem>
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To KUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" Font-Overline="False" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" CssClass="te" Text="Go To KUET" OnClick="Button1_Click" BackColor="#540D6E" ForeColor="White" Font-Bold="True" Font-Overline="False" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />

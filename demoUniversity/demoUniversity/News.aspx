@@ -24,7 +24,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -32,6 +32,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -84,7 +85,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 		<div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -92,7 +93,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -143,20 +144,20 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <p style="font-size:20px; margin-right:20px; margin-left:50px; text-shadow: 1px 1px 2px"> This page will provide news about various programme in different university.. You can filter those by month, venue or type of program.. Select that from the box.. Then press 'apply'..</p>
+        <p style="font-size:20px; margin-right:20px; margin-left:50px; color: white; text-shadow: 1px 1px 2px"> This page will provide news about various programme in different university.. You can filter those by month, venue or type of program.. Select that from the box.. Then press 'apply'..</p>
         <br />
          <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
                 <asp:TableCell>Filter By</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList4" runat="server" BackColor="#CCFFFF" Width="200" Height="30">
+                    <asp:DropDownList ID="DropDownList4" CssClass="te" runat="server"  Width="200" Height="30">
                         <asp:ListItem>Venue</asp:ListItem>
                         <asp:ListItem>Month</asp:ListItem>
                         <asp:ListItem>Type</asp:ListItem>
                     </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button4" runat="server" Text="Apply" OnClick="Button_Click4" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button4" runat="server" Text="Apply" CssClass="te" OnClick="Button_Click4" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
         
                 </asp:TableCell>
             </asp:TableRow>
@@ -165,10 +166,10 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Search with month</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="te" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button_Click" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
                     </asp:TableCell>
             </asp:TableRow>
 
@@ -177,10 +178,10 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Search with Venue</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="e" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button_Click1" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button2" runat="server" Text="Search" CssClass="te" OnClick="Button_Click1" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
                     </asp:TableCell>
             </asp:TableRow>
 

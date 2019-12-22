@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -83,7 +83,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 		<div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -91,7 +91,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -143,12 +143,45 @@ ul:after { clear: both; }
         <br />
         <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Date"></asp:Label><asp:TextBox ID="TextBox1" runat="server" CssClass="ex"></asp:TextBox><br />
-        <asp:Label ID="Label2" runat="server" Text="University"></asp:Label><asp:TextBox ID="TextBox2" runat="server" CssClass="ex"></asp:TextBox><br />
-        <asp:Label ID="Label3" runat="server" Text="description"></asp:Label><asp:TextBox ID="TextBox3" runat="server" CssClass="ex"></asp:TextBox><br />
-        <asp:Label ID="Label4" runat="server" Text="Upload a file"></asp:Label><asp:FileUpload ID="FileUpload1" runat="server" /><br />
-        <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
-
+        <asp:Table ID="Table1" ForeColor="white" runat="server" HorizontalAlign="Center">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label1" runat="server" Text="Date"></asp:Label>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="te"></asp:TextBox>
+                 </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label2" runat="server" Text="University"></asp:Label>
+                 </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass="te"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label3" runat="server" Text="description"></asp:Label>
+                 </asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox3" runat="server" CssClass="te"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Label ID="Label4" runat="server"  ForeColor="White"  Text="Upload a file"></asp:Label>
+                 </asp:TableCell>
+                <asp:TableCell>
+                    <asp:FileUpload ID="FileUpload1" ForeColor="White" runat="server" />
+                 </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:Button ID="Button1" runat="server" CssClass="te" ForeColor="White" BackColor="#540D6E" Text="Upload" OnClick="Button1_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
         <br />
         <br />
         <p class="foot" style="font:15px">

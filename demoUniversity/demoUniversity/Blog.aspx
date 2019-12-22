@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 10px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -51,6 +51,7 @@
         margin-left: 20px
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -103,7 +104,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 		<div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -111,7 +112,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -163,18 +164,18 @@ ul:after { clear: both; }
         <br />
         <br />
 
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
+        <asp:Table ID="Table1" ForeColor="White" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="TextBox1" runat="server" Height="100px" Width="300px" TextMode="MultiLine" CssClass="te"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Post" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" CssClass="te" ForeColor="White" BackColor="#540D6E" Text="Post" OnClick="Button1_Click" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Table ID="Table3" runat="server">
+        <asp:Table ID="Table3" ForeColor="White" runat="server">
             <asp:TableRow>
                 <asp:TableCell Width="600px" CssClass="bgcell" >
                     

@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -31,6 +31,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -84,7 +85,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:100%; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -92,7 +93,7 @@ ul:after { clear: both; }
          <asp:Table  ID="Table2" runat="server" HorizontalAlign="Right"   CellPadding="5">
             <asp:TableRow CssClass="ex">
                 <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -142,7 +143,7 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Select University </asp:TableCell>
                 <asp:TableCell>
-                   <asp:DropDownList ID="DropDownList1" runat="server" Width="450px" Height="25px" BackColor="#CCFFFF" Font-Italic="True" Font-Size="15" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                   <asp:DropDownList ID="DropDownList1"  ForeColor="Black" runat="server" Width="450px" Height="25px" BackColor="white" Font-Italic="True" Font-Size="15" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell> <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/images.png" Height="25px" Width="30px" OnClick="ImageButton1_Click" /> </asp:TableCell>
             </asp:TableRow>

@@ -277,7 +277,7 @@ namespace demoUniversity
                 cell.BackColor = System.Drawing.Color.LightGreen;
                 row.Cells.Add(cell);*/
                 TableCell cell1 = new TableCell();
-                cell1.BackColor = System.Drawing.Color.FromArgb(13434879);
+                cell1.BackColor = System.Drawing.Color.FromArgb(0);
                 cell1.Text = tables.Rows[i][1].ToString();
                 cell1.ForeColor = System.Drawing.Color.Blue;
                 cell1.Font.Size = 25;
@@ -294,7 +294,7 @@ namespace demoUniversity
                 TableCell cell11 = new TableCell();
                 Label lb1 = new Label();
                 lb1.Text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                lb1.BackColor = System.Drawing.Color.FromArgb(13434879);
+                lb1.BackColor = System.Drawing.Color.FromArgb(0);
                 lb1.Width = 20;
                 cell11.Controls.Add(lb1);
                 
@@ -304,12 +304,12 @@ namespace demoUniversity
                 lb2.Text = st;
                 lb2.Font.Size = 15;
  
-                lb2.BackColor = System.Drawing.Color.FromArgb(13434879);
+                lb2.BackColor = System.Drawing.Color.FromArgb(0);
                 
                 cell11.Controls.Add(lb2);
                 
                // cell11.Text = st;
-                cell11.BackColor = System.Drawing.Color.FromArgb(13434879);  
+                cell11.BackColor = System.Drawing.Color.FromArgb(0);  
                 row1.Cells.Add(cell11);
                 Table5.Rows.Add(row1);
                 TableRow row2 = new TableRow();
@@ -318,7 +318,7 @@ namespace demoUniversity
                 cell.BackColor = System.Drawing.Color.LightGreen;
                 row.Cells.Add(cell);*/
                 TableCell cell12 = new TableCell();
-                cell12.BackColor = System.Drawing.Color.FromArgb(13434879);
+                cell12.BackColor = System.Drawing.Color.FromArgb(0);
                 cell12.Text = "&nbsp;";
                 row2.Cells.Add(cell12);
 

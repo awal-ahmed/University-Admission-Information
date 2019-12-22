@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -31,6 +31,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -83,7 +84,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -91,7 +92,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -142,7 +143,7 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <h1 style="text-align:center; text-shadow:1px 1px 2px">Add a new Students</h1>
+        <h1 style="text-align:center; color:white; text-shadow:1px 1px 2px">Add a new Students</h1>
 
         <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" Font-Size="12pt" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#DCDCDC" />
@@ -159,29 +160,29 @@ ul:after { clear: both; }
         <br />
         <br/ />
         
-        <asp:Table ID="Table1" runat="server" CaptionAlign="Top" Font-Size="20px"  Caption="Add a new student">
+        <asp:Table ID="Table1" ForeColor="White" runat="server" CaptionAlign="Top" Font-Size="20px"  Caption="Add a new student">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList1" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Science</asp:ListItem>
                         <asp:ListItem>Commerce</asp:ListItem>
                         <asp:ListItem>Humanities</asp:ListItem>
                     </asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Next" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" CssClass="te" BackColor="#540D6E" ForeColor="white" Text="Next" OnClick="Button1_Click" />
                 </asp:TableCell>
             </asp:TableRow>
             
         </asp:Table>
-        <asp:Table ID="Table2" runat="server">
+        <asp:Table ID="Table2" ForeColor="White" runat="server">
             <asp:TableRow>
                 <asp:TableCell>Registration: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox15" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox15"  runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Roll: </asp:TableCell>
-                <asp:TableCell> <asp:TextBox ID="TextBox16" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
+                <asp:TableCell> <asp:TextBox ID="TextBox16"  runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Name: </asp:TableCell>
@@ -193,7 +194,7 @@ ul:after { clear: both; }
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList2" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -212,7 +213,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList4" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList4" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -231,7 +232,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList5" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList5" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -250,7 +251,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList6" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList6" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -269,7 +270,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList7" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList7" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -288,7 +289,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList8" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList8" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -307,7 +308,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList9" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList9" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -326,7 +327,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList10" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList10" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Physics</asp:ListItem>
                         <asp:ListItem>Chemistry</asp:ListItem>
                         <asp:ListItem>Biology</asp:ListItem>
@@ -344,7 +345,7 @@ ul:after { clear: both; }
         </asp:Table>
 
 
-        <asp:Table ID="Table3" runat="server">
+        <asp:Table ID="Table3" ForeColor="white" runat="server">
             <asp:TableRow>
                 <asp:TableCell>Registration: </asp:TableCell>
                 <asp:TableCell> <asp:TextBox ID="TextBox18" runat="server" type ="number" CssClass="te"></asp:TextBox> </asp:TableCell>
@@ -363,7 +364,7 @@ ul:after { clear: both; }
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList3" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList3" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -383,7 +384,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList11" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList11" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -403,7 +404,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList12" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList12" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -423,7 +424,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList13" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList13" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -443,7 +444,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList14" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList14" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -463,7 +464,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList15" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList15" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -483,7 +484,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList16" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList16" CssClass="te" runat="server" Width="100">
                         <asp:ListItem>Bangla</asp:ListItem>
                         <asp:ListItem>English</asp:ListItem>
                         <asp:ListItem>ICT</asp:ListItem>
@@ -500,7 +501,7 @@ ul:after { clear: both; }
             </asp:TableRow>
              <asp:TableRow>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList17" runat="server" Width="100">
+                    <asp:DropDownList ID="DropDownList17" CssClass="te" runat="server" Width="100">
 
                         <asp:ListItem>Accounting</asp:ListItem>
                         <asp:ListItem>Finance</asp:ListItem>
@@ -517,7 +518,7 @@ ul:after { clear: both; }
             
         </asp:Table>
 
-        <asp:Button ID="Button2" runat="server" Text="Submit" OnClick="Button2_Click" />
+        <asp:Button ID="Button2" runat="server" CssClass="te" BackColor="#540D6E" ForeColor="white" Text="Submit" OnClick="Button2_Click" />
        
          <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />

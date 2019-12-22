@@ -24,7 +24,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -84,7 +84,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -131,14 +131,14 @@ ul:after { clear: both; }
                 <tr>
                     <td style="font-size: x-large; background-color: #000000; color: #FF00FF;">Registration: </td>
                     <td class="auto-style1" style="background-color: #C0C0C0">
-                        <asp:TextBox ID="email" runat="server" BackColor="#CCFFFF" Font-Bold="True" ForeColor="Black" Width="250px" BorderColor="Black" BorderWidth="5px" Height="30px"></asp:TextBox>
+                        <asp:TextBox ID="email" runat="server" CssClass="te" BackColor="#CCFFFF" Font-Bold="True" ForeColor="Black" Width="250px" BorderColor="Black" BorderWidth="5px" Height="30px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td style="font-size: x-large; background-color: #000000; color: #FF00FF;">&nbsp;Password: </td>
                     <td class="auto-style1" style="background-color: #C0C0C0; margin-left: 40px;">
                         
-                        <asp:TextBox ID="pword" runat="server" BackColor="White" ForeColor="Black" Width="250px" BorderColor="Black" BorderWidth="5px" TextMode="Password" Height="30px" MaxLength="30"></asp:TextBox>
+                        <asp:TextBox ID="pword" runat="server" CssClass="te" BackColor="White" ForeColor="Black" Width="250px" BorderColor="Black" BorderWidth="5px" TextMode="Password" Height="30px" MaxLength="30"></asp:TextBox>
                     </td>
                 </tr>
                
@@ -148,7 +148,7 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <div style="margin-left:430px; text-shadow:1px 1px 2px"> Your roll is your initial password. Change it From your profile. For any login issue send a
+        <div style="margin-left:430px; color:white; text-shadow:1px 1px 2px"> Your roll is your initial password. Change it From your profile. For any login issue send a
         <asp:HyperLink ID="Forgot" runat="server" NavigateUrl="mailto:login@university.com">
                     Mail</asp:HyperLink>                    
                                   </div>

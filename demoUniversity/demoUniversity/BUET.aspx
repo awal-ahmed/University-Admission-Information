@@ -7,6 +7,7 @@
     <title>Home</title>
     <style>
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -59,7 +60,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -67,7 +68,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  >
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
@@ -118,7 +119,7 @@ ul:after { clear: both; }
         <br />
         <br />
         
-        <asp:Table ID="Table4" runat="server" Width="1359px" CellSpacing="10">
+        <asp:Table ID="Table4" ForeColor="White" runat="server" Width="1359px" CellSpacing="10">
             <asp:TableRow>
                 <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">The BUET campus is in the heart of the city of Dhaka. It has a compact campus with halls of residence within walking distances of the academic buildings. At present the campus occupies 83.9 acres (33.95 hectares) of land. The academic area itself occupies 31.81 acres (12.87 hectares) of land defined by Shahid Sharani, Bakshi Bazar Road and Asian Highway. The physical expansion of the university over the last few years has been quite impressive.Currently the main academic buildings include.</asp:TableCell>
                 <asp:TableCell Width="450px"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/BUET.jpg" Width="450" Height="300"></asp:Image></asp:TableCell>
@@ -128,21 +129,21 @@ ul:after { clear: both; }
         </asp:Table>
         <br />
         <br />
-        <div style=" text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Architecture (Arch.)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Biomedical Engineering (BME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Chemical Engineering (Ch.E)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Civil Engineering (CE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Computer Science & Engineering (CSE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Electrical & Electronic Engineering (EEE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Glass and Ceramic Engineering (GCE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Industrial & Production Engineering (IPE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Materials & Metallurgical Engineering (MME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Mechanical Engineering (ME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Naval Architecture & Marine Engineering (NAME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Petroleum & Mineral Resources Engineering (PMRE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Urban & Regional Planning (URP)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Water Resources Engineering (WRE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Architecture (Arch.)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Biomedical Engineering (BME)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Chemical Engineering (Ch.E)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Civil Engineering (CE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Computer Science & Engineering (CSE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Electrical & Electronic Engineering (EEE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Glass and Ceramic Engineering (GCE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Industrial & Production Engineering (IPE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Materials & Metallurgical Engineering (MME)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Mechanical Engineering (ME)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Naval Architecture & Marine Engineering (NAME)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Petroleum & Mineral Resources Engineering (PMRE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Urban & Regional Planning (URP)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Water Resources Engineering (WRE)</p></div> 
         <br />
         <br />
         <br />
@@ -211,12 +212,12 @@ ul:after { clear: both; }
         <asp:Table ID="Table2" runat="server" CellSpacing="10" HorizontalAlign="Center" ForeColor="White">
             
             <asp:TableRow>
-                <asp:TableCell><asp:DropDownList ID="DropDownList1" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
+                <asp:TableCell><asp:DropDownList ID="DropDownList1" CssClass="te" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
                     <Items> <asp:ListItem Enabled="true" Selected="True" Text="Select Your Place"></asp:ListItem>
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To BUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To BUET" OnClick="Button1_Click"  BackColor="##540D6E" ForeColor="White" Font-Bold="True" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />

@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -31,6 +31,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -83,7 +84,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -91,7 +92,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -141,9 +142,9 @@ ul:after { clear: both; }
         </div>
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" Width="1359px" CellSpacing="10">
+        <asp:Table ID="Table1" runat="server" ForeColor="white" Width="1359px" CellSpacing="10">
             <asp:TableRow>
-                <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Rajshahi University of Engineering & Technology (RUET) is the 2nd oldest prestigious public Engineering University of Bangladesh offers quality education and research in the field of engineering and technology. The university established in 1964 as Rajshahi Engineering College with three Engineering departments namely Mechanical Engineering, Electrical & Electronic Engineering and Civil Engineering. The institute started with Bachelor degree program and limited number of students (122) enrolled in three departments each year. Later it was converted to Bangladesh Institute of Technology (BIT), Rajshahi in 1986 to enhance the technical education.</asp:TableCell>
+                <asp:TableCell Width="450px" Font-Size="Larger"  VerticalAlign="Middle" Font-Bold="False">Rajshahi University of Engineering & Technology (RUET) is the 2nd oldest prestigious public Engineering University of Bangladesh offers quality education and research in the field of engineering and technology. The university established in 1964 as Rajshahi Engineering College with three Engineering departments namely Mechanical Engineering, Electrical & Electronic Engineering and Civil Engineering. The institute started with Bachelor degree program and limited number of students (122) enrolled in three departments each year. Later it was converted to Bangladesh Institute of Technology (BIT), Rajshahi in 1986 to enhance the technical education.</asp:TableCell>
                 <asp:TableCell Width="450px"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/RUET.jpg" Width="450" Height="300"></asp:Image></asp:TableCell>
                 <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">The institute is upgraded as Rajshahi University of Engineering & Technology (RUET) in September, 2003 to enhance the technical education and research. The university is financed by the Government through the university Grants Commission of Bangladesh. The university is an autonomous statutory organization of the Government of Bangladesh functioning within the "Rajshahi University of Engineering &Technology Act 2003.</asp:TableCell>
                 
@@ -151,25 +152,25 @@ ul:after { clear: both; }
         </asp:Table>
         <br />
         <br />
-        <div style=" text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Architecture (Arch)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Industrial & Production Engineering(BECM)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Chemical and Food Process Engineering(CFPE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Civil Engineering(CE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Computer Science & Engineering(CSE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Electrical and Computer Engineering(ECE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Electrical and Electronic Engineering(EEE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Electronics and Telecommunication Engineering(ETE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Glass & Ceramic Engineering(GCE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Industrial & Production Engineering(IPE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Materials Science & Engineering(MSE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Mechanical Engineering(ME)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Mechatronics Engineering(MTE)</p></div> 
-        <div style=" text-align:center; font-size:20px"><p>Department of Urban & Regional Planning(URP)</p></div> 
+        <div style=" color:white; text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Architecture (Arch)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Industrial & Production Engineering(BECM)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Chemical and Food Process Engineering(CFPE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Civil Engineering(CE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Computer Science & Engineering(CSE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Electrical and Computer Engineering(ECE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Electrical and Electronic Engineering(EEE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Electronics and Telecommunication Engineering(ETE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Glass & Ceramic Engineering(GCE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Industrial & Production Engineering(IPE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Materials Science & Engineering(MSE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Mechanical Engineering(ME)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Mechatronics Engineering(MTE)</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p>Department of Urban & Regional Planning(URP)</p></div> 
         <br />
         <br />
         <asp:Table ID="Table4" runat="server" BorderWidth="2px" GridLines="Both" HorizontalAlign="Center" Font-Size="30px" BackColor="#006666" Caption="Preveous Year Information Summary" CaptionAlign="Top" ForeColor="#006699" Width="1150px">
-            <asp:TableHeaderRow BackColor="#33CC33" ForeColor="Black" Font-Size="18px">
+            <asp:TableHeaderRow BackColor="#33CC33" ForeColor="white" Font-Size="18px">
                 <asp:TableHeaderCell>Year</asp:TableHeaderCell>
                 <asp:TableHeaderCell>GPA</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Examinee</asp:TableHeaderCell>
@@ -188,7 +189,7 @@ ul:after { clear: both; }
                 <asp:TableHeaderCell>URP</asp:TableHeaderCell>                
                 <asp:TableHeaderCell>IPE</asp:TableHeaderCell>
             </asp:TableHeaderRow>
-            <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
+            <asp:TableRow BackColor="#66FF66" ForeColor="white" Font-Size="18px">
                 <asp:TableCell>2018</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
@@ -207,7 +208,7 @@ ul:after { clear: both; }
                 <asp:TableCell>2996</asp:TableCell>
                 <asp:TableCell>1435</asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
+            <asp:TableRow BackColor="#66FF66" ForeColor="white" Font-Size="18px">
                 <asp:TableCell>2016</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
@@ -233,12 +234,12 @@ ul:after { clear: both; }
         <asp:Table ID="Table2" runat="server" CellSpacing="10" HorizontalAlign="Center" ForeColor="White">
             
             <asp:TableRow>
-                <asp:TableCell><asp:DropDownList ID="DropDownList1" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
+                <asp:TableCell><asp:DropDownList ID="DropDownList1" CssClass="te" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
                     <Items> <asp:ListItem Enabled="true" Selected="True" Text="Select Your Place"></asp:ListItem>
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To RUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" CssClass="te" Text="Go To RUET" OnClick="Button1_Click" BackColor="#540D6E" ForeColor="White" Font-Bold="True" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />

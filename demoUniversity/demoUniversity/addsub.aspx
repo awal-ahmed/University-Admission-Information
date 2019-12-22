@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -31,6 +31,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -83,7 +84,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 		<div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -91,7 +92,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
            </asp:TableCell>
            <asp:TableCell>
                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -139,7 +140,7 @@ ul:after { clear: both; }
         <div style="text-align:center; width:100%;  background-color:#5784BE">
             <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">Add a Subject</div>
         </div>
-        <asp:Table ID="Table2" runat="server" HorizontalAlign="Center">
+        <asp:Table ID="Table2" ForeColor="White" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell>
                     Add a new university
@@ -151,13 +152,13 @@ ul:after { clear: both; }
                     <asp:TextBox ID="TextBox2" CssClass="te" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button2" runat="server" CssClass="ex" BackColor="Green" Text="Add" OnClick="Button2_Click" />
+                    <asp:Button ID="Button2" runat="server" CssClass="te" BackColor="#540D6E" ForeColor="white" Text="Add" OnClick="Button2_Click" />
                 </asp:TableCell>
                 
             </asp:TableRow>
         </asp:Table>
         
-        <asp:Table ID="Table1" HorizontalAlign="Center"  runat="server">
+        <asp:Table ID="Table1" ForeColor="White" HorizontalAlign="Center"  runat="server">
             <asp:TableRow>
                 <asp:TableCell></asp:TableCell>
                 <asp:TableCell></asp:TableCell>
@@ -188,7 +189,7 @@ ul:after { clear: both; }
                     <asp:TextBox ID="TextBox1" CssClass="te" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" CssClass="ex" BackColor="green" runat="server" Text="Button" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" CssClass="te" BackColor="#540D6E" ForeColor="white" runat="server" Text="Button" OnClick="Button1_Click" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>

@@ -23,7 +23,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -31,6 +31,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -83,7 +84,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
     
 		<div style="text-align:center; width:100%; background-color:midnightblue">
@@ -96,7 +97,7 @@ ul:after { clear: both; }
             <asp:TableRow  >
                 <asp:TableCell>
                    
-                <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green" CssClass="ex"  ForeColor="White" Height="30px" Font-Bold="true" />
+                <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01" CssClass="ex"  ForeColor="White" Height="30px" Font-Bold="true" />
          
                                       </asp:TableCell>
                 <asp:TableCell>
@@ -161,7 +162,7 @@ ul:after { clear: both; }
 
         <p style=" text-shadow:1px 1px 2px; font-size:18px; color: red"> *Complete your payment first. To know details about payment procedure visit <a href ="Notic.aspx"> Notice</a> page. Use your transaction id here to continue your apply procedure. It may take time to update your transaction id on website.</p>
         <br />
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center">
+        <asp:Table ID="Table1" ForeColor="White" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:DropDownList ID="DropDownList2" CssClass="te" runat="server">
@@ -187,7 +188,7 @@ ul:after { clear: both; }
                     <asp:TextBox ID="TextBox1" CssClass="te" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" CssClass="ex" BackColor="Green" Text="Submit" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" CssClass="te" BackColor="#540D6E" ForeColor="White" Text="Submit" OnClick="Button1_Click" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
@@ -195,11 +196,11 @@ ul:after { clear: both; }
         <asp:Table ID="Table5" runat="server" HorizontalAlign="Center">
             <asp:TableRow>
                 <asp:TableCell>
-                           <asp:Label ID="Label1" runat="server" Text=""  ForeColor="Red"></asp:Label>
+                           <asp:Label ID="Label1" runat="server" Text="" CssClass="te"  ForeColor="Red"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:Table HorizontalAlign="Center" ID="Table2" runat="server" BorderWidth="2px" BorderColor="Green" CellPadding="2" CellSpacing="2">
+        <asp:Table HorizontalAlign="Center" ID="Table2" runat="server" CssClass="te" BorderWidth="2px" BorderColor="Green" CellPadding="2" CellSpacing="2">
             <asp:TableRow>
                 <asp:TableCell>
                  </asp:TableCell>
@@ -208,7 +209,7 @@ ul:after { clear: both; }
        <br />
 
 
-        <asp:Table ID="Table7" HorizontalAlign="Center" runat="server">
+        <asp:Table ID="Table7" ForeColor="White" HorizontalAlign="Center" runat="server">
             <asp:TableRow>
                 <asp:TableCell>
                     

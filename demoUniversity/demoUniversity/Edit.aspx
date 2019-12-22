@@ -24,14 +24,15 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
         border-radius: 4px;
         background-color: #f1f1f1;
     }
-        .foot{
+        .foot{ 
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -84,7 +85,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 		<div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -92,7 +93,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -143,49 +144,49 @@ ul:after { clear: both; }
     <br />
     <br />
     <br />
-        <p style="font-size: 25px">Add A Notice:</p><p style="font-size:20px; margin-left:50px"> This button will take you in a new page.. Where you can add a new notic from your university.. Any type of notice can be added here.. But It should be in .pdf form..</p>
+        <p style=" color:white; font-size: 25px">Add A Notice:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will take you in a new page.. Where you can add a new notic from your university.. Any type of notice can be added here.. But It should be in .pdf form..</p>
         <br />
         
-        <p style="font-size: 25px">Add A Subject:</p><p style="font-size:20px; margin-left:50px"> This button will take you in a new page.. This button is for adding a new subject in a university.. When a university addes a new department in the versity.. You can add it from here..</p>
+        <p style=" color:white; font-size: 25px">Add A Subject:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will take you in a new page.. This button is for adding a new subject in a university.. When a university addes a new department in the versity.. You can add it from here..</p>
         <br />
         
-        <p style="font-size: 25px">Add a new news:</p><p style="font-size:20px; margin-left:50px"> This button will keep you in the same page.. You can add any news of any type of programme happening in your university..</p>
+        <p style=" color:white; font-size: 25px">Add a new news:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will keep you in the same page.. You can add any news of any type of programme happening in your university..</p>
         <br />
         
-        <p style="font-size: 25px">Add a new student:</p><p style="font-size:20px; margin-left:50px"> This button will take you in a new page.. Where you can details about any student..</p>
+        <p style=" color:white; font-size: 25px">Add a new student:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will take you in a new page.. Where you can details about any student..</p>
         <br />
         
-        <p style="font-size: 25px">Add a place to stay in your city:</p><p style="font-size:20px; margin-left:50px"> This button will keep you in the same page.. You can add information about any hotel, mass or other resitent.. It will help the students to stay when they will come to university for any reason.. </p>
+        <p style=" color:white; font-size: 25px">Add a place to stay in your city:</p><p style="font-size:20px; color:white; margin-left:50px"> This button will keep you in the same page.. You can add information about any hotel, mass or other resitent.. It will help the students to stay when they will come to university for any reason.. </p>
         <br />
 
-        <p style="font-size: 25px">Add a new way to go to your university:</p><p style="font-size:20px; margin-left:50px"> This button will keep you in the same page.. Here you can add information about bus, train or other vehicle. This will help them to go to the university from district..</p>
+        <p style=" color:white; font-size: 25px">Add a new way to go to your university:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will keep you in the same page.. Here you can add information about bus, train or other vehicle. This will help them to go to the university from district..</p>
         <br />
 
        
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" CellSpacing="100">
+        <asp:Table ID="Table1" ForeColor="White" runat="server" HorizontalAlign="Center" CellSpacing="100">
             <asp:TableRow>
                 <asp:TableCell HorizontalAlign="Center" >
-                    <asp:Button ID="Button8" runat="server" Text="Add A Notice" OnClick="Button8_Click" BackColor="Teal" ForeColor="White" Font-Size="15"/>
+                    <asp:Button ID="Button8" runat="server" CssClass="te" Text="Add A Notice" OnClick="Button8_Click" BackColor="Teal" ForeColor="White" Font-Size="15"/>
                     <br />
-                    <asp:Button ID="Button9" runat="server" Text="Add A Subject" OnClick="Button9_Click" BackColor="Teal" ForeColor="White" Font-Size="15"/>
+                    <asp:Button ID="Button9" runat="server" CssClass="te" Text="Add A Subject" OnClick="Button9_Click" BackColor="Teal" ForeColor="White" Font-Size="15"/>
                     <br />
-                    <asp:Button ID="Button1" runat="server" Text="Add a new news" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
+                    <asp:Button ID="Button1" runat="server" CssClass="te" Text="Add a new news" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
                     <br />
-                    <asp:Button ID="Button7" runat="server" Text="Add a new student" OnClick="Button7_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+                    <asp:Button ID="Button7" runat="server" CssClass="te" Text="Add a new student" OnClick="Button7_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
                     <br />
-                    <asp:Button ID="Button3" runat="server" Text="Add a place to stay in your city" OnClick="Button3_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+                    <asp:Button ID="Button3" runat="server" CssClass="te" Text="Add a place to stay in your city" OnClick="Button3_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
                     <br />
-                    <asp:Button ID="Button2" runat="server" Text="Add a new way to go to your university" OnClick="Button2_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
+                    <asp:Button ID="Button2" runat="server" CssClass="te" Text="Add a new way to go to your university" OnClick="Button2_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
                 </asp:TableCell>
                 <asp:TableCell>
 <div style="text-align:center"><asp:Label ID="Label15" runat="server" Text="Add a new news" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>
-        <asp:Table HorizontalAlign="Center" ID="tab1" runat="server" CellSpacing="20">
+        <asp:Table HorizontalAlign="Center" ForeColor="white" ID="tab1" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label1" runat="server" Text="Venue"></asp:Label>
                  </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="140" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" CssClass="te" runat="server" BackColor="#CCFFFF" Width="140" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -241,19 +242,19 @@ ul:after { clear: both; }
 
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:Button ID="Button4" runat="server" Text="Done" OnClick="Button4_Click" BackColor="#006600" ForeColor="White" />
+                        <asp:Button ID="Button4" runat="server" Text="Done" OnClick="Button4_Click" BackColor="#540D6E" ForeColor="White" />
                     </asp:TableCell>
               </asp:TableRow>
         </asp:Table>
         <div style="text-align:center"><asp:Label ID="Label16" runat="server" Text="Add a way to go" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>
 
-        <asp:Table ID="tab2" HorizontalAlign="Center" runat="server" CellSpacing="20">
+        <asp:Table ID="tab2" ForeColor="white" HorizontalAlign="Center" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label7" runat="server" Text="From"></asp:Label>
                  </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="te" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -261,7 +262,7 @@ ul:after { clear: both; }
                      <asp:Label ID="Label8" runat="server" Text="To"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList3" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList3" runat="server" CssClass="te" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -325,19 +326,19 @@ ul:after { clear: both; }
 
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button5" runat="server" Text="Done" OnClick="Button5_Click" BackColor="#006600" ForeColor="White" />
+                    <asp:Button ID="Button5" runat="server" CssClass="te" Text="Done" OnClick="Button5_Click" BackColor="#540D6E" ForeColor="White" />
                 </asp:TableCell>
             </asp:TableRow>
          </asp:Table>
         <div style="text-align:center"><asp:Label ID="Label17" runat="server" Text="Place you stay in the city" Font-Size="25" ForeColor="#FF6600" Font-Bold="True"></asp:Label></div>
-        <asp:Table ID="tab3" HorizontalAlign="Center" runat="server" CellSpacing="20">
+        <asp:Table ID="tab3" ForeColor="White" HorizontalAlign="Center" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="Label18" runat="server" Text="Enter the versity "></asp:Label>
                  </asp:TableCell>
                 <asp:TableCell>
                     
-                    <asp:DropDownList ID="DropDownList4" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList4" CssClass="te" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -377,7 +378,7 @@ ul:after { clear: both; }
 
                  </asp:TableCell>
                  <asp:TableCell>
-                     <asp:Button ID="Button6" runat="server" Text="Done" OnClick="Button6_Click" BackColor="#006600" ForeColor="White" />
+                     <asp:Button ID="Button6" runat="server" CssClass="te" Text="Done" OnClick="Button6_Click" BackColor="#540D6E" ForeColor="White" />
                  </asp:TableCell>
              </asp:TableRow>
             

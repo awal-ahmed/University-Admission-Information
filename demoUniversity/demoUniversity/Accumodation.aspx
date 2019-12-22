@@ -24,7 +24,7 @@
         
         
         .te {
-        padding: 5px 20px;
+        padding: 5px 5px;
         border: solid;
         border-width: 1px;
         border-color:#99b3ff;
@@ -32,6 +32,7 @@
         background-color: #f1f1f1;
     }
         .foot{
+            color:white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -84,7 +85,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
         <div style="text-align:center; width:100%; background-color:midnightblue">
             <div style="font-size:60pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">University Admission Information</div>
@@ -92,7 +93,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  CssClass="ex">
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" /> 
                </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" CssClass="ex" />
@@ -143,7 +144,7 @@ ul:after { clear: both; }
         <br />
         <br />
         <br />
-        <p style="font-size:20px; margin-right:20px; margin-left:50px; text-shadow: 1px 1px 2px"> Select the name of any university.. I will give some name of hotels where you can stay if you go to the versity for any reason.. It will also provide their contact number and address..</p>
+        <p style="font-size:20px; margin-right:20px; color:white; margin-left:50px; text-shadow: 1px 1px 2px"> Select the name of any university.. I will give some name of hotels where you can stay if you go to the versity for any reason.. It will also provide their contact number and address..</p>
         <br />
         <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>
@@ -153,7 +154,7 @@ ul:after { clear: both; }
                     <asp:DropDownList ID="DropDownList1" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button1" runat="server" Text="Search" CssClass="te" OnClick="Button1_Click" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -190,10 +191,10 @@ ul:after { clear: both; }
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Button ID="Button3" runat="server" Text="Preveous" OnClick="Button3_Click" />
+                    <asp:Button ID="Button3" BackColor="#540D6E" ForeColor="white" runat="server" CssClass="te" Text="Preveous" OnClick="Button3_Click" />
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button2" runat="server" Text="Next" OnClick="Button2_Click" />
+                    <asp:Button ID="Button2" BackColor="#540D6E" ForeColor="white" runat="server" CssClass="te" Text="Next" OnClick="Button2_Click" />
                 </asp:TableCell>
             </asp:TableRow>
             

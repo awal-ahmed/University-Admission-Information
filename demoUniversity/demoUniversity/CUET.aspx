@@ -7,6 +7,7 @@
     <title>Home</title>
     <style>
         .foot{
+            color: white;
             position:static;
             bottom:-5em;
             left:40%;
@@ -59,7 +60,7 @@ ul:after { clear: both; }
 
     </style>
 </head>
-<body style="background-color: #CCFFFF">
+<body style="background-color: black">
     <form id="form1" runat="server">
 
        <div style="text-align:center; width:100%; background-color:midnightblue">
@@ -68,7 +69,7 @@ ul:after { clear: both; }
           <asp:Table ID="Table6" runat="server" HorizontalAlign="Right"  CellPadding="5">
             <asp:TableRow  >
                 <asp:TableCell>
-                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="Green"  ForeColor="White" Height="30px" Font-Bold="true" /> 
+                    <asp:Button ID="bt1" runat="server" Text="Button" OnClick="bt1_Click" BackColor="#26DF01"  ForeColor="White" Height="30px" Font-Bold="true" /> 
                 </asp:TableCell>
                 <asp:TableCell>
                      <asp:Button ID="bt2" runat="server" Text="Logout" OnClick="Bt2_Click" BackColor="Red" ForeColor="White" Height="30px" Font-Bold="true" />
@@ -118,7 +119,7 @@ ul:after { clear: both; }
         </div>
         <br />
         <br />
-        <asp:Table ID="Table1" runat="server" Width="1359px" CellSpacing="10">
+        <asp:Table ID="Table1" ForeColor="White" runat="server" Width="1359px" CellSpacing="10">
             <asp:TableRow>
                 <asp:TableCell Width="450px" Font-Size="Larger" VerticalAlign="Middle" Font-Bold="False">Former Bangladesh Institute of Technology, Chittagong, abbreviated as BIT Chittagong is presently Chittagong University of Engineering & Technology (CUET). It is one of the prominent and prestigious autonomous self-degree-awarding institute in the engineering education of Bangladesh. This Institute was created out of Engineering College, Chittagong that was established in 1968. The Chittagong Engineering College functioned as the Faculty of Engineering of the University of Chittagong. </asp:TableCell>
                 <asp:TableCell Width="450px"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/CUET.jpg" Width="450" Height="300"></asp:Image></asp:TableCell>
@@ -128,25 +129,25 @@ ul:after { clear: both; }
         </asp:Table>
         <br />
         <br />
-        <div style=" text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
-        <div style=" text-align:center; font-size:20px"><p> Department of Architecture(Arch)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Biomedical Engineering(BME)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Civil Engineering(CE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Computer Science & Engineering(CSE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Disaster & Environmental Engineering(DEE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Electrical And Electronics Engineering(EEE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Electronics & Telecommunication Engineering(ETE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Materials Science And Engineering(MSE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Mechanical Engineering(ME)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Mechatronics & Industrial Engineering(MIE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Nuclear Engineering(NE)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Petroleum And Mining Engineering(PME)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Urban & Regional Planning(URP)</p></div>
-        <div style=" text-align:center; font-size:20px"><p> Department of Water Resources Engineering(WRE)</p></div>
+        <div style=" color:white; text-align:center; font-size:30px; background-color:#5784BE; color:white"><p>Name of Departments</p></div> 
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Architecture(Arch)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Biomedical Engineering(BME)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Civil Engineering(CE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Computer Science & Engineering(CSE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Disaster & Environmental Engineering(DEE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Electrical And Electronics Engineering(EEE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Electronics & Telecommunication Engineering(ETE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Materials Science And Engineering(MSE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Mechanical Engineering(ME)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Mechatronics & Industrial Engineering(MIE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Nuclear Engineering(NE)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Petroleum And Mining Engineering(PME)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Urban & Regional Planning(URP)</p></div>
+        <div style=" color:white; text-align:center; font-size:20px"><p> Department of Water Resources Engineering(WRE)</p></div>
         <br />
         <br />
         <asp:Table ID="Table4" runat="server" BorderWidth="2px" GridLines="Both" HorizontalAlign="Center" Font-Size="30px" BackColor="#006666" Caption="Preveous Year Information Summary" CaptionAlign="Top" ForeColor="#006699" Width="1150px">
-            <asp:TableHeaderRow BackColor="#33CC33" ForeColor="Black" Font-Size="18px">
+            <asp:TableHeaderRow BackColor="#33CC33" ForeColor="white" Font-Size="18px">
                 <asp:TableHeaderCell>Year</asp:TableHeaderCell>
                 <asp:TableHeaderCell>GPA</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Examinee</asp:TableHeaderCell>
@@ -165,7 +166,7 @@ ul:after { clear: both; }
                 <asp:TableHeaderCell>URP</asp:TableHeaderCell>                
                 <asp:TableHeaderCell>WRE</asp:TableHeaderCell>
             </asp:TableHeaderRow>
-            <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
+            <asp:TableRow BackColor="#66FF66" ForeColor="white" Font-Size="18px">
                 <asp:TableCell>2018</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
@@ -184,7 +185,7 @@ ul:after { clear: both; }
                 <asp:TableCell>3712</asp:TableCell>
                 <asp:TableCell>1435</asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow BackColor="#66FF66" ForeColor="Black" Font-Size="18px">
+            <asp:TableRow BackColor="#66FF66" ForeColor="white" Font-Size="18px">
                 <asp:TableCell>2016</asp:TableCell>
                 <asp:TableCell>17.5</asp:TableCell>
                 <asp:TableCell>12500</asp:TableCell>
@@ -210,12 +211,12 @@ ul:after { clear: both; }
         <asp:Table ID="Table2" runat="server" CellSpacing="10" HorizontalAlign="Center" ForeColor="White">
             
             <asp:TableRow>
-                <asp:TableCell><asp:DropDownList ID="DropDownList1" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
+                <asp:TableCell><asp:DropDownList ID="DropDownList1" CssClass="te" runat="server"  Width="450px" Height="25px" BackColor="#CCFFFF" AutoPostBack="True" Font-Italic="True"> 
                     <Items> <asp:ListItem Enabled="true" Selected="True" Text="Select Your Place"></asp:ListItem>
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To CUET" OnClick="Button1_Click" BackColor="#006666" ForeColor="White" Font-Bold="True" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To CUET" OnClick="Button1_Click" BackColor="##540D6E" ForeColor="White" Font-Bold="True" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />
