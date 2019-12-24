@@ -64,7 +64,13 @@ namespace demoUniversity
                 Response.Clear();
                 if (true)
                 {
-                    SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news order by Start_Date", connect);
+                   // Response.Write("Connected");
+                    DateTime dt = DateTime.Now;
+                    var date1 = dt.Date;
+                    date1 = date1.AddDays(-5);
+                    var date2 = dt.Date;
+                    date2 = date2.AddDays(30);
+                    SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news  where Start_Date <= '" + date2 + "' and Start_Date >= '" + date1 + "' order by Start_Date", connect);
                     cmd5.ExecuteNonQuery();
                     SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                     DataSet ds5 = new DataSet();
@@ -86,7 +92,7 @@ namespace demoUniversity
 
            if (!IsPostBack)
             {
-                DropDownList2.Items.Clear();
+               /* DropDownList2.Items.Clear();
                 //  DropDownList1.DataValueField = "stf";
 
                 SqlCommand cmd2 = new SqlCommand("select distinct Mont from news", connect);
@@ -98,7 +104,7 @@ namespace demoUniversity
                 DropDownList2.DataBind();
                 DropDownList2.DataTextField = "Mont";
                 DropDownList2.DataValueField = "Mont";
-                DropDownList2.DataBind();
+                DropDownList2.DataBind();*/
 
             }
            if (!IsPostBack)
@@ -147,7 +153,9 @@ namespace demoUniversity
             //DropDownList1.AutoPostBack = true;
             if (true)
             {
-                SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news where Mont='" + DropDownList2.SelectedItem.Text + "' order by Start_Date", connect);
+                var fr = Convert.ToDateTime(TextBox1.Text.ToString());
+                var to = Convert.ToDateTime(TextBox2.Text.ToString());
+                SqlCommand cmd5 = new SqlCommand("select Venue, Program_Type, Mont as Month, Start_Date, End_Date, Details, Contact from news where Start_Date>='" + fr + "' and Start_Date<='" + to + "' order by Start_Date", connect);
                 cmd5.ExecuteNonQuery();
                 SqlDataAdapter da5 = new SqlDataAdapter(cmd5);
                 DataSet ds5 = new DataSet();
@@ -258,7 +266,7 @@ namespace demoUniversity
                     Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Information Not Found');</script>");
                     Response.Write("Information Not Found");
                 }*/
-                if (DropDownList4.SelectedItem.Text.ToString().ToLower() == "month")
+                if (DropDownList4.SelectedItem.Text.ToString().ToLower() == "date")
                 {
                     Table1.Visible = true;
                     Table2.Visible = false;

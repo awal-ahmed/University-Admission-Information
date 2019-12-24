@@ -152,7 +152,7 @@ ul:after { clear: both; }
                 <asp:TableCell>
                     <asp:DropDownList ID="DropDownList4" CssClass="te" runat="server"  Width="200" Height="30">
                         <asp:ListItem>Venue</asp:ListItem>
-                        <asp:ListItem>Month</asp:ListItem>
+                        <asp:ListItem>Date</asp:ListItem>
                         <asp:ListItem>Type</asp:ListItem>
                     </asp:DropDownList>
                 </asp:TableCell>
@@ -164,12 +164,16 @@ ul:after { clear: both; }
          </asp:Table>>
          <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="0">
             <asp:TableRow>
-                <asp:TableCell>Search with month</asp:TableCell>
+                <asp:TableCell>From</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList2" runat="server" CssClass="te" Width="200" Height="30"></asp:DropDownList>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="te" TextMode="Date"></asp:TextBox>
+                </asp:TableCell>
+                 <asp:TableCell>To</asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass="te" TextMode="Date"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button_Click" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button1" runat="server" Text="Search" CssClass="te" OnClick="Button_Click" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
                     </asp:TableCell>
             </asp:TableRow>
 
@@ -178,7 +182,7 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Search with Venue</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="e" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="te" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:Button ID="Button2" runat="server" Text="Search" CssClass="te" OnClick="Button_Click1" BackColor="#540D6E" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
@@ -190,10 +194,10 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell>Search with Program Type</asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="DropDownList3" runat="server" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList3" runat="server" CssClass="te" BackColor="#CCFFFF" Width="200" Height="30"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:Button ID="Button3" runat="server" Text="Search" OnClick="Button_Click2" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
+                    <asp:Button ID="Button3" runat="server"  CssClass="te" Text="Search" OnClick="Button_Click2" BackColor="#006600" Height="30" Width="75" Font-Bold="True" ForeColor="White" />
                     </asp:TableCell>
             </asp:TableRow>
 

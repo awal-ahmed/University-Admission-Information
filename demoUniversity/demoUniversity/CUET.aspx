@@ -216,7 +216,7 @@ ul:after { clear: both; }
                               </Items> </asp:DropDownList> 
                     
                 </asp:TableCell>
-                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To CUET" OnClick="Button1_Click" BackColor="##540D6E" ForeColor="White" Font-Bold="True" /></asp:TableCell>
+                <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Go To CUET" OnClick="Button1_Click" BackColor="#540D6E" ForeColor="White" Font-Bold="True" /></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <br />

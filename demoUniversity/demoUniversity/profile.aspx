@@ -149,7 +149,7 @@ ul:after { clear: both; }
             <asp:TableRow>
                 <asp:TableCell HorizontalAlign="Center">
         
-                    <asp:Table ID="Table1" runat="server" HorizontalAlign="Center"></asp:Table>
+                    <asp:Table ID="Table1" runat="server" ForeColor="Black" HorizontalAlign="Center"></asp:Table>
                     <asp:TableCell> <asp:Button ID="Button2" runat="server" Height="25px" Width="80%" Font-Bold="true" Text="Apply To University" OnClick="Button2_Click" BackColor="Cyan" /> </asp:TableCell>
 
                 </asp:TableCell>
