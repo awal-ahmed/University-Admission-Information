@@ -184,9 +184,20 @@ ul:after { clear: both; }
                     <asp:Table ID="Table2" runat="server"></asp:Table>
                 </asp:TableCell>
             </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <asp:TextBox ID="TextBox2" runat="server" Width="400" Height="200" CssClass="te" TextMode ="MultiLine"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button2" runat="server" Text="Save"  CssClass="te" OnClick="Button2_Click"  />
+                </asp:TableCell>
+                <asp:TableCell>
+                    <asp:Button ID="Button3" runat="server" Text="Save"  CssClass="te" OnClick="Button3_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
-        
 
+        
         
         <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />

@@ -23,6 +23,9 @@ namespace demoUniversity
             Response.Write("Successful");
             Button1.Visible = false;
             TextBox1.Visible = false;
+            TextBox2.Visible = false;
+            Button2.Visible = false;
+            Button3.Visible = false;
             if (Session["reg"] != null)
             {
                 SqlCommand cmds = new SqlCommand("select name from stud where reg = '" + Session["reg"].ToString() + "'", connect);
@@ -140,23 +143,44 @@ namespace demoUniversity
                 TableCell cellp = new TableCell();
                 row.Cells.Add(cellp);
                 row.Cells[1].Controls.Add(bt);
+
+
+
+                Button btedit = new Button();
+                btedit.ID = "bt_" + pstno.ToString() + "_edit";
+                btedit.CommandArgument = pstno.ToString();
+                btedit.Text = "Edit Blog";
+                btedit.BackColor = System.Drawing.Color.Red;
+                btedit.ForeColor = System.Drawing.Color.White;
+                btedit.Click += new EventHandler(btedit_Click);
+                TableCell celledit = new TableCell();
+                row.Cells.Add(celledit);
+                row.Cells[1].Controls.Add(btedit);
                 if (Session["reg"] == null)
                 {
                     bt.Visible = false;
+                    btedit.Visible = false;
                 }
                 else if (Session["reg"].ToString() == null)
                 {
                     bt.Visible = false;
+                    btedit.Visible = false;
                 }
                 else if (Session["reg"].ToString() == "admin")
                 {
                     bt.Visible = true;
+                    btedit.Visible = false;
                 }
                 else if (Session["name"].ToString() == tables.Rows[i][1].ToString())
                 {
                     bt.Visible = true;
+                    btedit.Visible = true;
                 }
-                else bt.Visible = false;
+                else
+                {
+                    bt.Visible = false;
+                    btedit.Visible = false;
+                }
                 Table2.Rows.Add(row);
 
                 TableRow row2 = new TableRow();
@@ -243,23 +267,43 @@ namespace demoUniversity
                     TableCell cellps = new TableCell();
                     rows.Cells.Add(cellps);
                     rows.Cells[1].Controls.Add(bts);
+
+                    Button btsedit = new Button();
+                    btsedit.ID = "btc_" + cmtno.ToString() + "_edit";
+                    btsedit.CommandArgument = cmtno.ToString();
+                    btsedit.Text = "Edit Comment";
+                    btsedit.BackColor = System.Drawing.Color.Red;
+                    btsedit.ForeColor = System.Drawing.Color.White;
+                    btsedit.Click += new EventHandler(ctedit_Click);
+                    TableCell cellsedit = new TableCell();
+                    rows.Cells.Add(cellsedit);
+                    rows.Cells[1].Controls.Add(btsedit);
+
                     if (Session["reg"] == null)
                     {
                         bts.Visible = false;
+                        btsedit.Visible = false;
                     }
                     else if (Session["reg"].ToString() == null)
                     {
                         bts.Visible = false;
+                        btsedit.Visible = false;
                     }
                     else if (Session["reg"].ToString() == "admin")
                     {
                         bts.Visible = true;
+                        btsedit.Visible = false;
                     }
                     else if (Session["name"].ToString() == tables1.Rows[i1][2].ToString())
                     {
                         bts.Visible = true;
+                        btsedit.Visible = true;
                     }
-                    else bts.Visible = false;
+                    else
+                    {
+                        bts.Visible = false;
+                        btsedit.Visible = false;
+                    }
                    // rows.CssClass = "re";
                     Table2.Rows.Add(rows);
 
@@ -299,12 +343,7 @@ namespace demoUniversity
                     // Loop through rows
                    
                 }
-                TableCell cell12 = new TableCell();
-                cell12.BackColor = System.Drawing.Color.FromArgb(13434879);
-                cell12.Text = "&nbsp;";
-                row2.Cells.Add(cell12);
-
-                Table2.Rows.Add(row2);
+                
                 TableRow rows1 = new TableRow();
                 TextBox tb = new TextBox();
                 tb.ID = "tb_" + pstno.ToString() + "_cm";
@@ -344,7 +383,12 @@ namespace demoUniversity
                 }
                 Table2.Rows.Add(rows1);
 
+                TableCell cell12 = new TableCell();
+                cell12.BackColor = System.Drawing.Color.FromArgb(13434879);
+                cell12.Text = "&nbsp;";
+                row2.Cells.Add(cell12);
 
+                Table2.Rows.Add(row2);
 
 
 
@@ -373,6 +417,60 @@ namespace demoUniversity
 
             cmd.ExecuteNonQuery();
             Response.Redirect("Blog.aspx");
+
+
+        }
+        void btedit_Click(object sender, EventArgs e)
+        {
+
+            Button button = (Button)sender;
+            string row = button.CommandArgument;
+            int i = Convert.ToInt32(row);
+            Table1.Visible = false;
+            Table2.Visible = false;
+            TextBox2.Visible = true;
+            Button2.Visible = true;
+            Session.Add("editindex",i);
+            String sql1 = "SELECT pst FROM bpost where id = '" + i + "'";
+            SqlCommand command1 = new SqlCommand(sql1, connect);
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
+            DataSet dataSet1 = new DataSet();
+            dataAdapter1.Fill(dataSet1);
+            int j1 = dataSet1.Tables[0].Rows.Count;
+            if (j1 > 0)
+            {
+                string st = dataSet1.Tables[0].Rows[0][0].ToString();
+                TextBox2.Text = st;
+            }
+
+           
+
+
+        }
+        void ctedit_Click(object sender, EventArgs e)
+        {
+
+            Button button = (Button)sender;
+            string row = button.CommandArgument;
+            int i = Convert.ToInt32(row);
+            Table1.Visible = false;
+            Table2.Visible = false;
+            TextBox2.Visible = true;
+            Button3.Visible = true;
+            Session.Add("editindex", i);
+            String sql1 = "SELECT cmt FROM cmnt where id = '" + i + "'";
+            SqlCommand command1 = new SqlCommand(sql1, connect);
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
+            DataSet dataSet1 = new DataSet();
+            dataAdapter1.Fill(dataSet1);
+            int j1 = dataSet1.Tables[0].Rows.Count;
+            if (j1 > 0)
+            {
+                string st = dataSet1.Tables[0].Rows[0][0].ToString();
+                TextBox2.Text = st;
+            }
+
+
 
 
         }
@@ -410,6 +508,26 @@ namespace demoUniversity
             Response.Redirect("Blog.aspx");
 
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            String sql1 = "update bpost set pst = '" + TextBox2.Text + "'  where id = '" + Session["editindex"].ToString() + "'";
+            SqlCommand command1 = new SqlCommand(sql1, connect);
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
+            DataSet dataSet1 = new DataSet();
+            dataAdapter1.Fill(dataSet1);
+            Response.Redirect("Blog.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            String sql1 = "update cmnt set cmt = '" + TextBox2.Text + "'  where id = '" + Session["editindex"].ToString() + "'";
+            SqlCommand command1 = new SqlCommand(sql1, connect);
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
+            DataSet dataSet1 = new DataSet();
+            dataAdapter1.Fill(dataSet1);
+            Response.Redirect("Blog.aspx");
         }
     }
 }
