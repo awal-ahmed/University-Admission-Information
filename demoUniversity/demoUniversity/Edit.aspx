@@ -202,7 +202,7 @@ ul:after { clear: both; }
                     <asp:Label ID="Label3" runat="server" Text="Month"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox3" runat="server" CssClass="te"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" CssClass="te" TextMode="Month"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -210,15 +210,15 @@ ul:after { clear: both; }
                     <asp:Label ID="Label4" runat="server" Text="Start Date"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox4" runat="server" CssClass="te"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" CssClass="te"  TextMode="Date"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="Label5" runat="server" Text="End Date"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text="End Date" ></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="TextBox5" runat="server" CssClass="te"></asp:TextBox>
+                    <asp:TextBox ID="TextBox5" runat="server" CssClass="te" TextMode="Date"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
