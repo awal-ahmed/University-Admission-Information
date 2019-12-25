@@ -63,7 +63,7 @@ namespace demoUniversity
             {
                 DropDownList1.Items.Clear();
                 DropDownList1.Items.Add("From");
-                SqlCommand cmd = new SqlCommand("select distinct varsity from univer2", connect);
+                SqlCommand cmd = new SqlCommand("select distinct varsity from hotel", connect);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds1 = new DataSet();

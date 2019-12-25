@@ -150,7 +150,7 @@ namespace demoUniversity
             else
             {
                 Response.Clear();
-                //Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Page is not available right now');</script>");
+                Response.Write("<script language=\"javascript\" type=\"text/javascript\">alert('Page is not available right now');</script>");
                 Response.Write("Page is not available right now");
             }
         }
