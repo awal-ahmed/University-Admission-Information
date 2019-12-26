@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head id="Head1" runat="server">
-    <title>Home</title>
+    <title>Accomodation</title>
     <style>
         .ex {
             color: #fff !important;
@@ -128,7 +128,7 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="News.aspx">News</a></li>
+    <li><a href="News.aspx">Schedule</a></li>
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head id="Head1" runat="server">
-    <title>Home</title>
+    <title>Schedule</title>
     <style>
         .ex {
             color: #fff !important;
@@ -128,7 +128,7 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="News.aspx">News</a></li>
+    <li><a href="News.aspx">Schedule</a></li>
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
@@ -139,12 +139,12 @@ ul:after { clear: both; }
    <br />
         <br />
         <div style="text-align:center; width:100%;  background-color:#5784BE">
-            <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">News</div>
+            <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">Schedule</div>
         </div>
         <br />
         <br />
         <br />
-        <p style="font-size:20px; margin-right:20px; margin-left:50px; color: white; text-shadow: 1px 1px 2px"> This page will provide news about various programme in different university.. You can filter those by month, venue or type of program.. Select that from the box.. Then press 'apply'..</p>
+        <p style="font-size:20px; margin-right:20px; margin-left:50px; color: white; text-shadow: 1px 1px 2px"> This page will provide Schedule about various programme in different university.. You can filter those by month, venue or type of program.. Select that from the box.. Then press 'apply'..</p>
         <br />
          <asp:Table ID="Table4" runat="server" HorizontalAlign="Center" Font-Size="20" ForeColor="Blue" Font-Bold="True" CellSpacing="5">
             <asp:TableRow>

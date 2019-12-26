@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head id="Head1" runat="server">
-    <title>Home</title>
+    <title>Edit</title>
     <style>
         .ex {
             color: #fff !important;
@@ -128,7 +128,7 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="News.aspx">News</a></li>
+    <li><a href="News.aspx">Schedule</a></li>
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
@@ -150,7 +150,7 @@ ul:after { clear: both; }
         <p style=" color:white; font-size: 25px">Add A Subject:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will take you in a new page.. This button is for adding a new subject in a university.. When a university addes a new department in the versity.. You can add it from here..</p>
         <br />
         
-        <p style=" color:white; font-size: 25px">Add a new news:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will keep you in the same page.. You can add any news of any type of programme happening in your university..</p>
+        <p style=" color:white; font-size: 25px">Add a new schedule:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will keep you in the same page.. You can add any schedule of any type of programme happening in your university..</p>
         <br />
         
         <p style=" color:white; font-size: 25px">Add a new student:</p><p style="font-size:20px; color:white;  margin-left:50px"> This button will take you in a new page.. Where you can details about any student..</p>
@@ -170,7 +170,7 @@ ul:after { clear: both; }
                     <br />
                     <asp:Button ID="Button9" runat="server" CssClass="te" Text="Add A Subject" OnClick="Button9_Click" BackColor="Teal" ForeColor="White" Font-Size="15"/>
                     <br />
-                    <asp:Button ID="Button1" runat="server" CssClass="te" Text="Add a new news" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
+                    <asp:Button ID="Button1" runat="server" CssClass="te" Text="Add a new schedule" OnClick="Button1_Click" ForeColor="White" BackColor="Teal" Font-Size="15" />
                     <br />
                     <asp:Button ID="Button7" runat="server" CssClass="te" Text="Add a new student" OnClick="Button7_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
                     <br />
@@ -179,7 +179,7 @@ ul:after { clear: both; }
                     <asp:Button ID="Button2" runat="server" CssClass="te" Text="Add a new way to go to your university" OnClick="Button2_Click" BackColor="Teal" ForeColor="White" Font-Size="15" />
                 </asp:TableCell>
                 <asp:TableCell>
-<div style="text-align:center"><asp:Label ID="Label15" runat="server" Text="Add a new news" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>
+<div style="text-align:center"><asp:Label ID="Label15" runat="server" Text="Add a new schedule" ForeColor="#FF6600" Font-Size="25" Font-Bold="True"></asp:Label></div>
         <asp:Table HorizontalAlign="Center" ForeColor="white" ID="tab1" runat="server" CellSpacing="20">
             <asp:TableRow>
                 <asp:TableCell>

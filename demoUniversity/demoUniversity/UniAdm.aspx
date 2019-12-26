@@ -126,7 +126,7 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="News.aspx">News</a></li>
+    <li><a href="News.aspx">Schedule</a></li>
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>

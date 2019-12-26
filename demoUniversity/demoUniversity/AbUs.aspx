@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Home</title>
+    <title>AbUs</title>
     <style>
         .ex {
             color: #fff !important;
@@ -127,7 +127,7 @@ ul:after { clear: both; }
     </li>
     <li><a href="Transport.aspx">Transportation</a></li>
     <li><a href="Accumodation.aspx">Accomodation</a></li>
-    <li><a href="News.aspx">News</a></li>
+    <li><a href="News.aspx">Schedule</a></li>
     <li><a href="FAQ.aspx">FAQ</a></li>
     <li><a href="Blog.aspx">Blog</a></li>
     <li><a href="Notic.aspx">Notice</a></li>
@@ -141,12 +141,28 @@ ul:after { clear: both; }
             <div style="font-size:30pt; color: #FFFFCC ; width:inherit; text-shadow:1px 1px 2px">About Us</div>
         </div>
         <br />
+        <p style=" color:white; font-size: 25px">According to current admission system, students have to apply each university and collect information individually. When they try to get all information at a place, they have to take it from third party which is a question of reliability. This website is made to take information from each authority and show them in an organized way to students. More it’s target is to provide some important information about transport and accommodation</p>
+        <br />
+        <asp:Table HorizontalAlign="Center" ID="Table1" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <p style=" color:white; font-size: 25px">-Md Ashikuzzaman Kanon</p>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                    <p style=" color:white; font-size: 25px">-Awal Ahmed Fime</p>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
         <br />
         <br />
-        <p class="foot" style="font:15px">
+        <br />
+                    <p class="foot" style="font:15px">
             Contact Us: support@universityadmission.com<br />
            ©System Development Project 2019
-        </p>   
+        </p>  
+         
     </form>
 
 </body>
